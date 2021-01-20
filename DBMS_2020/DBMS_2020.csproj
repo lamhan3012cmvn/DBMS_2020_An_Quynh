@@ -83,6 +83,24 @@
     <Compile Include="Features\Admin\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Admin\ManagerBrach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerBrach.Designer.cs">
+      <DependentUpon>ManagerBrach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerCustomer.Designer.cs">
+      <DependentUpon>ManagerCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerMenu.Designer.cs">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Authentication\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +142,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\ManagerBrach.resx">
+      <DependentUpon>ManagerBrach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\ManagerCustomer.resx">
+      <DependentUpon>ManagerCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\ManagerMenu.resx">
+      <DependentUpon>ManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Authentication\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

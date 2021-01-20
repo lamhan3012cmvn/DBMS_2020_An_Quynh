@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.pnl_Login = new Guna.UI.WinForms.GunaPanel();
             this.pnl_form = new Guna.UI.WinForms.GunaPanel();
+            this.txt_confim_password = new Guna.UI.WinForms.GunaLineTextBox();
+            this.lbl_confim_password = new Guna.UI.WinForms.GunaLabel();
             this.btn_register = new Guna.UI.WinForms.GunaButton();
             this.txt_password = new Guna.UI.WinForms.GunaLineTextBox();
             this.lbl_password = new Guna.UI.WinForms.GunaLabel();
@@ -40,8 +42,6 @@
             this.pnl_img = new Guna.UI.WinForms.GunaPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pbx_img = new Guna.UI.WinForms.GunaPictureBox();
-            this.txt_confim_password = new Guna.UI.WinForms.GunaLineTextBox();
-            this.lbl_confim_password = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Login.SuspendLayout();
             this.pnl_form.SuspendLayout();
             this.pnl_img.SuspendLayout();
@@ -74,6 +74,34 @@
             this.pnl_form.Name = "pnl_form";
             this.pnl_form.Size = new System.Drawing.Size(507, 524);
             this.pnl_form.TabIndex = 1;
+            // 
+            // txt_confim_password
+            // 
+            this.txt_confim_password.Animated = true;
+            this.txt_confim_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_confim_password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_confim_password.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_confim_password.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txt_confim_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_confim_password.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_confim_password.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_confim_password.LineSize = 2;
+            this.txt_confim_password.Location = new System.Drawing.Point(119, 323);
+            this.txt_confim_password.Name = "txt_confim_password";
+            this.txt_confim_password.PasswordChar = '*';
+            this.txt_confim_password.Size = new System.Drawing.Size(330, 35);
+            this.txt_confim_password.TabIndex = 10;
+            // 
+            // lbl_confim_password
+            // 
+            this.lbl_confim_password.AutoSize = true;
+            this.lbl_confim_password.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lbl_confim_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lbl_confim_password.Location = new System.Drawing.Point(63, 295);
+            this.lbl_confim_password.Name = "lbl_confim_password";
+            this.lbl_confim_password.Size = new System.Drawing.Size(157, 25);
+            this.lbl_confim_password.TabIndex = 9;
+            this.lbl_confim_password.Text = "Confim Password";
             // 
             // btn_register
             // 
@@ -196,34 +224,6 @@
             this.pbx_img.Size = new System.Drawing.Size(377, 524);
             this.pbx_img.TabIndex = 0;
             this.pbx_img.TabStop = false;
-            // 
-            // txt_confim_password
-            // 
-            this.txt_confim_password.Animated = true;
-            this.txt_confim_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.txt_confim_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_confim_password.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_confim_password.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txt_confim_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_confim_password.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_confim_password.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_confim_password.LineSize = 2;
-            this.txt_confim_password.Location = new System.Drawing.Point(119, 323);
-            this.txt_confim_password.Name = "txt_confim_password";
-            this.txt_confim_password.PasswordChar = '*';
-            this.txt_confim_password.Size = new System.Drawing.Size(330, 35);
-            this.txt_confim_password.TabIndex = 10;
-            // 
-            // lbl_confim_password
-            // 
-            this.lbl_confim_password.AutoSize = true;
-            this.lbl_confim_password.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lbl_confim_password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_confim_password.Location = new System.Drawing.Point(63, 295);
-            this.lbl_confim_password.Name = "lbl_confim_password";
-            this.lbl_confim_password.Size = new System.Drawing.Size(157, 25);
-            this.lbl_confim_password.TabIndex = 9;
-            this.lbl_confim_password.Text = "Confim Password";
             // 
             // Registration
             // 
