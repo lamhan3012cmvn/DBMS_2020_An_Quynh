@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +11,29 @@ using DBMS_2020;
 
 namespace DBMS_2020.Features.Admin
 {
-    public partial class ManagerCustomer : UserControl
+    
+    public partial class ManagerStaff : UserControl
     {
         DataTable DT;
-        private Controllers.Admin Customer;
-        public ManagerCustomer()
+        private Controllers.Admin staff;
+        public ManagerStaff()
         {
             InitializeComponent();
-            this.Customer = new Controllers.Admin();
+            this.staff = new Controllers.Admin();
             loadDataGridiew();
         }
-        public void loadDataGridiew()
+        private void loadDataGridiew()
         {
-            var data = this.Customer.loadViewManagerCustomer();
+            var data = this.staff.loadViewManagerStaff();
             DT = data.Tables[0];
-            this.dgv_customer.Rows.Clear();
+            this.dgv_staff.Rows.Clear();
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 var item = DT.Rows[i];
-                dgv_customer.Rows.Add(item[0], item[1], item[2], item[4]);
+                var DoB = item[3].ToString().Split(' ')[0];
+                dgv_staff.Rows.Add(item[0], item[1],  item[2], DoB, item[4],item[6]);
             }
+            // Qua day load len view
         }
     }
 }

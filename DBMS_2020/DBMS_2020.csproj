@@ -77,17 +77,18 @@
     <Compile Include="Componets\txt.Designer.cs">
       <DependentUpon>txt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Admin.cs" />
     <Compile Include="Features\Admin\Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Features\Admin\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Features\Admin\ManagerBrach.cs">
+    <Compile Include="Features\Admin\ManagerBranch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Features\Admin\ManagerBrach.Designer.cs">
-      <DependentUpon>ManagerBrach.cs</DependentUpon>
+    <Compile Include="Features\Admin\ManagerBranch.Designer.cs">
+      <DependentUpon>ManagerBranch.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\Admin\ManagerCustomer.cs">
       <SubType>UserControl</SubType>
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="Features\Admin\ManagerMenu.Designer.cs">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerStaff.Designer.cs">
+      <DependentUpon>ManagerStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\Authentication\Login.cs">
       <SubType>UserControl</SubType>
@@ -143,14 +150,17 @@
     <EmbeddedResource Include="Features\Admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Features\Admin\ManagerBrach.resx">
-      <DependentUpon>ManagerBrach.cs</DependentUpon>
+    <EmbeddedResource Include="Features\Admin\ManagerBranch.resx">
+      <DependentUpon>ManagerBranch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Admin\ManagerCustomer.resx">
       <DependentUpon>ManagerCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Admin\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\ManagerStaff.resx">
+      <DependentUpon>ManagerStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Authentication\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -187,7 +197,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Images\icons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

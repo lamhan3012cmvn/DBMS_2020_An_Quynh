@@ -16,12 +16,15 @@ namespace DBMS_2020.Features.Admin
         public Admin()
         {
             InitializeComponent();
-            loadManagerBrach();
+            //loadManagerBranch();
+            //loadManagerCustomer();
+            //loadManagerMenu();
+            loadManagerStaff();
         }
-        private void loadManagerBrach()
+        private void loadManagerBranch()
         {
-            ManagerBrach brach = new ManagerBrach();
-            MethodHelps.addControl(this.pnl_Admin, brach);
+            ManagerBranch branch = new ManagerBranch();
+            MethodHelps.addControl(this.pnl_Admin, branch);
         }
         private void loadManagerCustomer()
         {
@@ -31,6 +34,11 @@ namespace DBMS_2020.Features.Admin
         private void loadManagerMenu()
         {
             ManagerMenu menu = new ManagerMenu();
+            MethodHelps.addControl(this.pnl_Admin, menu);
+        }
+        private void loadManagerStaff()
+        {
+            ManagerStaff menu = new ManagerStaff();
             MethodHelps.addControl(this.pnl_Admin, menu);
         }
 
