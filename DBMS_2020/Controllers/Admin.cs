@@ -49,5 +49,33 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
+        public bool addStaff (string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, string tk, string mk , ref string err )
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute DangKiNV_Proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau + "'," + SoLuongBan, CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, string tk, string mk, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute suaNV_proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau + "'," + SoLuongBan, CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool deleteStaff (string MaNV, ref string err, string tk, string mk)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute xoaNV_proc '"+ MaNV + "'", CommandType.Text, ref err);
+            return result;
+        }
+         
+        public bool AddMenu (string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, int DaBan, string tk, string mk, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute themMon_proc '" + MaMon + "',N'" + TenMon + "'," + GiaTien + "','" + AnhMinhHoa + "'," + DaBan, CommandType.Text, ref err);
+            return result;
+        }
+
     }
 }

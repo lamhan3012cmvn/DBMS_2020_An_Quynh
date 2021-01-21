@@ -16,10 +16,10 @@ namespace DBMS_2020.Features.Admin
         public Admin()
         {
             InitializeComponent();
-            //loadManagerBranch();
+            loadManagerBranch();
             //loadManagerCustomer();
             //loadManagerMenu();
-            loadManagerStaff();
+            //loadManagerStaff();
         }
         private void loadManagerBranch()
         {
