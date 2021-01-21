@@ -75,7 +75,8 @@ namespace DBMS_2020.Features.Admin
             // 
             // dgv_branch
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgv_branch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_branch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_branch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
@@ -106,7 +107,7 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_branch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_branch.EnableHeadersVisualStyles = false;
-            this.dgv_branch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_branch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_branch.Location = new System.Drawing.Point(0, 0);
             this.dgv_branch.Name = "dgv_branch";
             this.dgv_branch.RowHeadersVisible = false;
@@ -115,13 +116,13 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.Size = new System.Drawing.Size(595, 524);
             this.dgv_branch.TabIndex = 0;
             this.dgv_branch.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgv_branch.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgv_branch.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.Transparent;
             this.dgv_branch.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgv_branch.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgv_branch.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_branch.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgv_branch.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgv_branch.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_branch.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgv_branch.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_branch.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_branch.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_branch.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
