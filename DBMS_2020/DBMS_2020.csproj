@@ -101,6 +101,12 @@
     <Compile Include="Features\Admin\ManagerMenu.Designer.cs">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Admin\ManagerWorker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\ManagerWorker.Designer.cs">
+      <DependentUpon>ManagerWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Authentication\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Admin\ManagerMenu.resx">
       <DependentUpon>ManagerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\ManagerWorker.resx">
+      <DependentUpon>ManagerWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Authentication\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
