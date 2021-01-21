@@ -141,6 +141,7 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_branch.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_branch.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_branch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_branch_CellContentClick);
             // 
             // cCode
             // 
@@ -209,7 +210,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Del.ForeColor = System.Drawing.Color.White;
             this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
             this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Del.Location = new System.Drawing.Point(29, 404);
+            this.btn_Del.Location = new System.Drawing.Point(211, 408);
             this.btn_Del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -223,6 +224,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Del.TabIndex = 21;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Update
             // 
@@ -250,7 +252,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Update.Radius = 20;
             this.btn_Update.Size = new System.Drawing.Size(151, 52);
             this.btn_Update.TabIndex = 20;
-            this.btn_Update.Text = "Sữa";
+            this.btn_Update.Text = "Sửa";
             this.btn_Update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Add
@@ -281,6 +283,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Add.TabIndex = 19;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // txt_Address
             // 
@@ -296,7 +299,7 @@ namespace DBMS_2020.Features.Admin
             this.txt_Address.Location = new System.Drawing.Point(61, 258);
             this.txt_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Address.Name = "txt_Address";
-            this.txt_Address.PasswordChar = '*';
+            this.txt_Address.PasswordChar = '\0';
             this.txt_Address.Size = new System.Drawing.Size(301, 52);
             this.txt_Address.TabIndex = 18;
             // 
@@ -326,7 +329,7 @@ namespace DBMS_2020.Features.Admin
             this.txt_Name.Location = new System.Drawing.Point(61, 154);
             this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.PasswordChar = '*';
+            this.txt_Name.PasswordChar = '\0';
             this.txt_Name.Size = new System.Drawing.Size(301, 52);
             this.txt_Name.TabIndex = 16;
             // 
@@ -356,7 +359,7 @@ namespace DBMS_2020.Features.Admin
             this.txt_Code.Location = new System.Drawing.Point(61, 59);
             this.txt_Code.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Code.Name = "txt_Code";
-            this.txt_Code.PasswordChar = '*';
+            this.txt_Code.PasswordChar = '\0';
             this.txt_Code.Size = new System.Drawing.Size(301, 52);
             this.txt_Code.TabIndex = 14;
             // 
@@ -398,7 +401,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Back.ForeColor = System.Drawing.Color.White;
             this.btn_Back.Image = null;
             this.btn_Back.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Back.Location = new System.Drawing.Point(41, 17);
+            this.btn_Back.Location = new System.Drawing.Point(4, 0);
             this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -411,6 +414,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Back.TabIndex = 23;
             this.btn_Back.Text = "Trở lại";
             this.btn_Back.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // gunaLineTextBox1
             // 
@@ -423,7 +427,7 @@ namespace DBMS_2020.Features.Admin
             this.gunaLineTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.gunaLineTextBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.gunaLineTextBox1.LineSize = 2;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(179, 47);
+            this.gunaLineTextBox1.Location = new System.Drawing.Point(179, 28);
             this.gunaLineTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaLineTextBox1.Name = "gunaLineTextBox1";
             this.gunaLineTextBox1.PasswordChar = '*';
@@ -435,7 +439,7 @@ namespace DBMS_2020.Features.Admin
             this.txt_SearchName.AutoSize = true;
             this.txt_SearchName.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_SearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_SearchName.Location = new System.Drawing.Point(35, 59);
+            this.txt_SearchName.Location = new System.Drawing.Point(51, 48);
             this.txt_SearchName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_SearchName.Name = "txt_SearchName";
             this.txt_SearchName.Size = new System.Drawing.Size(116, 32);

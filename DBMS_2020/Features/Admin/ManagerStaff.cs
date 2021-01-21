@@ -33,7 +33,37 @@ namespace DBMS_2020.Features.Admin
                 var DoB = item[3].ToString().Split(' ')[0];
                 dgv_staff.Rows.Add(item[0], item[1],  item[2], DoB, item[4],item[6]);
             }
-            // Qua day load len view
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void dgv_staff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.txt_Code.Text = this.dgv_staff.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.txt_Name.Text = this.dgv_staff.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.txt_Phone.Text = this.dgv_staff.Rows[e.RowIndex].Cells[2].Value.ToString();
+            this.txt_DoB.Text = this.dgv_staff.Rows[e.RowIndex].Cells[3].Value.ToString();
+            this.txt_BranchCode.Text = this.dgv_staff.Rows[e.RowIndex].Cells[4].Value.ToString();
+           
+
         }
     }
 }

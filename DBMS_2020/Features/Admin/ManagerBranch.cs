@@ -39,5 +39,27 @@ namespace DBMS_2020.Features.Admin
         {
 
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_branch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.txt_Code.Text = this.dgv_branch.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.txt_Name.Text = this.dgv_branch.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.txt_Address.Text = this.dgv_branch.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
     }
 }

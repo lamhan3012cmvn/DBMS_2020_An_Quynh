@@ -199,5 +199,16 @@
   <ItemGroup>
     <Folder Include="Images\icons\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\black-sesame.jpg" />
+    <Content Include="img\Cheese.jpg" />
+    <Content Include="img\Choco.jpg" />
+    <Content Include="img\GreenTea.jpg" />
+    <Content Include="img\mango.png" />
+    <Content Include="img\Oreo.jpg" />
+    <Content Include="img\peach.jpg" />
+    <Content Include="img\special.jpg" />
+    <Content Include="img\strawberry.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
