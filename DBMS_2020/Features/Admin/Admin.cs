@@ -16,7 +16,7 @@ namespace DBMS_2020.Features.Admin
         public Admin()
         {
             InitializeComponent();
-            loadManagerBranch();
+            //loadManagerBranch();
             //loadManagerCustomer();
             //loadManagerMenu();
             //loadManagerStaff();
@@ -38,8 +38,8 @@ namespace DBMS_2020.Features.Admin
         }
         private void loadManagerStaff()
         {
-            ManagerStaff menu = new ManagerStaff();
-            MethodHelps.addControl(this.pnl_Admin, menu);
+            ManagerStaff staff = new ManagerStaff();
+            MethodHelps.addControl(this.pnl_Admin, staff);
         }
 
     }
