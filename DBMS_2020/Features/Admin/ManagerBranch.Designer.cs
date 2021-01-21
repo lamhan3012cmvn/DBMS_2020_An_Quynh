@@ -139,6 +139,7 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_branch.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_branch.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_branch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_branch_CellContentClick);
             // 
             // cCode
             // 

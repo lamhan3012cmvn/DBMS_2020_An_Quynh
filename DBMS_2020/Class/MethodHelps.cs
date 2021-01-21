@@ -15,7 +15,7 @@ namespace DBMS_2020.Class
             control_parent.Controls.Add(control_child);
             control_child.Dock = DockStyle.Fill;
             control_child.BringToFront();
-
+            MessageBox.Show(control_parent.Controls.Count.ToString());
         }
     }
 }

@@ -54,5 +54,10 @@ namespace DBMS_2020.Features.Admin
         {
 
         }
+
+        private void dgv_branch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -48,22 +48,26 @@ namespace DBMS_2020.Features.Admin
 
         private void lbl_Staff_Click(object sender, EventArgs e)
         {
+            resetPnl();
             loadManagerStaff();
         }
 
         private void lbl_bracnh_Click(object sender, EventArgs e)
         {
+            resetPnl();
             loadManagerBranch();
 
         }
 
         private void lbl_Customer_Click(object sender, EventArgs e)
         {
+            resetPnl();
             loadManagerCustomer();
         }
 
         private void lbl_Menu_Click(object sender, EventArgs e)
         {
+            resetPnl();
             loadManagerMenu();
         }
         private void resetPnl()
@@ -71,6 +75,18 @@ namespace DBMS_2020.Features.Admin
             if(!(this.staff is null))
             {
                 this.staff.Dispose();
+            }
+            if (!(this.customer is null))
+            {
+                this.customer.Dispose();
+            }
+            if(!(this.branch is null))
+            {
+                this.branch.Dispose();
+            }    
+            if(!(this.menu  is null))
+            {
+                this.menu.Dispose();
             }    
         }
        
