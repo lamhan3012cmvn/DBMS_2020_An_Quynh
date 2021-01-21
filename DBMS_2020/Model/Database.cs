@@ -10,7 +10,7 @@ namespace DBMS_2020.Model
 {
     public class Database
     {
-        private string conn_str = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=DoanDBMS;Integrated Security=True";
+        private string conn_str = @"Data Source=PC;Initial Catalog=QuanLyCuaHangBingSu;Integrated Security=True";
         private SqlConnection conn = null;
         private SqlCommand comm = null;
         private SqlDataAdapter da = null;
@@ -19,7 +19,7 @@ namespace DBMS_2020.Model
         {
             if (userName != null && password != null)
             {
-                this.conn_str = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=DoanDBMS;User ID=" + userName + ";Password=" + password + ";";
+                this.conn_str = @"Data Source=PC; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
             }
             //Gán chuỗi kết nối để kết nối với SQL sever
             this.conn = new SqlConnection(this.conn_str);

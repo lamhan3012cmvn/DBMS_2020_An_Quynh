@@ -11,26 +11,28 @@ using DBMS_2020;
 
 namespace DBMS_2020.Features.Admin
 {
-    public partial class ManagerCustomer : UserControl
+    public partial class ManagerBranch : UserControl
     {
         DataTable DT;
-        private Controllers.Admin Customer;
-        public ManagerCustomer()
+        private Controllers.Admin branch;
+        public ManagerBranch()
         {
             InitializeComponent();
-            this.Customer = new Controllers.Admin();
+            this.branch = new Controllers.Admin();
             loadDataGridiew();
         }
-        public void loadDataGridiew()
+
+        private void loadDataGridiew()
         {
-            var data = this.Customer.loadViewManagerCustomer();
+            var data = this.branch.loadViewManagerBranch();
             DT = data.Tables[0];
-            this.dgv_customer.Rows.Clear();
+            this.dgv_branch.Rows.Clear();
             for (int i = 0; i < DT.Rows.Count; i++)
             {
                 var item = DT.Rows[i];
-                dgv_customer.Rows.Add(item[0], item[1], item[2], item[4]);
+                dgv_branch.Rows.Add(item[0], item[1], item[2], item[3]);
             }
+            // Qua day load len view
         }
     }
 }

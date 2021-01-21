@@ -1,7 +1,7 @@
 ﻿
 namespace DBMS_2020.Features.Admin
 {
-    partial class ManagerBrach
+    partial class ManagerBranch
     {
         /// <summary> 
         /// Required designer variable.
@@ -38,6 +38,7 @@ namespace DBMS_2020.Features.Admin
             this.cCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cAdress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cRevenue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_branch)).BeginInit();
             this.SuspendLayout();
@@ -50,8 +51,9 @@ namespace DBMS_2020.Features.Admin
             this.pnl_data.LineRight = 2;
             this.pnl_data.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnl_data.Location = new System.Drawing.Point(0, 0);
+            this.pnl_data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_data.Name = "pnl_data";
-            this.pnl_data.Size = new System.Drawing.Size(595, 524);
+            this.pnl_data.Size = new System.Drawing.Size(793, 645);
             this.pnl_data.TabIndex = 0;
             // 
             // dgv_branch
@@ -75,7 +77,8 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cCode,
             this.cName,
-            this.cAdress});
+            this.cAdress,
+            this.cRevenue});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -88,10 +91,12 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.EnableHeadersVisualStyles = false;
             this.dgv_branch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_branch.Location = new System.Drawing.Point(0, 0);
+            this.dgv_branch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_branch.Name = "dgv_branch";
             this.dgv_branch.RowHeadersVisible = false;
+            this.dgv_branch.RowHeadersWidth = 51;
             this.dgv_branch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_branch.Size = new System.Drawing.Size(595, 524);
+            this.dgv_branch.Size = new System.Drawing.Size(793, 645);
             this.dgv_branch.TabIndex = 0;
             this.dgv_branch.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_branch.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -119,35 +124,46 @@ namespace DBMS_2020.Features.Admin
             // pnl_control
             // 
             this.pnl_control.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_control.Location = new System.Drawing.Point(595, 0);
+            this.pnl_control.Location = new System.Drawing.Point(793, 0);
+            this.pnl_control.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_control.Name = "pnl_control";
-            this.pnl_control.Size = new System.Drawing.Size(289, 524);
+            this.pnl_control.Size = new System.Drawing.Size(386, 645);
             this.pnl_control.TabIndex = 1;
             // 
             // cCode
             // 
             this.cCode.HeaderText = "Mã Chi Nhánh";
+            this.cCode.MinimumWidth = 6;
             this.cCode.Name = "cCode";
             // 
             // cName
             // 
             this.cName.HeaderText = "Tên Chi Nhánh";
+            this.cName.MinimumWidth = 6;
             this.cName.Name = "cName";
             // 
             // cAdress
             // 
             this.cAdress.HeaderText = "Dịa Chỉ";
+            this.cAdress.MinimumWidth = 6;
             this.cAdress.Name = "cAdress";
             // 
-            // ManagerBrach
+            // cRevenue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.cRevenue.HeaderText = "Doanh Thu";
+            this.cRevenue.MinimumWidth = 6;
+            this.cRevenue.Name = "cRevenue";
+            // 
+            // ManagerBranch
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.Controls.Add(this.pnl_control);
             this.Controls.Add(this.pnl_data);
-            this.Name = "ManagerBrach";
-            this.Size = new System.Drawing.Size(884, 524);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "ManagerBranch";
+            this.Size = new System.Drawing.Size(1179, 645);
             this.pnl_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_branch)).EndInit();
             this.ResumeLayout(false);
@@ -162,5 +178,6 @@ namespace DBMS_2020.Features.Admin
         private System.Windows.Forms.DataGridViewTextBoxColumn cCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn cName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cAdress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cRevenue;
     }
 }
