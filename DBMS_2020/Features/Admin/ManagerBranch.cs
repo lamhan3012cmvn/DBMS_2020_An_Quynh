@@ -19,7 +19,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.branch = new Controllers.Admin();
-            loadDataGridiew();
+            //loadDataGridiew();
         }
 
         private void loadDataGridiew()
@@ -36,6 +36,21 @@ namespace DBMS_2020.Features.Admin
         }
 
         private void txt_SearchName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
         {
 
         }

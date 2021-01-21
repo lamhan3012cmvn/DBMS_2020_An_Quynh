@@ -20,7 +20,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.Menu = new Controllers.Admin();
-            loadDataGridiew();
+            //loadDataGridiew();
         }
         public void loadDataGridiew()
         {
@@ -34,5 +34,29 @@ namespace DBMS_2020.Features.Admin
             }    
         }
 
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_Menu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

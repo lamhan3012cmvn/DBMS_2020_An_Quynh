@@ -20,7 +20,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.staff = new Controllers.Admin();
-            loadDataGridiew();
+            //loadDataGridiew();
         }
         private void loadDataGridiew()
         {
@@ -34,6 +34,26 @@ namespace DBMS_2020.Features.Admin
                 dgv_staff.Rows.Add(item[0], item[1],  item[2], DoB, item[4],item[6]);
             }
             // Qua day load len view
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
