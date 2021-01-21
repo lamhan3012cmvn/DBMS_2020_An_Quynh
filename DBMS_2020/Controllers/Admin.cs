@@ -18,6 +18,8 @@ namespace DBMS_2020.Controllers
             this.tk = "sa";
             this.mk = "quýnhql2017";
         }
+
+        //LOAD DATA
         public DataSet loadViewManagerMenu()
         {
             //B1 Keets noi database
@@ -49,33 +51,115 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
-        public bool addStaff (string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, string tk, string mk , ref string err )
+        //NHÂN VIÊN
+        public bool addStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
             var result = db.MyExecuteNonQuery("execute DangKiNV_Proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau + "'," + SoLuongBan, CommandType.Text, ref err);
             return result;
         }
 
-        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, string tk, string mk, ref string err)
+        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
             var result = db.MyExecuteNonQuery("execute suaNV_proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau + "'," + SoLuongBan, CommandType.Text, ref err);
             return result;
         }
 
-        public bool deleteStaff (string MaNV, ref string err, string tk, string mk)
+        public bool deleteStaff (string MaNV, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
             var result = db.MyExecuteNonQuery("execute xoaNV_proc '"+ MaNV + "'", CommandType.Text, ref err);
             return result;
         }
-         
-        public bool AddMenu (string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, int DaBan, string tk, string mk, ref string err)
+
+        //MENU
+        public DataSet pick1Item (string MaMon)
         {
-            Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute themMon_proc '" + MaMon + "',N'" + TenMon + "'," + GiaTien + "','" + AnhMinhHoa + "'," + DaBan, CommandType.Text, ref err);
+            Database db = new Database(tk, mk);
+            var result =  db.ExecuteQueryDataSet("select * from pickMon_func ('" + MaMon + "')", CommandType.Text);
             return result;
         }
+
+        public bool addMenu(string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, int DaBan, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute themMon_proc '" + MaMon + "',N'" + TenMon + "','" + GiaTien + "','" + AnhMinhHoa + "','" + DaBan + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool updateMenu (string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, int DaBan, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute suaMon_proc '" + MaMon + "',N'" + TenMon + "'," + GiaTien + "','" + AnhMinhHoa + "','" + DaBan + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public DataSet top3Menu ()
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.ExecuteQueryDataSet("select * from top3MonAn_func", CommandType.Text);
+            return result;
+        }
+        //KHÁCH HÀNG
+        public bool addCustomer (string SDT, string TenKH, string DiaChi, int DaMua, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute themKH_proc '" + SDT + "',N'" + TenKH + "',N'" + DiaChi + "','" + DaMua + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool updateCustomer(string SDT, string TenKH, string DiaChi, int DaMua, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute suaKH_proc '" + SDT + "',N'" + TenKH + "',N'" + DiaChi + "','" + DaMua + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool deleteCustomner (string SDT, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute xoaKH_proc '" + SDT + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public DataSet top3Customer ()
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.ExecuteQueryDataSet("select * from top3KhachHang_func", CommandType.Text);
+            return result;
+        }
+
+        //CHI NHANH
+        public bool addBranch (string MaChiNhanh, string TenChiNhanh, string DiaChi, float DoanhThu, ref string err )
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute themCN_proc '" +MaChiNhanh + "',N'" + TenChiNhanh +"',N'" + DiaChi + "','" + DoanhThu + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool updateBranch(string MaChiNhanh, string TenChiNhanh, string DiaChi, float DoanhThu, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute suaCN_proc '" + MaChiNhanh + "',N'" + TenChiNhanh + "',N'" + DiaChi + "','" + DoanhThu + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public bool deleteBranch (string MaChiNhanh, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute xoaCN_proc '" + MaChiNhanh + "'", CommandType.Text, ref err);
+            return result;
+        }
+
+        public DataSet Top1Branch ()
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.ExecuteQueryDataSet("select * from topChiNhanh_func", CommandType.Text);
+            return result;
+        }
+
+
 
     }
 }

@@ -19,7 +19,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.branch = new Controllers.Admin();
-            //loadDataGridiew();
+            loadDataGridiew();
         }
 
         private void loadDataGridiew()
@@ -57,7 +57,9 @@ namespace DBMS_2020.Features.Admin
 
         private void dgv_branch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            this.txt_Code.Text = this.dgv_branch.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.txt_Name.Text = this.dgv_branch.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.txt_Address.Text = this.dgv_branch.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }
