@@ -126,6 +126,24 @@
     <Compile Include="Features\Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Staff\InforStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Staff\InforStaff.Designer.cs">
+      <DependentUpon>InforStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Staff\Sell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Staff\Sell.Designer.cs">
+      <DependentUpon>Sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Staff\Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Staff\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +188,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Staff\InforStaff.resx">
+      <DependentUpon>InforStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Staff\Sell.resx">
+      <DependentUpon>Sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Staff\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

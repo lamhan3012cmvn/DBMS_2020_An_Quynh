@@ -20,10 +20,6 @@ namespace DBMS_2020.Features.Admin
         public Admin()
         {
             InitializeComponent();
-            //loadManagerBranch();
-            //loadManagerCustomer();
-            //loadManagerMenu();
-            //loadManagerStaff();
         }
         private void loadManagerBranch()
         {
@@ -48,27 +44,74 @@ namespace DBMS_2020.Features.Admin
 
         private void lbl_Staff_Click(object sender, EventArgs e)
         {
-            resetPnl();
+            //resetPnl();
             loadManagerStaff();
+            if (!(this.customer is null))
+            {
+                this.customer.Dispose();
+            }
+            if (!(this.branch is null))
+            {
+                this.branch.Dispose();
+            }
+            if (!(this.menu is null))
+            {
+                this.menu.Dispose();
+            }
         }
 
         private void lbl_bracnh_Click(object sender, EventArgs e)
         {
-            resetPnl();
+            //resetPnl();
             loadManagerBranch();
-
+            if (!(this.staff is null))
+            {
+                this.staff.Dispose();
+            }
+            if (!(this.customer is null))
+            {
+                this.customer.Dispose();
+            }
+            if (!(this.menu is null))
+            {
+                this.menu.Dispose();
+            }
         }
 
         private void lbl_Customer_Click(object sender, EventArgs e)
         {
-            resetPnl();
+            //resetPnl();
             loadManagerCustomer();
+            if (!(this.staff is null))
+            {
+                this.staff.Dispose();
+            }
+            if (!(this.branch is null))
+            {
+                this.branch.Dispose();
+            }
+            if (!(this.menu is null))
+            {
+                this.menu.Dispose();
+            }
         }
 
         private void lbl_Menu_Click(object sender, EventArgs e)
         {
-            resetPnl();
+            //resetPnl();
             loadManagerMenu();
+            if (!(this.staff is null))
+            {
+                this.staff.Dispose();
+            }
+            if (!(this.customer is null))
+            {
+                this.customer.Dispose();
+            }
+            if (!(this.branch is null))
+            {
+                this.branch.Dispose();
+            }
         }
         private void resetPnl()
         {

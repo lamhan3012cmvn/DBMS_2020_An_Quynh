@@ -18,7 +18,8 @@ namespace DBMS_2020.Features
             InitializeComponent();
             //UILogin();
             //UIRegistration();
-            UIAdmin();
+            //UIAdmin();
+            UIStaff();
 
         }
         public void UILogin()
@@ -35,6 +36,11 @@ namespace DBMS_2020.Features
         {
             Admin.Admin admin = new Admin.Admin();
             MethodHelps.addControl(this.pnl_load_ui, admin);
+        }
+        public void UIStaff()
+        {
+            Staff.Staff staff = new Staff.Staff();
+            MethodHelps.addControl(this.pnl_load_ui,staff);
         }
     }
 }
