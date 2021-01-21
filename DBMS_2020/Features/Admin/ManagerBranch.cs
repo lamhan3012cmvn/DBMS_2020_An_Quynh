@@ -34,5 +34,10 @@ namespace DBMS_2020.Features.Admin
             }
             // Qua day load len view
         }
+
+        private void txt_SearchName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
