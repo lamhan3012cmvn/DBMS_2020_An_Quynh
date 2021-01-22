@@ -18,8 +18,8 @@ namespace DBMS_2020.Features
             InitializeComponent();
             //UILogin();
             //UIRegistration();
-            //UIAdmin();
-            UIStaff();
+            UIAdmin();
+            //UIStaff();
 
         }
         public void UILogin()
