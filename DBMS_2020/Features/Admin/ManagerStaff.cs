@@ -14,6 +14,7 @@ namespace DBMS_2020.Features.Admin
     
     public partial class ManagerStaff : UserControl
     {
+        private string err;
         DataTable DT;
         private Controllers.Admin staff;
         public ManagerStaff()
@@ -37,17 +38,17 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-
+            this.staff.updateStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,MatKhau:"1234",err:ref err);
         }
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
-
+            this.staff.deleteStaff(MaNV:this.txt_Code.Text,err:ref err);
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
+            this.staff.addStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,MatKhau:"1234",SoLuongBan:0,err:ref this.err);
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -60,10 +61,25 @@ namespace DBMS_2020.Features.Admin
             this.txt_Code.Text = this.dgv_staff.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.txt_Name.Text = this.dgv_staff.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.txt_Phone.Text = this.dgv_staff.Rows[e.RowIndex].Cells[2].Value.ToString();
-            this.txt_DoB.Text = this.dgv_staff.Rows[e.RowIndex].Cells[3].Value.ToString();
+           // this.date_birthDay.Value = new DateTime(this.dgv_staff.Rows[e.RowIndex].Cells[3].Value.ToString());
             this.txt_BranchCode.Text = this.dgv_staff.Rows[e.RowIndex].Cells[4].Value.ToString();
            
 
         }
+
+        private void txt_SearchName_TextChanged(object sender, EventArgs e)
+        {
+            var data =this.staff.searchStaff(this.txt_SearchName.Text);
+            DT = data.Tables[0];
+            this.dgv_staff.Rows.Clear();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                var item = DT.Rows[i];
+                var DoB = item[3].ToString().Split(' ')[0];
+                dgv_staff.Rows.Add(item[0], item[1], item[2], DoB, item[4], item[6]);
+            }
+        }
+
     }
 }
+

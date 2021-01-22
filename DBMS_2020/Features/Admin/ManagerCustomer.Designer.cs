@@ -40,6 +40,8 @@
             this.pnl_data = new Guna.UI.WinForms.GunaLinePanel();
             this.pnl_control = new Guna.UI.WinForms.GunaPanel();
             this.pnl_CRUD = new Guna.UI.WinForms.GunaPanel();
+            this.txt_bought = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.btn_Del = new Guna.UI.WinForms.GunaButton();
             this.btn_Update = new Guna.UI.WinForms.GunaButton();
             this.btn_Add = new Guna.UI.WinForms.GunaButton();
@@ -51,10 +53,8 @@
             this.lbl_user_name = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Search = new Guna.UI.WinForms.GunaPanel();
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txt_SearchCustomer = new Guna.UI.WinForms.GunaLineTextBox();
             this.txt_SearchName = new Guna.UI.WinForms.GunaLabel();
-            this.txt_bought = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customer)).BeginInit();
             this.pnl_data.SuspendLayout();
             this.pnl_control.SuspendLayout();
@@ -64,6 +64,8 @@
             // 
             // dgv_customer
             // 
+            this.dgv_customer.AllowUserToAddRows = false;
+            this.dgv_customer.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
@@ -100,12 +102,11 @@
             this.dgv_customer.EnableHeadersVisualStyles = false;
             this.dgv_customer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_customer.Location = new System.Drawing.Point(0, 0);
-            this.dgv_customer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_customer.Name = "dgv_customer";
             this.dgv_customer.RowHeadersVisible = false;
             this.dgv_customer.RowHeadersWidth = 51;
             this.dgv_customer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_customer.Size = new System.Drawing.Size(793, 645);
+            this.dgv_customer.Size = new System.Drawing.Size(595, 524);
             this.dgv_customer.TabIndex = 0;
             this.dgv_customer.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_customer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -163,9 +164,8 @@
             this.pnl_data.LineRight = 2;
             this.pnl_data.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnl_data.Location = new System.Drawing.Point(0, 0);
-            this.pnl_data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_data.Name = "pnl_data";
-            this.pnl_data.Size = new System.Drawing.Size(793, 645);
+            this.pnl_data.Size = new System.Drawing.Size(595, 524);
             this.pnl_data.TabIndex = 2;
             // 
             // pnl_control
@@ -173,10 +173,9 @@
             this.pnl_control.Controls.Add(this.pnl_CRUD);
             this.pnl_control.Controls.Add(this.pnl_Search);
             this.pnl_control.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_control.Location = new System.Drawing.Point(793, 0);
-            this.pnl_control.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_control.Location = new System.Drawing.Point(595, 0);
             this.pnl_control.Name = "pnl_control";
-            this.pnl_control.Size = new System.Drawing.Size(386, 645);
+            this.pnl_control.Size = new System.Drawing.Size(289, 524);
             this.pnl_control.TabIndex = 3;
             // 
             // pnl_CRUD
@@ -194,11 +193,38 @@
             this.pnl_CRUD.Controls.Add(this.txt_PhoneNumber);
             this.pnl_CRUD.Controls.Add(this.lbl_user_name);
             this.pnl_CRUD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_CRUD.Location = new System.Drawing.Point(0, 101);
-            this.pnl_CRUD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_CRUD.Location = new System.Drawing.Point(0, 82);
             this.pnl_CRUD.Name = "pnl_CRUD";
-            this.pnl_CRUD.Size = new System.Drawing.Size(386, 544);
+            this.pnl_CRUD.Size = new System.Drawing.Size(289, 442);
             this.pnl_CRUD.TabIndex = 14;
+            // 
+            // txt_bought
+            // 
+            this.txt_bought.Animated = true;
+            this.txt_bought.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_bought.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_bought.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_bought.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_bought.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_bought.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_bought.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_bought.LineSize = 2;
+            this.txt_bought.Location = new System.Drawing.Point(19, 260);
+            this.txt_bought.Name = "txt_bought";
+            this.txt_bought.PasswordChar = '\0';
+            this.txt_bought.Size = new System.Drawing.Size(81, 32);
+            this.txt_bought.TabIndex = 23;
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(15, 236);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(80, 20);
+            this.gunaLabel3.TabIndex = 22;
+            this.gunaLabel3.Text = "SL Đã Mua";
             // 
             // btn_Del
             // 
@@ -214,17 +240,16 @@
             this.btn_Del.ForeColor = System.Drawing.Color.White;
             this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
             this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Del.Location = new System.Drawing.Point(213, 411);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Del.Location = new System.Drawing.Point(160, 334);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Del.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Del.OnHoverImage = null;
             this.btn_Del.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Del.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Del.Radius = 20;
-            this.btn_Del.Size = new System.Drawing.Size(151, 52);
+            this.btn_Del.Size = new System.Drawing.Size(113, 42);
             this.btn_Del.TabIndex = 21;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -244,17 +269,16 @@
             this.btn_Update.ForeColor = System.Drawing.Color.White;
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
             this.btn_Update.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Update.Location = new System.Drawing.Point(213, 351);
-            this.btn_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Update.Location = new System.Drawing.Point(160, 285);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Update.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Update.OnHoverImage = null;
             this.btn_Update.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Update.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Update.Radius = 20;
-            this.btn_Update.Size = new System.Drawing.Size(151, 52);
+            this.btn_Update.Size = new System.Drawing.Size(113, 42);
             this.btn_Update.TabIndex = 20;
             this.btn_Update.Text = "Sửa";
             this.btn_Update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -274,17 +298,16 @@
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(213, 291);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Location = new System.Drawing.Point(160, 236);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Add.OnHoverImage = null;
             this.btn_Add.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Add.Radius = 20;
-            this.btn_Add.Size = new System.Drawing.Size(151, 52);
+            this.btn_Add.Size = new System.Drawing.Size(113, 42);
             this.btn_Add.TabIndex = 19;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -301,11 +324,10 @@
             this.txt_Address.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Address.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Address.LineSize = 2;
-            this.txt_Address.Location = new System.Drawing.Point(25, 229);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Address.Location = new System.Drawing.Point(19, 186);
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.PasswordChar = '\0';
-            this.txt_Address.Size = new System.Drawing.Size(307, 40);
+            this.txt_Address.Size = new System.Drawing.Size(230, 32);
             this.txt_Address.TabIndex = 18;
             // 
             // gunaLabel2
@@ -313,10 +335,9 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(20, 200);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(15, 162);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(73, 25);
+            this.gunaLabel2.Size = new System.Drawing.Size(57, 20);
             this.gunaLabel2.TabIndex = 17;
             this.gunaLabel2.Text = "Địa Chỉ";
             // 
@@ -331,11 +352,10 @@
             this.txt_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Name.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Name.LineSize = 2;
-            this.txt_Name.Location = new System.Drawing.Point(25, 139);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Name.Location = new System.Drawing.Point(19, 113);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
-            this.txt_Name.Size = new System.Drawing.Size(301, 44);
+            this.txt_Name.Size = new System.Drawing.Size(226, 36);
             this.txt_Name.TabIndex = 16;
             // 
             // gunaLabel1
@@ -343,10 +363,9 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(20, 110);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(15, 89);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(148, 25);
+            this.gunaLabel1.Size = new System.Drawing.Size(116, 20);
             this.gunaLabel1.TabIndex = 15;
             this.gunaLabel1.Text = "Tên Khách Hàng";
             // 
@@ -361,11 +380,10 @@
             this.txt_PhoneNumber.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_PhoneNumber.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_PhoneNumber.LineSize = 2;
-            this.txt_PhoneNumber.Location = new System.Drawing.Point(25, 45);
-            this.txt_PhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PhoneNumber.Location = new System.Drawing.Point(19, 37);
             this.txt_PhoneNumber.Name = "txt_PhoneNumber";
             this.txt_PhoneNumber.PasswordChar = '\0';
-            this.txt_PhoneNumber.Size = new System.Drawing.Size(292, 39);
+            this.txt_PhoneNumber.Size = new System.Drawing.Size(219, 32);
             this.txt_PhoneNumber.TabIndex = 14;
             // 
             // lbl_user_name
@@ -373,10 +391,9 @@
             this.lbl_user_name.AutoSize = true;
             this.lbl_user_name.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_user_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_user_name.Location = new System.Drawing.Point(20, 16);
-            this.lbl_user_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_user_name.Location = new System.Drawing.Point(15, 13);
             this.lbl_user_name.Name = "lbl_user_name";
-            this.lbl_user_name.Size = new System.Drawing.Size(129, 25);
+            this.lbl_user_name.Size = new System.Drawing.Size(102, 20);
             this.lbl_user_name.TabIndex = 13;
             this.lbl_user_name.Text = "Số Điện Thoại";
             // 
@@ -384,13 +401,12 @@
             // 
             this.pnl_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.pnl_Search.Controls.Add(this.btn_Back);
-            this.pnl_Search.Controls.Add(this.gunaLineTextBox1);
+            this.pnl_Search.Controls.Add(this.txt_SearchCustomer);
             this.pnl_Search.Controls.Add(this.txt_SearchName);
             this.pnl_Search.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Search.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Search.Name = "pnl_Search";
-            this.pnl_Search.Size = new System.Drawing.Size(386, 101);
+            this.pnl_Search.Size = new System.Drawing.Size(289, 82);
             this.pnl_Search.TabIndex = 13;
             // 
             // btn_Back
@@ -407,90 +423,57 @@
             this.btn_Back.ForeColor = System.Drawing.Color.White;
             this.btn_Back.Image = null;
             this.btn_Back.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Back.Location = new System.Drawing.Point(8, 0);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Back.Location = new System.Drawing.Point(6, 0);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Back.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Back.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Back.OnHoverImage = null;
             this.btn_Back.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Back.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.btn_Back.Size = new System.Drawing.Size(141, 38);
+            this.btn_Back.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_Back.Size = new System.Drawing.Size(106, 31);
             this.btn_Back.TabIndex = 23;
             this.btn_Back.Text = "Trở lại";
             this.btn_Back.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // gunaLineTextBox1
+            // txt_SearchCustomer
             // 
-            this.gunaLineTextBox1.Animated = true;
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.LineSize = 2;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(233, 43);
-            this.gunaLineTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '*';
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(149, 34);
-            this.gunaLineTextBox1.TabIndex = 22;
+            this.txt_SearchCustomer.Animated = true;
+            this.txt_SearchCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_SearchCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SearchCustomer.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_SearchCustomer.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SearchCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_SearchCustomer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_SearchCustomer.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_SearchCustomer.LineSize = 2;
+            this.txt_SearchCustomer.Location = new System.Drawing.Point(175, 35);
+            this.txt_SearchCustomer.Name = "txt_SearchCustomer";
+            this.txt_SearchCustomer.PasswordChar = '\0';
+            this.txt_SearchCustomer.Size = new System.Drawing.Size(112, 30);
+            this.txt_SearchCustomer.TabIndex = 22;
+            this.txt_SearchCustomer.TextChanged += new System.EventHandler(this.txt_SearchCustomer_TextChanged);
             // 
             // txt_SearchName
             // 
             this.txt_SearchName.AutoSize = true;
             this.txt_SearchName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_SearchName.Location = new System.Drawing.Point(135, 52);
-            this.txt_SearchName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txt_SearchName.Location = new System.Drawing.Point(101, 42);
             this.txt_SearchName.Name = "txt_SearchName";
-            this.txt_SearchName.Size = new System.Drawing.Size(90, 25);
+            this.txt_SearchName.Size = new System.Drawing.Size(72, 20);
             this.txt_SearchName.TabIndex = 21;
             this.txt_SearchName.Text = "Tìm Kiếm";
             // 
-            // txt_bought
-            // 
-            this.txt_bought.Animated = true;
-            this.txt_bought.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.txt_bought.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_bought.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_bought.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bought.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_bought.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txt_bought.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_bought.LineSize = 2;
-            this.txt_bought.Location = new System.Drawing.Point(25, 320);
-            this.txt_bought.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_bought.Name = "txt_bought";
-            this.txt_bought.PasswordChar = '\0';
-            this.txt_bought.Size = new System.Drawing.Size(108, 40);
-            this.txt_bought.TabIndex = 23;
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(20, 291);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(102, 25);
-            this.gunaLabel3.TabIndex = 22;
-            this.gunaLabel3.Text = "SL Đã Mua";
-            // 
             // ManagerCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_control);
             this.Controls.Add(this.pnl_data);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ManagerCustomer";
-            this.Size = new System.Drawing.Size(1179, 645);
+            this.Size = new System.Drawing.Size(884, 524);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_customer)).EndInit();
             this.pnl_data.ResumeLayout(false);
             this.pnl_control.ResumeLayout(false);
@@ -523,7 +506,7 @@
         private Guna.UI.WinForms.GunaLabel lbl_user_name;
         private Guna.UI.WinForms.GunaPanel pnl_Search;
         private Guna.UI.WinForms.GunaButton btn_Back;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaLineTextBox txt_SearchCustomer;
         private Guna.UI.WinForms.GunaLabel txt_SearchName;
         private Guna.UI.WinForms.GunaLineTextBox txt_bought;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;

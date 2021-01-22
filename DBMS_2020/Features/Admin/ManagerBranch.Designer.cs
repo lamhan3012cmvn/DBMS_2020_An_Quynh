@@ -29,9 +29,9 @@ namespace DBMS_2020.Features.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerBranch));
             this.pnl_data = new Guna.UI.WinForms.GunaLinePanel();
             this.dgv_branch = new Guna.UI.WinForms.GunaDataGridView();
@@ -52,8 +52,8 @@ namespace DBMS_2020.Features.Admin
             this.lbl_user_name = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Search = new Guna.UI.WinForms.GunaPanel();
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txt_SearchName = new Guna.UI.WinForms.GunaLabel();
+            this.txt_SearchName = new Guna.UI.WinForms.GunaLineTextBox();
+            this.lblNull = new Guna.UI.WinForms.GunaLabel();
             this.pnl_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_branch)).BeginInit();
             this.pnl_control.SuspendLayout();
@@ -69,55 +69,53 @@ namespace DBMS_2020.Features.Admin
             this.pnl_data.LineRight = 2;
             this.pnl_data.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnl_data.Location = new System.Drawing.Point(0, 0);
-            this.pnl_data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_data.Name = "pnl_data";
-            this.pnl_data.Size = new System.Drawing.Size(793, 645);
+            this.pnl_data.Size = new System.Drawing.Size(595, 524);
             this.pnl_data.TabIndex = 0;
             // 
             // dgv_branch
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgv_branch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_branch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_branch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_branch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_branch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_branch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv_branch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_branch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_branch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_branch.ColumnHeadersHeight = 21;
             this.dgv_branch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cCode,
             this.cName,
             this.cAdress,
             this.cRevenue});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_branch.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_branch.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_branch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_branch.EnableHeadersVisualStyles = false;
             this.dgv_branch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_branch.Location = new System.Drawing.Point(0, 0);
-            this.dgv_branch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_branch.Name = "dgv_branch";
             this.dgv_branch.RowHeadersVisible = false;
             this.dgv_branch.RowHeadersWidth = 51;
             this.dgv_branch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_branch.Size = new System.Drawing.Size(793, 645);
+            this.dgv_branch.Size = new System.Drawing.Size(595, 524);
             this.dgv_branch.TabIndex = 0;
             this.dgv_branch.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_branch.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -172,10 +170,9 @@ namespace DBMS_2020.Features.Admin
             this.pnl_control.Controls.Add(this.pnl_CRUD);
             this.pnl_control.Controls.Add(this.pnl_Search);
             this.pnl_control.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_control.Location = new System.Drawing.Point(793, 0);
-            this.pnl_control.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_control.Location = new System.Drawing.Point(595, 0);
             this.pnl_control.Name = "pnl_control";
-            this.pnl_control.Size = new System.Drawing.Size(386, 645);
+            this.pnl_control.Size = new System.Drawing.Size(289, 524);
             this.pnl_control.TabIndex = 1;
             // 
             // pnl_CRUD
@@ -190,10 +187,9 @@ namespace DBMS_2020.Features.Admin
             this.pnl_CRUD.Controls.Add(this.txt_Code);
             this.pnl_CRUD.Controls.Add(this.lbl_user_name);
             this.pnl_CRUD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_CRUD.Location = new System.Drawing.Point(0, 101);
-            this.pnl_CRUD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_CRUD.Location = new System.Drawing.Point(0, 82);
             this.pnl_CRUD.Name = "pnl_CRUD";
-            this.pnl_CRUD.Size = new System.Drawing.Size(386, 544);
+            this.pnl_CRUD.Size = new System.Drawing.Size(289, 442);
             this.pnl_CRUD.TabIndex = 14;
             // 
             // btn_Del
@@ -210,17 +206,16 @@ namespace DBMS_2020.Features.Admin
             this.btn_Del.ForeColor = System.Drawing.Color.White;
             this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
             this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Del.Location = new System.Drawing.Point(211, 408);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Del.Location = new System.Drawing.Point(158, 332);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Del.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Del.OnHoverImage = null;
             this.btn_Del.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Del.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Del.Radius = 20;
-            this.btn_Del.Size = new System.Drawing.Size(151, 52);
+            this.btn_Del.Size = new System.Drawing.Size(113, 42);
             this.btn_Del.TabIndex = 21;
             this.btn_Del.Text = "Xóa";
             this.btn_Del.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -240,20 +235,20 @@ namespace DBMS_2020.Features.Admin
             this.btn_Update.ForeColor = System.Drawing.Color.White;
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
             this.btn_Update.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Update.Location = new System.Drawing.Point(212, 330);
-            this.btn_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Update.Location = new System.Drawing.Point(159, 268);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Update.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Update.OnHoverImage = null;
             this.btn_Update.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Update.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Update.Radius = 20;
-            this.btn_Update.Size = new System.Drawing.Size(151, 52);
+            this.btn_Update.Size = new System.Drawing.Size(113, 42);
             this.btn_Update.TabIndex = 20;
             this.btn_Update.Text = "Sửa";
             this.btn_Update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Add
             // 
@@ -269,17 +264,16 @@ namespace DBMS_2020.Features.Admin
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(29, 330);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Location = new System.Drawing.Point(22, 268);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Add.OnHoverImage = null;
             this.btn_Add.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Add.Radius = 20;
-            this.btn_Add.Size = new System.Drawing.Size(151, 52);
+            this.btn_Add.Size = new System.Drawing.Size(113, 42);
             this.btn_Add.TabIndex = 19;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -291,27 +285,25 @@ namespace DBMS_2020.Features.Admin
             this.txt_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.txt_Address.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Address.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Address.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txt_Address.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Address.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Address.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Address.LineSize = 2;
-            this.txt_Address.Location = new System.Drawing.Point(61, 258);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Address.Location = new System.Drawing.Point(45, 177);
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.PasswordChar = '\0';
-            this.txt_Address.Size = new System.Drawing.Size(301, 52);
+            this.txt_Address.Size = new System.Drawing.Size(226, 30);
             this.txt_Address.TabIndex = 18;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(21, 224);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(16, 154);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(92, 32);
+            this.gunaLabel2.Size = new System.Drawing.Size(57, 20);
             this.gunaLabel2.TabIndex = 17;
             this.gunaLabel2.Text = "Địa Chỉ";
             // 
@@ -321,27 +313,25 @@ namespace DBMS_2020.Features.Admin
             this.txt_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.txt_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Name.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Name.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txt_Name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Name.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Name.LineSize = 2;
-            this.txt_Name.Location = new System.Drawing.Point(61, 154);
-            this.txt_Name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Name.Location = new System.Drawing.Point(45, 111);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
-            this.txt_Name.Size = new System.Drawing.Size(301, 52);
+            this.txt_Name.Size = new System.Drawing.Size(226, 30);
             this.txt_Name.TabIndex = 16;
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(21, 119);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(10, 88);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(174, 32);
+            this.gunaLabel1.Size = new System.Drawing.Size(104, 20);
             this.gunaLabel1.TabIndex = 15;
             this.gunaLabel1.Text = "Tên Chi Nhánh";
             // 
@@ -351,40 +341,37 @@ namespace DBMS_2020.Features.Admin
             this.txt_Code.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.txt_Code.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Code.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Code.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txt_Code.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Code.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Code.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Code.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Code.LineSize = 2;
-            this.txt_Code.Location = new System.Drawing.Point(61, 59);
-            this.txt_Code.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Code.Location = new System.Drawing.Point(46, 43);
             this.txt_Code.Name = "txt_Code";
             this.txt_Code.PasswordChar = '\0';
-            this.txt_Code.Size = new System.Drawing.Size(301, 52);
+            this.txt_Code.Size = new System.Drawing.Size(226, 30);
             this.txt_Code.TabIndex = 14;
             // 
             // lbl_user_name
             // 
             this.lbl_user_name.AutoSize = true;
-            this.lbl_user_name.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lbl_user_name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_user_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_user_name.Location = new System.Drawing.Point(21, 25);
-            this.lbl_user_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_user_name.Location = new System.Drawing.Point(16, 20);
             this.lbl_user_name.Name = "lbl_user_name";
-            this.lbl_user_name.Size = new System.Drawing.Size(170, 32);
+            this.lbl_user_name.Size = new System.Drawing.Size(102, 20);
             this.lbl_user_name.TabIndex = 13;
             this.lbl_user_name.Text = "Mã Chi Nhánh";
             // 
             // pnl_Search
             // 
             this.pnl_Search.Controls.Add(this.btn_Back);
-            this.pnl_Search.Controls.Add(this.gunaLineTextBox1);
             this.pnl_Search.Controls.Add(this.txt_SearchName);
+            this.pnl_Search.Controls.Add(this.lblNull);
             this.pnl_Search.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Search.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Search.Name = "pnl_Search";
-            this.pnl_Search.Size = new System.Drawing.Size(386, 101);
+            this.pnl_Search.Size = new System.Drawing.Size(289, 82);
             this.pnl_Search.TabIndex = 13;
             // 
             // btn_Back
@@ -401,62 +388,58 @@ namespace DBMS_2020.Features.Admin
             this.btn_Back.ForeColor = System.Drawing.Color.White;
             this.btn_Back.Image = null;
             this.btn_Back.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Back.Location = new System.Drawing.Point(4, 0);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Back.Location = new System.Drawing.Point(3, 0);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Back.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Back.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Back.OnHoverImage = null;
             this.btn_Back.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Back.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.btn_Back.Size = new System.Drawing.Size(141, 38);
+            this.btn_Back.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_Back.Size = new System.Drawing.Size(106, 31);
             this.btn_Back.TabIndex = 23;
             this.btn_Back.Text = "Trở lại";
             this.btn_Back.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // gunaLineTextBox1
-            // 
-            this.gunaLineTextBox1.Animated = true;
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gunaLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.LineSize = 2;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(179, 28);
-            this.gunaLineTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '*';
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(184, 52);
-            this.gunaLineTextBox1.TabIndex = 22;
-            // 
             // txt_SearchName
             // 
-            this.txt_SearchName.AutoSize = true;
-            this.txt_SearchName.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txt_SearchName.Animated = true;
+            this.txt_SearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_SearchName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SearchName.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_SearchName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_SearchName.Location = new System.Drawing.Point(51, 48);
-            this.txt_SearchName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txt_SearchName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_SearchName.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_SearchName.LineSize = 2;
+            this.txt_SearchName.Location = new System.Drawing.Point(133, 39);
             this.txt_SearchName.Name = "txt_SearchName";
-            this.txt_SearchName.Size = new System.Drawing.Size(116, 32);
-            this.txt_SearchName.TabIndex = 21;
-            this.txt_SearchName.Text = "Tìm Kiếm";
-            this.txt_SearchName.Click += new System.EventHandler(this.txt_SearchName_Click);
+            this.txt_SearchName.PasswordChar = '\0';
+            this.txt_SearchName.Size = new System.Drawing.Size(138, 30);
+            this.txt_SearchName.TabIndex = 22;
+            this.txt_SearchName.TextChanged += new System.EventHandler(this.txt_SearchName_TextChanged);
+            // 
+            // lblNull
+            // 
+            this.lblNull.AutoSize = true;
+            this.lblNull.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNull.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lblNull.Location = new System.Drawing.Point(42, 49);
+            this.lblNull.Name = "lblNull";
+            this.lblNull.Size = new System.Drawing.Size(72, 20);
+            this.lblNull.TabIndex = 21;
+            this.lblNull.Text = "Tìm Kiếm";
             // 
             // ManagerBranch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.Controls.Add(this.pnl_control);
             this.Controls.Add(this.pnl_data);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ManagerBranch";
-            this.Size = new System.Drawing.Size(1179, 645);
+            this.Size = new System.Drawing.Size(884, 524);
             this.pnl_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_branch)).EndInit();
             this.pnl_control.ResumeLayout(false);
@@ -485,8 +468,8 @@ namespace DBMS_2020.Features.Admin
         private Guna.UI.WinForms.GunaLineTextBox txt_Code;
         private Guna.UI.WinForms.GunaLabel lbl_user_name;
         private Guna.UI.WinForms.GunaPanel pnl_Search;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
-        private Guna.UI.WinForms.GunaLabel txt_SearchName;
+        private Guna.UI.WinForms.GunaLineTextBox txt_SearchName;
+        private Guna.UI.WinForms.GunaLabel lblNull;
         private Guna.UI.WinForms.GunaButton btn_Del;
         private Guna.UI.WinForms.GunaButton btn_Update;
         private Guna.UI.WinForms.GunaButton btn_Add;

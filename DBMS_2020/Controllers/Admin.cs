@@ -55,14 +55,15 @@ namespace DBMS_2020.Controllers
         public bool addStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute DangKiNV_Proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau + "'," + SoLuongBan, CommandType.Text, ref err);
+            //DangKiNV_Proc @tk varchar(10), @mk varchar(20),@tenNV nvarchar(50),@sdt nvarchar(50),@machinhanh nvarchar(50),@soluongban int
+            var result = db.MyExecuteNonQuery("execute DangKiNV_Proc '" + MaNV + "',N'" + MatKhau + "','" + TenNV + "','" + SDT + "','" + ngaySinh + "','" + MaChiNhanh + "'," + SoLuongBan, CommandType.Text, ref err);
             return result;
         }
 
-        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, int SoLuongBan, ref string err)
+        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute suaNV_proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau + "'," + SoLuongBan, CommandType.Text, ref err);
+            var result = db.MyExecuteNonQuery("execute suaNV_proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau, CommandType.Text, ref err);
             return result;
         }
 
@@ -71,6 +72,11 @@ namespace DBMS_2020.Controllers
             Database db = new Database(this.tk, this.mk);
             var result = db.MyExecuteNonQuery("execute xoaNV_proc '"+ MaNV + "'", CommandType.Text, ref err);
             return result;
+        }
+        public DataSet searchStaff(string name)
+        {
+            Database db = new Database(this.tk, this.mk);
+            return db.ExecuteQueryDataSet("select * from timkiemNV_func (N'" + name + "')", CommandType.Text);
         }
 
         //MENU
@@ -81,6 +87,7 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
+
         public bool addMenu(string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, int DaBan, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
@@ -88,11 +95,15 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
-        public bool updateMenu (string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, int DaBan, ref string err)
+        public bool updateMenu (string MaMon, string TenMon, float GiaTien, string AnhMinhHoa, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute suaMon_proc '" + MaMon + "',N'" + TenMon + "'," + GiaTien + "','" + AnhMinhHoa + "','" + DaBan + "'", CommandType.Text, ref err);
+            var result = db.MyExecuteNonQuery("execute suaMon_proc '" + MaMon + "',N'" + TenMon + "','" + GiaTien + "','" + AnhMinhHoa+ "'", CommandType.Text, ref err);
             return result;
+        }
+        public bool deleteMenu(string MaMon)
+        {
+            return true;
         }
 
         public DataSet top3Menu ()
@@ -102,6 +113,12 @@ namespace DBMS_2020.Controllers
             return result;
         }
         //KHÁCH HÀNG
+
+        public DataSet pickCustomer(string code)
+        {
+            Database db = new Database(this.tk, this.mk);
+            return db.ExecuteQueryDataSet("select * from pickCustomer_func ('" + code + "')", CommandType.Text);
+        }
         public bool addCustomer (string SDT, string TenKH, string DiaChi, int DaMua, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
@@ -109,10 +126,10 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
-        public bool updateCustomer(string SDT, string TenKH, string DiaChi, int DaMua, ref string err)
+        public bool updateCustomer(string SDT, string TenKH, string DiaChi, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute suaKH_proc '" + SDT + "',N'" + TenKH + "',N'" + DiaChi + "','" + DaMua + "'", CommandType.Text, ref err);
+            var result = db.MyExecuteNonQuery("execute suaKH_proc '" + SDT + "',N'" + TenKH + "',N'" + DiaChi+"'", CommandType.Text, ref err);
             return result;
         }
 
@@ -121,6 +138,12 @@ namespace DBMS_2020.Controllers
             Database db = new Database(this.tk, this.mk);
             var result = db.MyExecuteNonQuery("execute xoaKH_proc '" + SDT + "'", CommandType.Text, ref err);
             return result;
+        }
+
+        public DataSet searchCustomer(string name)
+        {
+            Database db = new Database(this.tk, this.mk);
+            return db.ExecuteQueryDataSet("select * from timkiemKH_func (N'" + name + "')", CommandType.Text);
         }
 
         public DataSet top3Customer ()
@@ -138,10 +161,10 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
-        public bool updateBranch(string MaChiNhanh, string TenChiNhanh, string DiaChi, float DoanhThu, ref string err)
+        public bool updateBranch(string MaChiNhanh, string TenChiNhanh, string DiaChi, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute suaCN_proc '" + MaChiNhanh + "',N'" + TenChiNhanh + "',N'" + DiaChi + "','" + DoanhThu + "'", CommandType.Text, ref err);
+            var result = db.MyExecuteNonQuery("execute suaCN_proc '" + MaChiNhanh + "',N'" + TenChiNhanh + "',N'" + DiaChi + "'", CommandType.Text, ref err);
             return result;
         }
 
@@ -157,6 +180,12 @@ namespace DBMS_2020.Controllers
             Database db = new Database(this.tk, this.mk);
             var result = db.ExecuteQueryDataSet("select * from topChiNhanh_func", CommandType.Text);
             return result;
+        }
+
+        public DataSet searchBrach(string name)
+        {
+            Database db = new Database(this.tk, this.mk);
+            return db.ExecuteQueryDataSet("select * from timkiemCN_func (N'" + name + "')", CommandType.Text);
         }
 
 

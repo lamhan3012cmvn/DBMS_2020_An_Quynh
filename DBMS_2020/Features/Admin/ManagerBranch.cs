@@ -13,6 +13,7 @@ namespace DBMS_2020.Features.Admin
 {
     public partial class ManagerBranch : UserControl
     {
+        private string err;
         DataTable DT;
         private Controllers.Admin branch;
         public ManagerBranch()
@@ -35,10 +36,7 @@ namespace DBMS_2020.Features.Admin
             // Qua day load len view
         }
 
-        private void txt_SearchName_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -47,7 +45,32 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
+            DataSet check = this.branch.pickCustomer(this.txt_Code.Text);
+            if (check.Tables[0].Rows.Count == 0)
+            {
+                this.branch.addBranch(MaChiNhanh: this.txt_Code.Text, TenChiNhanh: this.txt_Name.Text, DiaChi: this.txt_Address.Text, DoanhThu: 0, ref err);
+                if (err == null)
+                {
+                    MessageBox.Show("Thêm Chi Nhánh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        loadDataGridiew();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    err = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chi Nhánh đã tồn tại trong menu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btn_Del_Click(object sender, EventArgs e)
@@ -57,9 +80,57 @@ namespace DBMS_2020.Features.Admin
 
         private void dgv_branch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0)
+                return;
+            this.txt_Code.Enabled = false;
             this.txt_Code.Text = this.dgv_branch.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.txt_Name.Text = this.dgv_branch.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.txt_Address.Text = this.dgv_branch.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            DataSet check = this.branch.pickCustomer(this.txt_Code.Text);
+            if (check.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm chi nhánh để update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.branch.updateBranch(MaChiNhanh: this.txt_Code.Text, TenChiNhanh: this.txt_Name.Text, DiaChi: this.txt_Address.Text, ref err);
+                if (err == null)
+                {
+                    MessageBox.Show("Update chi nhánh thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        loadDataGridiew();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    err = null;
+                }
+            }
+        }
+
+        private void txt_SearchName_TextChanged(object sender, EventArgs e)
+        {
+            var data = this.branch.searchBrach(this.txt_SearchName.Text);
+            DT = data.Tables[0];
+            this.dgv_branch.Rows.Clear();
+            for (int i = 0; i < DT.Rows.Count; i++)
+            {
+                var item = DT.Rows[i];
+                dgv_branch.Rows.Add(item[0], item[1], item[2], item[3]);
+            }
+            // Qua day load len view
+
+        }
     }
 }
+
