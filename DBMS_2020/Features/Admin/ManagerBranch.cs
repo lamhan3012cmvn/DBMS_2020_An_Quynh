@@ -90,7 +90,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            DataSet check = this.branch.pickCustomer(this.txt_Code.Text);
+            DataSet check = this.branch.pickBranch(this.txt_Code.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm chi nhánh để update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

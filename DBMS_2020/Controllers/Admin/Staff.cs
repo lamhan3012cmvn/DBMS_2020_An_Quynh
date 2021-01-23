@@ -13,7 +13,7 @@ namespace DBMS_2020.Controllers.Admin
     {
         private string tk;
         private string mk;
-        public Staff(string codeStaff)
+        public Staff()
         {
             this.tk = ConfigurationManager.AppSettings["userName"];
             this.mk = ConfigurationManager.AppSettings["password"];

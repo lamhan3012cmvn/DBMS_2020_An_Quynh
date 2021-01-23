@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_Search = new Guna.UI.WinForms.GunaPanel();
+            this.lbl_nameStaff = new Guna.UI.WinForms.GunaLabel();
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
             this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
             this.txt_SearchName = new Guna.UI.WinForms.GunaLabel();
@@ -42,7 +40,7 @@
             this.pnl_view = new Guna.UI.WinForms.GunaPanel();
             this.pnl_Control = new Guna.UI.WinForms.GunaPanel();
             this.btn_Pay = new Guna.UI.WinForms.GunaButton();
-            this.btn_login = new Guna.UI.WinForms.GunaButton();
+            this.btn_addOrder = new Guna.UI.WinForms.GunaButton();
             this.number_Quantity = new Guna.UI.WinForms.GunaNumeric();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.txt_Name = new Guna.UI.WinForms.GunaLineTextBox();
@@ -53,15 +51,14 @@
             this.lbl_Money = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.lv_Bill = new System.Windows.Forms.ListView();
-            this.c_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.c_Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cPrices = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_data = new Guna.UI.WinForms.GunaPanel();
             this.dgv_menu = new Guna.UI.WinForms.GunaDataGridView();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_img = new System.Windows.Forms.DataGridViewImageColumn();
             this.cMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl_nameStaff = new Guna.UI.WinForms.GunaLabel();
+            this.cPrices = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.c_Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.c_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_Search.SuspendLayout();
             this.pnl_SellMain.SuspendLayout();
             this.pnl_view.SuspendLayout();
@@ -82,6 +79,17 @@
             this.pnl_Search.Name = "pnl_Search";
             this.pnl_Search.Size = new System.Drawing.Size(884, 57);
             this.pnl_Search.TabIndex = 15;
+            // 
+            // lbl_nameStaff
+            // 
+            this.lbl_nameStaff.AutoSize = true;
+            this.lbl_nameStaff.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nameStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lbl_nameStaff.Location = new System.Drawing.Point(253, 11);
+            this.lbl_nameStaff.Name = "lbl_nameStaff";
+            this.lbl_nameStaff.Size = new System.Drawing.Size(136, 20);
+            this.lbl_nameStaff.TabIndex = 24;
+            this.lbl_nameStaff.Text = "Nhân Viên : ................";
             // 
             // btn_Back
             // 
@@ -162,7 +170,7 @@
             // pnl_Control
             // 
             this.pnl_Control.Controls.Add(this.btn_Pay);
-            this.pnl_Control.Controls.Add(this.btn_login);
+            this.pnl_Control.Controls.Add(this.btn_addOrder);
             this.pnl_Control.Controls.Add(this.number_Quantity);
             this.pnl_Control.Controls.Add(this.gunaLabel4);
             this.pnl_Control.Controls.Add(this.txt_Name);
@@ -200,34 +208,36 @@
             this.btn_Pay.TabIndex = 28;
             this.btn_Pay.Text = "Thanh Toán";
             this.btn_Pay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Pay.Click += new System.EventHandler(this.btn_Pay_Click);
             // 
-            // btn_login
+            // btn_addOrder
             // 
-            this.btn_login.AnimationHoverSpeed = 0.07F;
-            this.btn_login.AnimationSpeed = 0.03F;
-            this.btn_login.BackColor = System.Drawing.Color.Transparent;
-            this.btn_login.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_login.BorderColor = System.Drawing.Color.Black;
-            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_login.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_login.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_login.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Image = null;
-            this.btn_login.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_login.Location = new System.Drawing.Point(22, 197);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_login.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_login.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_login.OnHoverImage = null;
-            this.btn_login.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_login.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btn_login.Radius = 20;
-            this.btn_login.Size = new System.Drawing.Size(160, 42);
-            this.btn_login.TabIndex = 27;
-            this.btn_login.Text = "Thêm vào giỏ hàng";
-            this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_addOrder.AnimationHoverSpeed = 0.07F;
+            this.btn_addOrder.AnimationSpeed = 0.03F;
+            this.btn_addOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addOrder.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_addOrder.BorderColor = System.Drawing.Color.Black;
+            this.btn_addOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addOrder.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_addOrder.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_addOrder.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addOrder.ForeColor = System.Drawing.Color.White;
+            this.btn_addOrder.Image = null;
+            this.btn_addOrder.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_addOrder.Location = new System.Drawing.Point(22, 197);
+            this.btn_addOrder.Name = "btn_addOrder";
+            this.btn_addOrder.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_addOrder.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_addOrder.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_addOrder.OnHoverImage = null;
+            this.btn_addOrder.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_addOrder.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_addOrder.Radius = 20;
+            this.btn_addOrder.Size = new System.Drawing.Size(160, 42);
+            this.btn_addOrder.TabIndex = 27;
+            this.btn_addOrder.Text = "Thêm vào giỏ hàng";
+            this.btn_addOrder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_addOrder.Click += new System.EventHandler(this.btn_addOrder_Click);
             // 
             // number_Quantity
             // 
@@ -351,27 +361,15 @@
             this.cPrices});
             this.lv_Bill.GridLines = true;
             this.lv_Bill.HideSelection = false;
-            this.lv_Bill.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
+            this.lv_Bill.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lv_Bill.Location = new System.Drawing.Point(0, 48);
             this.lv_Bill.Name = "lv_Bill";
+            this.lv_Bill.Scrollable = false;
             this.lv_Bill.Size = new System.Drawing.Size(246, 309);
             this.lv_Bill.TabIndex = 0;
             this.lv_Bill.UseCompatibleStateImageBehavior = false;
-            // 
-            // c_Name
-            // 
-            this.c_Name.Text = "Tên Món";
-            // 
-            // c_Quantity
-            // 
-            this.c_Quantity.Text = "Số Lượng";
-            // 
-            // cPrices
-            // 
-            this.cPrices.Text = "Tổng giá";
+            this.lv_Bill.UseWaitCursor = true;
+            this.lv_Bill.View = System.Windows.Forms.View.Details;
             // 
             // pnl_data
             // 
@@ -384,37 +382,37 @@
             // 
             // dgv_menu
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgv_menu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_menu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_menu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_menu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_menu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_menu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_menu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_menu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_menu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_menu.ColumnHeadersHeight = 21;
             this.dgv_menu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cName,
             this.txt_img,
             this.cMoney});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_menu.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_menu.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_menu.EnableHeadersVisualStyles = false;
             this.dgv_menu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -469,16 +467,21 @@
             this.cMoney.MinimumWidth = 6;
             this.cMoney.Name = "cMoney";
             // 
-            // lbl_nameStaff
+            // cPrices
             // 
-            this.lbl_nameStaff.AutoSize = true;
-            this.lbl_nameStaff.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nameStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_nameStaff.Location = new System.Drawing.Point(253, 11);
-            this.lbl_nameStaff.Name = "lbl_nameStaff";
-            this.lbl_nameStaff.Size = new System.Drawing.Size(136, 20);
-            this.lbl_nameStaff.TabIndex = 24;
-            this.lbl_nameStaff.Text = "Nhân Viên : ................";
+            this.cPrices.Text = "Tổng giá";
+            this.cPrices.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cPrices.Width = 67;
+            // 
+            // c_Quantity
+            // 
+            this.c_Quantity.Text = "Số Lượng";
+            this.c_Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // c_Name
+            // 
+            this.c_Name.Text = "Tên Món";
+            this.c_Name.Width = 120;
             // 
             // Sell
             // 
@@ -526,12 +529,12 @@
         private Guna.UI.WinForms.GunaLabel lbl_Money;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.ListView lv_Bill;
+        private Guna.UI.WinForms.GunaButton btn_Pay;
+        private Guna.UI.WinForms.GunaButton btn_addOrder;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaLabel lbl_nameStaff;
         private System.Windows.Forms.ColumnHeader c_Name;
         private System.Windows.Forms.ColumnHeader c_Quantity;
         private System.Windows.Forms.ColumnHeader cPrices;
-        private Guna.UI.WinForms.GunaButton btn_Pay;
-        private Guna.UI.WinForms.GunaButton btn_login;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel lbl_nameStaff;
     }
 }

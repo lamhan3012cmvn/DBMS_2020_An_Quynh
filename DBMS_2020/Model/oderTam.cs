@@ -20,5 +20,16 @@ namespace DBMS_2020.Model
             this.codeBranch = codeBranch;
             this.dishes = new List<Dish>();
         }
+
+        public List<Dish> Dishes()
+        {
+            return this.dishes;
+        }
+
+        public void addDish(string code,string price,string toal )
+        {
+            Dish dish = new Dish(code, price, toal);
+            this.dishes.Add(dish);
+        }
     }
 }

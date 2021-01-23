@@ -11,5 +11,12 @@ namespace DBMS_2020.Model
         public string CodeDish { set; get; }
         public string PriceDish { set; get; }
         public string ToalDish { set; get; }
+
+        public Dish(string code,string price,string toal)
+        {
+            this.CodeDish = code;
+            this.PriceDish = price;
+            this.ToalDish = toal;
+        }
     }
 }
