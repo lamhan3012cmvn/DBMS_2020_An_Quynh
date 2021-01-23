@@ -23,14 +23,14 @@ namespace DBMS_2020.Features.Staff
             this.number_Quantity.Value = 1;
         }
 
-        private void gunaLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+        public void loadMenu()
+        {
+            this.dgv_menu.Rows.Clear();
+
         }
     }
 }

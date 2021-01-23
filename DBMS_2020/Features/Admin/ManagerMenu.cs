@@ -17,12 +17,12 @@ namespace DBMS_2020.Features.Admin
     {
         string err;
         DataTable DT;
-        private Controllers.Admin Menu;
+        private Controllers.Admin.Menu Menu;
         private string srcImg;
         public ManagerMenu()
         {
             InitializeComponent();
-            this.Menu = new Controllers.Admin();
+            Menu = new Controllers.Admin.Menu();
             loadDataGridiew();
 
             picb_img.SizeMode = PictureBoxSizeMode.Zoom;
@@ -48,7 +48,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DataSet check = Menu.pick1Item(this.txt_Code.Text);
+            DataSet check = Menu.pickItem(this.txt_Code.Text);
             if(check.Tables[0].Rows.Count == 0)
             {
                 //Xử Lý Ảnh ở đây
@@ -93,7 +93,7 @@ namespace DBMS_2020.Features.Admin
                 MessageBox.Show("Giá trị Price nhập sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            DataSet check = Menu.pick1Item(this.txt_Code.Text);
+            DataSet check = Menu.pickItem(this.txt_Code.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy món ăn để update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
@@ -38,6 +40,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\IMethods.cs" />
     <Compile Include="Class\RootConfig.cs" />
     <Compile Include="Class\MethodHelps.cs" />
     <Compile Include="Componets\btn.cs">
@@ -77,7 +81,12 @@
     <Compile Include="Componets\txt.Designer.cs">
       <DependentUpon>txt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Admin.cs" />
+    <Compile Include="Controllers\Admin\Customer.cs" />
+    <Compile Include="Controllers\Admin\Staff.cs" />
+    <Compile Include="Controllers\Authentication.cs" />
+    <Compile Include="Controllers\Admin\Branch.cs" />
+    <Compile Include="Controllers\Admin\Menu.cs" />
+    <Compile Include="Controllers\Staff.cs" />
     <Compile Include="Features\Admin\Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +160,8 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Database.cs" />
+    <Compile Include="Model\Dish.cs" />
+    <Compile Include="Model\oderTam.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Componets\btn.resx">
