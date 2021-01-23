@@ -661,6 +661,9 @@ create or alter View ChiNhanh_View as
 select * from ChiNhanh 
 go
 
+create or alter View NhanVien_View as
+select MaNhanVien,TenNhanVien,NgaySinh,MaChiNhanh,SoLuongBan from NhanVien
+go
 
 
 -- Phân quyền
