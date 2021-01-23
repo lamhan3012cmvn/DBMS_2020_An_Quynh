@@ -7,16 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBMS_2020;
+using System.IO;
 
 namespace DBMS_2020.Features.Staff
 {
     public partial class Sell : UserControl
     {
+        private Controllers.Admin Menu;
+        DataTable DT;
+
         public Sell()
         {
             InitializeComponent();
+            this.Menu = new Controllers.Admin();
+            loadDataGridView();
+            
         }
+        public void loadDataGridView()
+        {
 
+        }
         private void dgv_staff_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txt_Name.Text = this.dgv_menu.Rows[e.RowIndex].Cells[0].ToString();
