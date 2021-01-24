@@ -16,5 +16,10 @@ namespace DBMS_2020.Componets
         {
             InitializeComponent();
         }
+
+        private void pnl_Menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

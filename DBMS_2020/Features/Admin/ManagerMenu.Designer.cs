@@ -95,7 +95,7 @@
             // picb_img
             // 
             this.picb_img.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.picb_img.Location = new System.Drawing.Point(6, 200);
+            this.picb_img.Location = new System.Drawing.Point(6, 224);
             this.picb_img.Name = "picb_img";
             this.picb_img.Size = new System.Drawing.Size(147, 157);
             this.picb_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +118,7 @@
             this.btn_Del.ForeColor = System.Drawing.Color.White;
             this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
             this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Del.Location = new System.Drawing.Point(169, 315);
+            this.btn_Del.Location = new System.Drawing.Point(169, 339);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -147,7 +147,7 @@
             this.btn_Update.ForeColor = System.Drawing.Color.White;
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
             this.btn_Update.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Update.Location = new System.Drawing.Point(169, 257);
+            this.btn_Update.Location = new System.Drawing.Point(169, 281);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -176,7 +176,7 @@
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(169, 201);
+            this.btn_Add.Location = new System.Drawing.Point(169, 225);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -202,7 +202,7 @@
             this.txt_Price.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Price.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Price.LineSize = 2;
-            this.txt_Price.Location = new System.Drawing.Point(19, 149);
+            this.txt_Price.Location = new System.Drawing.Point(19, 170);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.PasswordChar = '\0';
             this.txt_Price.Size = new System.Drawing.Size(226, 30);
@@ -213,7 +213,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(15, 125);
+            this.gunaLabel2.Location = new System.Drawing.Point(15, 146);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(31, 20);
             this.gunaLabel2.TabIndex = 17;
@@ -230,7 +230,7 @@
             this.txt_Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txt_Name.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_Name.LineSize = 2;
-            this.txt_Name.Location = new System.Drawing.Point(19, 94);
+            this.txt_Name.Location = new System.Drawing.Point(19, 107);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.PasswordChar = '\0';
             this.txt_Name.Size = new System.Drawing.Size(226, 30);
@@ -241,7 +241,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(15, 71);
+            this.gunaLabel1.Location = new System.Drawing.Point(15, 84);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(66, 20);
             this.gunaLabel1.TabIndex = 15;

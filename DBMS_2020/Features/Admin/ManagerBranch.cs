@@ -20,7 +20,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.branch = new Controllers.Admin.Branch();
-            //loadDataGridiew();
+            loadDataGridiew();
         }
 
         private void loadDataGridiew()

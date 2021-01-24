@@ -24,22 +24,22 @@ namespace DBMS_2020.Features.Admin
         private void loadManagerBranch()
         {
             this.branch= new ManagerBranch();
-            MethodHelps.addControl(this.pnl_Admin, branch);
+            MethodHelps.addControl(this.pnl_loadUI, branch);
         }
         private void loadManagerCustomer()
         {
             this.customer = new ManagerCustomer();
-            MethodHelps.addControl(this.pnl_Admin, customer);
+            MethodHelps.addControl(this.pnl_loadUI, customer);
         }
         private void loadManagerMenu()
         {
             this.menu = new ManagerMenu();
-            MethodHelps.addControl(this.pnl_Admin, menu);
+            MethodHelps.addControl(this.pnl_loadUI, menu);
         }
         private void loadManagerStaff()
         {
             this.staff = new ManagerStaff();
-            MethodHelps.addControl(this.pnl_Admin, staff);
+            MethodHelps.addControl(this.pnl_loadUI, staff);
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

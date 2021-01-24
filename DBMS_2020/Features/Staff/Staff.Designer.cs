@@ -59,7 +59,7 @@
             this.pnl_Staff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Staff.Location = new System.Drawing.Point(0, 0);
             this.pnl_Staff.Name = "pnl_Staff";
-            this.pnl_Staff.Size = new System.Drawing.Size(884, 524);
+            this.pnl_Staff.Size = new System.Drawing.Size(884, 609);
             this.pnl_Staff.TabIndex = 0;
             // 
             // pnl_load
@@ -68,7 +68,7 @@
             this.pnl_load.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_load.Location = new System.Drawing.Point(0, 85);
             this.pnl_load.Name = "pnl_load";
-            this.pnl_load.Size = new System.Drawing.Size(884, 439);
+            this.pnl_load.Size = new System.Drawing.Size(884, 524);
             this.pnl_load.TabIndex = 1;
             // 
             // gunaPanel2
@@ -82,7 +82,7 @@
             this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel2.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(884, 439);
+            this.gunaPanel2.Size = new System.Drawing.Size(884, 524);
             this.gunaPanel2.TabIndex = 0;
             // 
             // gunaLabel1
@@ -272,7 +272,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_Staff);
             this.Name = "Staff";
-            this.Size = new System.Drawing.Size(884, 524);
+            this.Size = new System.Drawing.Size(884, 609);
             this.pnl_Staff.ResumeLayout(false);
             this.pnl_load.ResumeLayout(false);
             this.gunaPanel2.ResumeLayout(false);

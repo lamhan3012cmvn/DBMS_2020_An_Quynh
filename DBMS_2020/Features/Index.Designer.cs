@@ -36,7 +36,7 @@
             this.pnl_load_ui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_load_ui.Location = new System.Drawing.Point(0, 0);
             this.pnl_load_ui.Name = "pnl_load_ui";
-            this.pnl_load_ui.Size = new System.Drawing.Size(884, 561);
+            this.pnl_load_ui.Size = new System.Drawing.Size(884, 609);
             this.pnl_load_ui.TabIndex = 0;
             // 
             // Index
@@ -46,7 +46,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnl_load_ui);
             this.Name = "Index";
-            this.Size = new System.Drawing.Size(884, 561);
+            this.Size = new System.Drawing.Size(884, 609);
             this.ResumeLayout(false);
 
         }

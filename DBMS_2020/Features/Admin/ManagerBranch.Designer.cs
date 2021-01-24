@@ -70,7 +70,7 @@ namespace DBMS_2020.Features.Admin
             this.pnl_data.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnl_data.Location = new System.Drawing.Point(0, 0);
             this.pnl_data.Name = "pnl_data";
-            this.pnl_data.Size = new System.Drawing.Size(595, 479);
+            this.pnl_data.Size = new System.Drawing.Size(595, 524);
             this.pnl_data.TabIndex = 0;
             // 
             // dgv_branch
@@ -117,7 +117,7 @@ namespace DBMS_2020.Features.Admin
             this.dgv_branch.RowHeadersVisible = false;
             this.dgv_branch.RowHeadersWidth = 51;
             this.dgv_branch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_branch.Size = new System.Drawing.Size(595, 479);
+            this.dgv_branch.Size = new System.Drawing.Size(595, 524);
             this.dgv_branch.TabIndex = 0;
             this.dgv_branch.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_branch.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -174,7 +174,7 @@ namespace DBMS_2020.Features.Admin
             this.pnl_control.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_control.Location = new System.Drawing.Point(595, 0);
             this.pnl_control.Name = "pnl_control";
-            this.pnl_control.Size = new System.Drawing.Size(289, 479);
+            this.pnl_control.Size = new System.Drawing.Size(289, 524);
             this.pnl_control.TabIndex = 1;
             // 
             // pnl_CRUD
@@ -191,7 +191,7 @@ namespace DBMS_2020.Features.Admin
             this.pnl_CRUD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_CRUD.Location = new System.Drawing.Point(0, 82);
             this.pnl_CRUD.Name = "pnl_CRUD";
-            this.pnl_CRUD.Size = new System.Drawing.Size(289, 397);
+            this.pnl_CRUD.Size = new System.Drawing.Size(289, 442);
             this.pnl_CRUD.TabIndex = 14;
             // 
             // btn_Del
@@ -208,7 +208,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Del.ForeColor = System.Drawing.Color.White;
             this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
             this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Del.Location = new System.Drawing.Point(157, 293);
+            this.btn_Del.Location = new System.Drawing.Point(157, 306);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -237,7 +237,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Update.ForeColor = System.Drawing.Color.White;
             this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
             this.btn_Update.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Update.Location = new System.Drawing.Point(158, 229);
+            this.btn_Update.Location = new System.Drawing.Point(158, 242);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -266,7 +266,7 @@ namespace DBMS_2020.Features.Admin
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(21, 229);
+            this.btn_Add.Location = new System.Drawing.Point(21, 242);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -441,7 +441,7 @@ namespace DBMS_2020.Features.Admin
             this.Controls.Add(this.pnl_control);
             this.Controls.Add(this.pnl_data);
             this.Name = "ManagerBranch";
-            this.Size = new System.Drawing.Size(884, 479);
+            this.Size = new System.Drawing.Size(884, 524);
             this.pnl_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_branch)).EndInit();
             this.pnl_control.ResumeLayout(false);

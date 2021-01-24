@@ -23,7 +23,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             Menu = new Controllers.Admin.Menu();
-            //loadDataGridiew();
+            loadDataGridiew();
 
             picb_img.SizeMode = PictureBoxSizeMode.Zoom;
             openFileDialog1.Title = "Select Picture";
