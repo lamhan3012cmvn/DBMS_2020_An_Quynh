@@ -47,34 +47,10 @@ create table Menu
 	primary key (MaMon)
 )
 
-create table Menu_ChiNhanh
-(
-	MaChiNhanh varchar(10),
-	MaMon varchar(10),
-	primary key (MaChiNhanh, MaMon),
-	constraint FK_Menu_ChiNhanh_ChiNhanh foreign key (MaChiNhanh) references ChiNhanh(MaChiNhanh),
-	constraint FK_Menu_ChiNhanh_Menu foreign key (MaMon) references Menu(MaMon)
-)
-
-create table TamOrder 
-(
-	ID_TamOrder int,
-	SDT_KhachHang varchar(10),
-	MaMon varchar(10),
-	SoLuong int,
-	Gia float,
-	MaNV varchar(10),
-	MaCN varchar(10),
-	primary key (ID_TamOrder),
-	constraint FK_TamOrder_KhachHang foreign key (SDT_KhachHang) references KhachHang(SoDienThoai),
-	constraint FK_TamOrder_Menu foreign key (MaMon) references Menu(MaMon),
-	constraint FK_TamOrder_NhanVien foreign key (MaNV) references NhanVien(MaNhanVien),
-	constraint FK_TamOrder_ChiNhanh foreign key (MaCN) references ChiNhanh(MaChiNhanh),
-)
 
 create table HoaDon
 (
-	MaHoaDon int,
+	MaHoaDon varchar(10),
 	SoDT_KhachHang varchar(10),
 	MaNV varchar(10),
 	MaChiNhanh varchar(10),
@@ -88,7 +64,7 @@ create table HoaDon
 
 create table ChiTietHoaDon
 (
-	MaHD int,
+	MaHD varchar(10),
 	MaMon varchar(10),
 	SoLuong int,
 	Gia float,
@@ -142,27 +118,61 @@ insert into Menu values ('BINGSU10','Black Sesame BingSu',40000,null,'6')
 go
 create or alter trigger SoLuongMuaBan on HoaDon
 after insert as
-declare @chinhanh int, @khachhang nvarchar(50), @tonggia float
+declare @chinhanh varchar(10), @khachhang nvarchar(50), @tonggia float
 set @tonggia = (select inserted.TongGia from inserted)
 select @chinhanh = inserted.MaChiNhanh, @khachhang= inserted.SoDT_KhachHang from inserted
 begin 
 	update ChiNhanh set DoanhThu = DoanhThu + @tonggia where ChiNhanh.MaChiNhanh = @chinhanh
-	update KhachHang set KhachHang.DaMua = KhachHang.DaMua + @tonggia*0.1 where KhachHang.SoDienThoai = @khachhang
+	--update KhachHang set KhachHang.DaMua = KhachHang.DaMua + @tonggia*0.1 where KhachHang.SoDienThoai = @khachhang
+end
+go 
+--Trigger: sau khi thanh toán thì số lượng đã mua của khách hàng tăng lên 
+
+create or alter trigger SoLuongDaMua on ChiTietHoaDon
+after insert as
+declare @soluong int, @khachhang nvarchar(50)
+set @soluong = (select inserted.SoLuong from inserted )
+set @khachhang = (select HoaDon.SoDT_KhachHang from inserted, HoaDon where inserted.MaHD = HoaDon.MaHoaDon)
+begin 
+	update KhachHang set KhachHang.DaMua = KhachHang.DaMua +@soluong where KhachHang.SoDienThoai = @khachhang
 end
 go 
 
--- trigger Sau khi thanh toán thì số lượng đã bán của món được mua tăng lên
+--trigger Sau khi thanh toán thì số lượng đã bán của món được mua tăng lên
 create or alter trigger SoLuongDaBan on ChiTietHoaDon
 after insert as
-declare @mon int, @soluong int
+declare @mon varchar(10), @soluong int
 select @mon =inserted.MaMon, @soluong = inserted.SoLuong from inserted
 begin 
 	update Menu set Menu.DaBan = Menu.DaBan + @soluong where Menu.MaMon = @mon
 end
 go
 
+--Trigger: sau khi thanh toán thì số lượng đã bán của nhân viên tăng lên 
+
+create or alter trigger SoLuongDaBan on ChiTietHoaDon
+after insert as
+declare @soluong int, @nhanvien nvarchar(50)
+set @soluong = (select inserted.SoLuong from inserted )
+set @nhanvien = (select HoaDon.MaNV from inserted, HoaDon where inserted.MaHD = HoaDon.MaHoaDon)
+begin 
+	update NhanVien set SoLuongBan = SoLuongBan +@soluong where MaNhanVien = @nhanvien
+end
+go
 --function 
 
+create or alter function autoID_func () returns varchar(10)
+as
+begin
+	declare @preMaHD varchar(10)
+	declare @nextMaHD varchar(10)
+	select top(1) @preMaHD = MaHoaDon from HoaDon order by CONVERT(int,SUBSTRING(HoaDon.MaHoaDon,3,10)) desc
+	set @nextMaHD = Cast(CONVERT(int,SUBSTRING(@preMaHD,3,10))+1 as varchar(10))
+	return concat('HD', @nextMaHD)
+end
+go
+print dbo.autoID_func()
+go
 -- Function lấy một nhân viên khi biết mã nhân viên đó
 create or alter function pickNhanVien_func (@MaNV varchar(10)) returns table
 as
@@ -469,6 +479,7 @@ begin
 end
 go
 
+
 --Procedure thêm vào chi tiết hóa đơn
 create or alter procedure ThemChiTietHoaDon_proc @maHD varchar(10),@maMon varchar(10), @soLuong int, @gia float
 as
@@ -476,106 +487,6 @@ begin
 	insert into ChiTietHoaDon values(@maHD,@maMon,@SoLuong,@Gia)
 end
 go
---View
-create or alter View ChiNhanh_View as
-select MaChiNhanh, TenChiNhanh from ChiNhanh 
-go
-
-
-
--- Phân quyền
--- tạo login
-sp_addlogin 'AdminQuynh','1234'
-go
-sp_addlogin 'AdminAn','1234'
-go
-sp_addlogin 'NV1','1'
-go
-sp_addlogin 'NV2','1'
-go
-sp_addlogin 'NV3','1'
-go
-sp_addlogin 'NV4','1'
-go
-sp_addlogin 'NV5','1'
-go
-sp_addlogin 'NV6','1'
-go
-sp_addlogin 'NV7','1'
-go
-
--- tạo user ứng với login 
-sp_adduser 'NV1','NV1'
-go
-sp_adduser 'NV2','NV2'
-go
-sp_adduser 'NV3','NV3'
-go
-sp_adduser 'NV4','NV4'
-go
-sp_adduser 'NV5','NV5'
-go
-sp_adduser 'NV6','NV6'
-go
-sp_adduser 'NV7','NV7'
-go
-sp_adduser 'AdminAn','AdminAn'
-go
-sp_adduser 'AdminQuynh','AdminQuynh'
-go
---Add quyền cho admin (toàn quyền)
-sp_addsrvrolemember[AdminAn],[sysadmin]
-go
-sp_addsrvrolemember[AdminQuynh],[sysadmin]
-go
---Tạo role nhân viên
-sp_addrole [RoleNhanVien]
-go
---Add nhân viên vào RoleNhanVien
-sp_addrolemember [RoleNhanVien],[NV1]
-go
-sp_addrolemember [RoleNhanVien],[NV2]
-go
-sp_addrolemember [RoleNhanVien],[NV3]
-go
-sp_addrolemember [RoleNhanVien],[NV4]
-go
-sp_addrolemember [RoleNhanVien],[NV5]
-go
-sp_addrolemember [RoleNhanVien],[NV6]
-go
-sp_addrolemember [RoleNhanVien],[NV7]
-go
-
---Add các quyền vào role của nhân viên (RoleNhanViên)
-Grant select  on ChiNhanh to RoleNhanVien
-Grant select, insert  on ChiTietHoaDon to RoleNhanVien
-Grant select, insert  on HoaDon to RoleNhanVien
-Grant select, insert  on KhachHang to RoleNhanVien 
-Grant select   on Menu to RoleNhanVien 
-Grant update  on NhanVien to RoleNhanVien 
-
---nhân viên
-Grant exec on suaNV_proc to RoleNhanVien 
-
-
---Menu
-Grant select on timkiemMonAn_func to RoleNhanVien 
-
---Chi Nhánh
-Grant select on timkiemCN_func to RoleNhanVien 
---Hóa đơn
-Grant exec on ThemHoaDon_proce to RoleNhanVien 		
-Grant select on LayHoaDonTruoc_func to RoleNhanVien 		
-Grant exec on ThemChiTietHD_proce to RoleNhanVien 	
-
-go
-
-
-
-
-
-
 --View
 create or alter View ChiNhanh_View as
 select * from ChiNhanh 
@@ -589,6 +500,7 @@ create or alter View Menu_View as
 select MaMon,TenMon, GiaTien,AnhMinhHoa from Menu
 go
 
+
 -- Phân quyền
 -- tạo login
 sp_addlogin 'AdminQuynh','1234'
@@ -671,9 +583,16 @@ Grant select on timkiemMonAn_func to RoleNhanVien
 --Chi Nhánh
 Grant select on timkiemCN_func to RoleNhanVien 
 --Hóa đơn
-Grant exec on ThemHoaDon_proce to RoleNhanVien 		
-Grant select on LayHoaDonTruoc_func to RoleNhanVien 		
-Grant exec on ThemChiTietHD_proce to RoleNhanVien 	
+Grant exec on ThemHoaDon_proc to RoleNhanVien 		
+--Grant select on LayHoaDonTruoc_func to RoleNhanVien 		
+Grant exec on ThemChiTietHoaDon_proc to RoleNhanVien 	
+
+go
+--trên bảng KhachHang
+Grant exec on themKH_proc to RoleNhanVien 
+
+
+		
 
 
 
