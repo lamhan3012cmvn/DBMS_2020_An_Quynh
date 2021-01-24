@@ -89,25 +89,29 @@
             // 
             // rd_Manager
             // 
-            this.rd_Manager.BaseColor = System.Drawing.SystemColors.Control;
+            this.rd_Manager.BaseColor = System.Drawing.Color.White;
             this.rd_Manager.CheckedOffColor = System.Drawing.Color.Gray;
             this.rd_Manager.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.rd_Manager.FillColor = System.Drawing.Color.White;
+            this.rd_Manager.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.rd_Manager.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_Manager.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.rd_Manager.Location = new System.Drawing.Point(203, 15);
             this.rd_Manager.Name = "rd_Manager";
-            this.rd_Manager.Size = new System.Drawing.Size(72, 20);
+            this.rd_Manager.Size = new System.Drawing.Size(81, 20);
             this.rd_Manager.TabIndex = 1;
             this.rd_Manager.Text = "Quản Lý";
             // 
             // rd_Staff
             // 
-            this.rd_Staff.BaseColor = System.Drawing.SystemColors.Control;
+            this.rd_Staff.BaseColor = System.Drawing.Color.White;
             this.rd_Staff.CheckedOffColor = System.Drawing.Color.Gray;
             this.rd_Staff.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.rd_Staff.FillColor = System.Drawing.Color.White;
+            this.rd_Staff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.rd_Staff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_Staff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.rd_Staff.Location = new System.Drawing.Point(76, 15);
             this.rd_Staff.Name = "rd_Staff";
-            this.rd_Staff.Size = new System.Drawing.Size(82, 20);
+            this.rd_Staff.Size = new System.Drawing.Size(93, 20);
             this.rd_Staff.TabIndex = 0;
             this.rd_Staff.Text = "Nhân Viên";
             // 
@@ -136,7 +140,7 @@
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Image = ((System.Drawing.Image)(resources.GetObject("btn_login.Image")));
             this.btn_login.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_login.Location = new System.Drawing.Point(183, 363);
+            this.btn_login.Location = new System.Drawing.Point(204, 372);
             this.btn_login.Name = "btn_login";
             this.btn_login.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_login.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -149,6 +153,7 @@
             this.btn_login.TabIndex = 7;
             this.btn_login.Text = "Login";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // txt_password
             // 

@@ -29,9 +29,9 @@ namespace DBMS_2020.Features.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerBranch));
             this.pnl_data = new Guna.UI.WinForms.GunaLinePanel();
             this.dgv_branch = new Guna.UI.WinForms.GunaDataGridView();
@@ -41,9 +41,6 @@ namespace DBMS_2020.Features.Admin
             this.cRevenue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_control = new Guna.UI.WinForms.GunaPanel();
             this.pnl_CRUD = new Guna.UI.WinForms.GunaPanel();
-            this.btn_Del = new Guna.UI.WinForms.GunaButton();
-            this.btn_Update = new Guna.UI.WinForms.GunaButton();
-            this.btn_Add = new Guna.UI.WinForms.GunaButton();
             this.txt_Address = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.txt_Name = new Guna.UI.WinForms.GunaLineTextBox();
@@ -54,6 +51,9 @@ namespace DBMS_2020.Features.Admin
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
             this.txt_SearchName = new Guna.UI.WinForms.GunaLineTextBox();
             this.lblNull = new Guna.UI.WinForms.GunaLabel();
+            this.btn_Del = new Guna.UI.WinForms.GunaButton();
+            this.btn_Update = new Guna.UI.WinForms.GunaButton();
+            this.btn_Add = new Guna.UI.WinForms.GunaButton();
             this.pnl_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_branch)).BeginInit();
             this.pnl_control.SuspendLayout();
@@ -77,38 +77,38 @@ namespace DBMS_2020.Features.Admin
             // 
             this.dgv_branch.AllowUserToAddRows = false;
             this.dgv_branch.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgv_branch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_branch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_branch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_branch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_branch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_branch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgv_branch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_branch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_branch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_branch.ColumnHeadersHeight = 21;
             this.dgv_branch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cCode,
             this.cName,
             this.cAdress,
             this.cRevenue});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_branch.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_branch.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_branch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_branch.EnableHeadersVisualStyles = false;
             this.dgv_branch.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -193,93 +193,6 @@ namespace DBMS_2020.Features.Admin
             this.pnl_CRUD.Name = "pnl_CRUD";
             this.pnl_CRUD.Size = new System.Drawing.Size(289, 442);
             this.pnl_CRUD.TabIndex = 14;
-            // 
-            // btn_Del
-            // 
-            this.btn_Del.AnimationHoverSpeed = 0.07F;
-            this.btn_Del.AnimationSpeed = 0.03F;
-            this.btn_Del.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Del.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.BorderColor = System.Drawing.Color.Black;
-            this.btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Del.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Del.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Del.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btn_Del.ForeColor = System.Drawing.Color.White;
-            this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
-            this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Del.Location = new System.Drawing.Point(158, 332);
-            this.btn_Del.Name = "btn_Del";
-            this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Del.OnHoverImage = null;
-            this.btn_Del.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btn_Del.Radius = 20;
-            this.btn_Del.Size = new System.Drawing.Size(113, 42);
-            this.btn_Del.TabIndex = 21;
-            this.btn_Del.Text = "Xóa";
-            this.btn_Del.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
-            // 
-            // btn_Update
-            // 
-            this.btn_Update.AnimationHoverSpeed = 0.07F;
-            this.btn_Update.AnimationSpeed = 0.03F;
-            this.btn_Update.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Update.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.BorderColor = System.Drawing.Color.Black;
-            this.btn_Update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Update.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Update.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btn_Update.ForeColor = System.Drawing.Color.White;
-            this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
-            this.btn_Update.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Update.Location = new System.Drawing.Point(159, 268);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Update.OnHoverImage = null;
-            this.btn_Update.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btn_Update.Radius = 20;
-            this.btn_Update.Size = new System.Drawing.Size(113, 42);
-            this.btn_Update.TabIndex = 20;
-            this.btn_Update.Text = "Sửa";
-            this.btn_Update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.AnimationHoverSpeed = 0.07F;
-            this.btn_Add.AnimationSpeed = 0.03F;
-            this.btn_Add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Add.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.BorderColor = System.Drawing.Color.Black;
-            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Add.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Add.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
-            this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Add.Location = new System.Drawing.Point(22, 268);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Add.OnHoverImage = null;
-            this.btn_Add.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btn_Add.Radius = 20;
-            this.btn_Add.Size = new System.Drawing.Size(113, 42);
-            this.btn_Add.TabIndex = 19;
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // txt_Address
             // 
@@ -432,6 +345,93 @@ namespace DBMS_2020.Features.Admin
             this.lblNull.Size = new System.Drawing.Size(72, 20);
             this.lblNull.TabIndex = 21;
             this.lblNull.Text = "Tìm Kiếm";
+            // 
+            // btn_Del
+            // 
+            this.btn_Del.AnimationHoverSpeed = 0.07F;
+            this.btn_Del.AnimationSpeed = 0.03F;
+            this.btn_Del.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Del.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.BorderColor = System.Drawing.Color.Black;
+            this.btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Del.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Del.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Del.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btn_Del.ForeColor = System.Drawing.Color.White;
+            this.btn_Del.Image = ((System.Drawing.Image)(resources.GetObject("btn_Del.Image")));
+            this.btn_Del.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Del.Location = new System.Drawing.Point(158, 332);
+            this.btn_Del.Name = "btn_Del";
+            this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Del.OnHoverImage = null;
+            this.btn_Del.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_Del.Radius = 20;
+            this.btn_Del.Size = new System.Drawing.Size(113, 42);
+            this.btn_Del.TabIndex = 21;
+            this.btn_Del.Text = "Xóa";
+            this.btn_Del.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.AnimationHoverSpeed = 0.07F;
+            this.btn_Update.AnimationSpeed = 0.03F;
+            this.btn_Update.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Update.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.BorderColor = System.Drawing.Color.Black;
+            this.btn_Update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Update.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Update.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btn_Update.ForeColor = System.Drawing.Color.White;
+            this.btn_Update.Image = ((System.Drawing.Image)(resources.GetObject("btn_Update.Image")));
+            this.btn_Update.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Update.Location = new System.Drawing.Point(159, 268);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Update.OnHoverImage = null;
+            this.btn_Update.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_Update.Radius = 20;
+            this.btn_Update.Size = new System.Drawing.Size(113, 42);
+            this.btn_Update.TabIndex = 20;
+            this.btn_Update.Text = "Sửa";
+            this.btn_Update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.AnimationHoverSpeed = 0.07F;
+            this.btn_Add.AnimationSpeed = 0.03F;
+            this.btn_Add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Add.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.BorderColor = System.Drawing.Color.Black;
+            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Add.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Add.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
+            this.btn_Add.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Add.Location = new System.Drawing.Point(22, 268);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Add.OnHoverImage = null;
+            this.btn_Add.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_Add.Radius = 20;
+            this.btn_Add.Size = new System.Drawing.Size(113, 42);
+            this.btn_Add.TabIndex = 19;
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // ManagerBranch
             // 

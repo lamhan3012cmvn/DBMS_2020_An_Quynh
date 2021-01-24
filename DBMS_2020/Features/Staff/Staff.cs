@@ -15,35 +15,42 @@ namespace DBMS_2020.Features.Staff
     {
         private InforStaff inforStaff;
         private Sell sell;
-        public Staff()
+        private string codeStaff;
+        public Staff(string codeNV)
         {
             InitializeComponent();
             //loadInforStaff();
             //loadSell();
+            this.codeStaff = codeNV;
         }
         private void loadInforStaff()
         {
+            this.lbl_NamePage.Text = "Thông tin user";
             this.inforStaff = new InforStaff();
             MethodHelps.addControl(this.pnl_load, this.inforStaff); ;
         }
         private void loadSell()
         {
+            this.lbl_NamePage.Text = "Bán hàng";
             this.sell = new Sell();
             MethodHelps.addControl(this.pnl_load, this.sell);
         }
 
-      
-
-        private void lbl_InfoStaff_Click(object sender, EventArgs e)
+        private void btn_inforStaff_Click(object sender, EventArgs e)
         {
             loadInforStaff();
             if (!(this.sell is null)) this.sell.Dispose();
         }
 
-        private void lbl_Sell_Click(object sender, EventArgs e)
+        private void btn_Sell_Click(object sender, EventArgs e)
         {
             loadSell();
             if (!(this.inforStaff is null)) this.inforStaff.Dispose();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

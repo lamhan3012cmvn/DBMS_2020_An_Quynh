@@ -49,18 +49,11 @@ namespace DBMS_2020.Controllers
             return reuslt;
 
         }
-        //public bool payTheBill(oderTam order,string total,ref string err)
-        //{
-            
-        //    bool result_CTHD = true;
-        //    order.Dishes().ForEach(d => {
-        //        //ThemChiTietHoaDon_proc @maHD varchar(10),@maMon varchar(10), @soLuong int, @gia float
-        //        string strSQL_CTHD = $"exec ThemChiTietHoaDon_proc{MaHoaDon},{d.CodeDish},{d.ToalDish},{float.Parse(d.PriceDish)}";
-        //       // result_CTHD = result_CTHD && db.MyExecuteNonQuery(strSQL_CTHD, CommandType.Text, ref err2);    
-        //    });
-        //    return result_HD && result_CTHD;
-        //}
-
+        public DataSet searchCustomer(string name)
+        {
+            Database db = new Database(this.tk, this.mk);
+            return db.ExecuteQueryDataSet("select * from timkiemKH_func (N'" + name + "')", CommandType.Text);
+        }
         public string createCodeBill(ref string err)
         {
             Database db = new Database(this.tk, this.mk);

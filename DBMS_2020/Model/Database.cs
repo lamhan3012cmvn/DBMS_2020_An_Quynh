@@ -19,8 +19,8 @@ namespace DBMS_2020.Model
         {
             if (userName != null && password != null)
             {
-                this.conn_str = @"Data Source=DESKTOP-UEKLT7K; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
-                //this.conn_str = @"Data Source=192.168.1.6; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
+                //this.conn_str = @"Data Source=DESKTOP-UEKLT7K; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
+                this.conn_str = @"Data Source=192.168.43.111; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
             }
             //Gán chuỗi kết nối để kết nối với SQL sever
             this.conn = new SqlConnection(this.conn_str);
@@ -97,7 +97,7 @@ namespace DBMS_2020.Model
             try
             {
                 //Nếu chương trình chạy bình thường thì cờ được gán là True
-                var result=comm.ExecuteNonQuery();
+                var result=comm.ExecuteScalar();
                 f = true;
             }
             catch (SqlException ex)

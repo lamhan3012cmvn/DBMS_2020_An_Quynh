@@ -59,12 +59,16 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.pnl_data = new Guna.UI.WinForms.GunaPanel();
             this.dgv_menu = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaColorTransition1 = new Guna.UI.WinForms.GunaColorTransition(this.components);
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.cCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_img = new System.Windows.Forms.DataGridViewImageColumn();
-            this.gunaColorTransition1 = new Guna.UI.WinForms.GunaColorTransition(this.components);
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.txt_PhoneCustomer = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.btn_SearchKH = new Guna.UI.WinForms.GunaButton();
+            this.lbl_phone = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Search.SuspendLayout();
             this.pnl_SellMain.SuspendLayout();
             this.pnl_view.SuspendLayout();
@@ -78,6 +82,7 @@
             // 
             // pnl_Search
             // 
+            this.pnl_Search.Controls.Add(this.lbl_phone);
             this.pnl_Search.Controls.Add(this.lbl_nameStaff);
             this.pnl_Search.Controls.Add(this.btn_Back);
             this.pnl_Search.Controls.Add(this.txt_Search);
@@ -93,7 +98,7 @@
             this.lbl_nameStaff.AutoSize = true;
             this.lbl_nameStaff.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nameStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_nameStaff.Location = new System.Drawing.Point(253, 11);
+            this.lbl_nameStaff.Location = new System.Drawing.Point(160, 12);
             this.lbl_nameStaff.Name = "lbl_nameStaff";
             this.lbl_nameStaff.Size = new System.Drawing.Size(136, 20);
             this.lbl_nameStaff.TabIndex = 24;
@@ -178,6 +183,9 @@
             // 
             // pnl_Control
             // 
+            this.pnl_Control.Controls.Add(this.btn_SearchKH);
+            this.pnl_Control.Controls.Add(this.txt_PhoneCustomer);
+            this.pnl_Control.Controls.Add(this.gunaLabel6);
             this.pnl_Control.Controls.Add(this.btn_Pay);
             this.pnl_Control.Controls.Add(this.btn_addOrder);
             this.pnl_Control.Controls.Add(this.number_Quantity);
@@ -204,7 +212,7 @@
             this.btn_Pay.ForeColor = System.Drawing.Color.White;
             this.btn_Pay.Image = null;
             this.btn_Pay.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Pay.Location = new System.Drawing.Point(22, 255);
+            this.btn_Pay.Location = new System.Drawing.Point(22, 385);
             this.btn_Pay.Name = "btn_Pay";
             this.btn_Pay.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Pay.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -494,6 +502,19 @@
             this.dgv_menu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_menu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_menu_CellClick);
             // 
+            // gunaColorTransition1
+            // 
+            this.gunaColorTransition1.ColorArray = new System.Drawing.Color[] {
+        System.Drawing.Color.Red,
+        System.Drawing.Color.Blue,
+        System.Drawing.Color.Orange};
+            this.gunaColorTransition1.EndColor = System.Drawing.Color.Blue;
+            this.gunaColorTransition1.StartColor = System.Drawing.Color.Red;
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = null;
+            // 
             // cCode
             // 
             this.cCode.HeaderText = "Mã Món";
@@ -514,24 +535,80 @@
             // 
             // txt_img
             // 
+            this.txt_img.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.txt_img.HeaderText = "Ảnh";
+            this.txt_img.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.txt_img.MinimumWidth = 6;
             this.txt_img.Name = "txt_img";
             this.txt_img.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.txt_img.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // gunaColorTransition1
+            // txt_PhoneCustomer
             // 
-            this.gunaColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.Red,
-        System.Drawing.Color.Blue,
-        System.Drawing.Color.Orange};
-            this.gunaColorTransition1.EndColor = System.Drawing.Color.Blue;
-            this.gunaColorTransition1.StartColor = System.Drawing.Color.Red;
+            this.txt_PhoneCustomer.Animated = true;
+            this.txt_PhoneCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_PhoneCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_PhoneCustomer.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_PhoneCustomer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PhoneCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_PhoneCustomer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_PhoneCustomer.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_PhoneCustomer.LineSize = 2;
+            this.txt_PhoneCustomer.Location = new System.Drawing.Point(38, 281);
+            this.txt_PhoneCustomer.Name = "txt_PhoneCustomer";
+            this.txt_PhoneCustomer.PasswordChar = '\0';
+            this.txt_PhoneCustomer.Size = new System.Drawing.Size(138, 30);
+            this.txt_PhoneCustomer.TabIndex = 30;
             // 
-            // gunaDragControl1
+            // gunaLabel6
             // 
-            this.gunaDragControl1.TargetControl = null;
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.gunaLabel6.Location = new System.Drawing.Point(6, 258);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(121, 20);
+            this.gunaLabel6.TabIndex = 29;
+            this.gunaLabel6.Text = "Số điện thoại KH";
+            // 
+            // btn_SearchKH
+            // 
+            this.btn_SearchKH.AnimationHoverSpeed = 0.07F;
+            this.btn_SearchKH.AnimationSpeed = 0.03F;
+            this.btn_SearchKH.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SearchKH.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_SearchKH.BorderColor = System.Drawing.Color.Black;
+            this.btn_SearchKH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_SearchKH.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_SearchKH.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_SearchKH.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SearchKH.ForeColor = System.Drawing.Color.White;
+            this.btn_SearchKH.Image = null;
+            this.btn_SearchKH.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_SearchKH.Location = new System.Drawing.Point(22, 317);
+            this.btn_SearchKH.Name = "btn_SearchKH";
+            this.btn_SearchKH.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_SearchKH.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_SearchKH.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_SearchKH.OnHoverImage = null;
+            this.btn_SearchKH.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_SearchKH.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_SearchKH.Radius = 20;
+            this.btn_SearchKH.Size = new System.Drawing.Size(160, 42);
+            this.btn_SearchKH.TabIndex = 31;
+            this.btn_SearchKH.Text = "Tìm";
+            this.btn_SearchKH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_SearchKH.Click += new System.EventHandler(this.btn_SearchKH_Click);
+            // 
+            // lbl_phone
+            // 
+            this.lbl_phone.AutoSize = true;
+            this.lbl_phone.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lbl_phone.Location = new System.Drawing.Point(340, 12);
+            this.lbl_phone.Name = "lbl_phone";
+            this.lbl_phone.Size = new System.Drawing.Size(0, 20);
+            this.lbl_phone.TabIndex = 25;
             // 
             // Sell
             // 
@@ -581,10 +658,6 @@
         private Guna.UI.WinForms.GunaButton btn_Pay;
         private Guna.UI.WinForms.GunaButton btn_addOrder;
         private Guna.UI.WinForms.GunaLabel lbl_nameStaff;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMoney;
-        private System.Windows.Forms.DataGridViewImageColumn txt_img;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.ListView lv_Bill;
         private System.Windows.Forms.ColumnHeader c_Name;
@@ -594,5 +667,13 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaColorTransition gunaColorTransition1;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMoney;
+        private System.Windows.Forms.DataGridViewImageColumn txt_img;
+        private Guna.UI.WinForms.GunaLineTextBox txt_PhoneCustomer;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaButton btn_SearchKH;
+        private Guna.UI.WinForms.GunaLabel lbl_phone;
     }
 }

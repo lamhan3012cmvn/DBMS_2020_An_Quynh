@@ -21,6 +21,7 @@ namespace DBMS_2020.Features.Staff
         private DataTable menu;
         private Controllers.Staff staff;
         private string err;
+        private string phoneUser;
        
         public Sell()
         {
@@ -69,7 +70,7 @@ namespace DBMS_2020.Features.Staff
         {
             if(this.order is null)
             {
-                this.order = new oderTam("", this.codeStaff, this.codeBranch);
+                this.order = new oderTam(this.phoneUser, this.codeStaff, this.codeBranch);
             }
             int index = this.order.checkoutCodDish(this.codeDish);
             if (index==-1)
@@ -125,7 +126,7 @@ namespace DBMS_2020.Features.Staff
             
             
             
-            
+     
             if (err == null)
             {
                 MessageBox.Show("Thanh toán hóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -159,6 +160,24 @@ namespace DBMS_2020.Features.Staff
                     this.dgv_menu.Rows.Add(item[0], item[1], item[2]);
                 }
             }
+        }
+
+        private void btn_SearchKH_Click(object sender, EventArgs e)
+        {
+            var customer=this.staff.searchCustomer(this.txt_PhoneCustomer.Text);
+            if(customer.Tables[0].Rows.Count==0)
+            {
+                this.phoneUser = null;
+                this.lbl_phone.Text = "";
+                MessageBox.Show("Chưa có khác hàng");
+                //Không có Q về tạo form
+            }
+            else
+            {
+                this.phoneUser = this.lbl_phone.Text;
+                this.lbl_phone.Text = customer.Tables[0].Rows[0][1].ToString();
+            }
+
         }
     }
 }
