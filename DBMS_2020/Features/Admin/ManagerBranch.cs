@@ -15,11 +15,11 @@ namespace DBMS_2020.Features.Admin
     {
         private string err;
         DataTable DT;
-        private Controllers.Admin branch;
+        private Controllers.Admin.Branch branch;
         public ManagerBranch()
         {
             InitializeComponent();
-            this.branch = new Controllers.Admin();
+            this.branch = new Controllers.Admin.Branch();
             loadDataGridiew();
         }
 
@@ -45,7 +45,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DataSet check = this.branch.pickCustomer(this.txt_Code.Text);
+            DataSet check = this.branch.pickBranch(this.txt_Code.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
                 this.branch.addBranch(MaChiNhanh: this.txt_Code.Text, TenChiNhanh: this.txt_Name.Text, DiaChi: this.txt_Address.Text, DoanhThu: 0, ref err);
@@ -90,7 +90,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            DataSet check = this.branch.pickCustomer(this.txt_Code.Text);
+            DataSet check = this.branch.pickBranch(this.txt_Code.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm chi nhánh để update", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

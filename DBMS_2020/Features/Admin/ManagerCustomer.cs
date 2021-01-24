@@ -15,11 +15,11 @@ namespace DBMS_2020.Features.Admin
     {
         private string err;
         DataTable DT;
-        private Controllers.Admin Customer;
+        private Controllers.Admin.Customer Customer;
         public ManagerCustomer()
         {
             InitializeComponent();
-            this.Customer = new Controllers.Admin();
+            this.Customer = new Controllers.Admin.Customer();
             
             loadDataGridiew();
         }

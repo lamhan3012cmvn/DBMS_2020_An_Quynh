@@ -85,13 +85,13 @@ insert into ChiNhanh values ('CN05',N'Chi Nhánh 5',N'Quận 5',450000)
 insert into ChiNhanh values ('CN06',N'Chi Nhánh 6',N'Quận 6',800000)
 insert into ChiNhanh values ('CN07',N'Chi Nhánh 7',N'Quận 7',700000)
 
-insert into  NhanVien  values ('NV01',N'Nguyễn Cước Thiên','0984728234','01-10-2000','CN01','thien',null)
-insert into  NhanVien values ('NV02',N'Lâm Hoàng An','0912348234','2000-01-01','CN02','an',null)
-insert into  NhanVien values ('NV03',N'Tu Ngọc Yến Vy','0984724567','2000-01-01','CN03','vy',null)
-insert into  NhanVien values ('NV04',N'Nguyễn Hữu Tường','0984325790','2000-01-01','CN04','tuong',null)
-insert into  NhanVien values ('NV05',N'Đặng Nguyễn Hoài Thư','0984712367','2000-01-01','CN05','thu',null)
-insert into  NhanVien values ('NV06',N'Nguyễn Thị Như Quỳnh','0985194510','2000-01-01','CN06','quynh',null)
-insert into  NhanVien values ('NV07',N'Phạm Duy Khôi','0998728678','2000-01-01','CN07','khoi',null)
+insert into  NhanVien  values ('NV01',N'Nguyễn Cước Thiên','0984728234','01-10-2000','CN01','thien',0)
+insert into  NhanVien values ('NV02',N'Lâm Hoàng An','0912348234','2000-01-01','CN02','an',0)
+insert into  NhanVien values ('NV03',N'Tu Ngọc Yến Vy','0984724567','2000-01-01','CN03','vy',0)
+insert into  NhanVien values ('NV04',N'Nguyễn Hữu Tường','0984325790','2000-01-01','CN04','tuong',0)
+insert into  NhanVien values ('NV05',N'Đặng Nguyễn Hoài Thư','0984712367','2000-01-01','CN05','thu',0)
+insert into  NhanVien values ('NV06',N'Nguyễn Thị Như Quỳnh','0985194510','2000-01-01','CN06','quynh',0)
+insert into  NhanVien values ('NV07',N'Phạm Duy Khôi','0998728678','2000-01-01','CN07','khoi',0)
 
 insert into KhachHang values ('0985194510',N'Trần Ngọc Anh',N'01 Trần Hưng Đạo, Quận 1',15)
 insert into KhachHang values ('0947699623',N'Đặng Quốc Việt',N'02 Võ Thị Sáu, Quận 3',15)
@@ -100,17 +100,18 @@ insert into KhachHang values ('0912674906',N'Nguyễn Mai Hoa',N'99 Nguyễn Th�
 insert into KhachHang values ('0912674006',N'Võ Văn Thiên',N'01 Đường 9, Quận 4',15)
 insert into KhachHang values ('0912674001',N'Nguyễn Gia Bảo',N'02 Đường 10, Quận 5',15)
 
-insert into Menu values ('BINGSU01','Special BingSu',55000,null,'5')
-insert into Menu values ('BINGSU02','Cheese Cake BingSu',50000,null,'10')
-insert into Menu values ('BINGSU03','Passion Cheese BingSu',45000,null,'4')
-insert into Menu values ('BINGSU04','Choco BingSu',40000,null,'5')
-insert into Menu values ('BINGSU05','Oreo BingSu',45000,null,'7')
-insert into Menu values ('BINGSU06','Mango BingSo',45000,null,'10')
-insert into Menu values ('BINGSU07','Strawberry BingSu',50000,null,'8')
-insert into Menu values ('BINGSU08','Green Tea BingSu',40000,null,'2')
-insert into Menu values ('BINGSU09','Peach BingSu',45000,null,'1')
-insert into Menu values ('BINGSU10','Black Sesame BingSu',40000,null,'6')
+insert into Menu values ('BINGSU01','Special BingSu',55000,'special.jpg','5')
+insert into Menu values ('BINGSU02','Cheese Cake BingSu',50000,'Cheese.jpg','10')
+insert into Menu values ('BINGSU03','Passion Cheese BingSu','45000,passioncheese.jpg','4')
+insert into Menu values ('BINGSU04','Choco BingSu',40000,'Choco.jpg','5')
+insert into Menu values ('BINGSU05','Oreo BingSu',45000,'Oreo.jpg','7')
+insert into Menu values ('BINGSU06','Mango BingSo',45000,'mango.png','10')
+insert into Menu values ('BINGSU07','Strawberry BingSu',50000,'strawberry.jpg','8')
+insert into Menu values ('BINGSU08','Green Tea BingSu',40000,'GreenTea.jpg','2')
+insert into Menu values ('BINGSU09','Peach BingSu',45000,'peach.jpg','1')
+insert into Menu values ('BINGSU10','Black Sesame BingSu',40000,'black-sesame','6')
 
+select * from Menu
 
 
 --trigger 
@@ -172,6 +173,8 @@ begin
 end
 go
 print dbo.autoID_func()
+select dbo.autoID_func()
+
 go
 -- Function lấy một nhân viên khi biết mã nhân viên đó
 create or alter function pickNhanVien_func (@MaNV varchar(10)) returns table
@@ -190,11 +193,15 @@ as
 return (select * from KhachHang where SoDienThoai = @maKH)
 go
 
-
 --Function lấy 1 chi nhánh khi biết mã
 create or alter function pickBranch_func(@maCN varchar(10)) returns table
 as
 return (select * from ChiNhanh where MaChiNhanh = @maCN)
+go
+-- Function lấy một chi nhánh khi biết mã nhân viên
+create or alter function pickChiNhanh_NV_func (@MaNV varchar(10)) returns table
+as
+	return select TenChiNhanh from ChiNhanh,NhanVien where NhanVien.MaNhanVien = @MaNV and NhanVien.MaChiNhanh =ChiNhanh.MaChiNhanh 
 go
 
 --tìm kiếm theo tên nhân viên
@@ -225,7 +232,7 @@ as
 return(select* from KhachHang where KhachHang.TenKhachHang like N'%' + @tenKH+'%' or KhachHang.SoDienThoai like N'%' + @tenKH+'%')
 go
 
-select * from timkiemKH_func (N'Viê')
+select * from timkiemKH_func (N'Vi')
 go
 
 --top 3 món bán chạy
@@ -305,6 +312,8 @@ create or alter function ktDangNhap_func(@tk varchar(20),@mk varchar(20),@chucna
 as
 begin
 declare @kq int
+if(@tk = '' or @mk ='')
+	set @kq =0
 if (@chucnang=1)
 	begin
 		if(exists(select * from QuanLy where QuanLy.TenDangNhap=@tk and QuanLy.MatKhau=@mk))
@@ -326,7 +335,7 @@ else if(@chucnang = -1 )
 return @kq
 end
 go
-print dbo.ktDangNhap_func ('adminQuynh','1234',1)
+select dbo.ktDangNhap_func ('','',1)
 go
 
 -- Procedure
@@ -507,35 +516,35 @@ sp_addlogin 'AdminQuynh','1234'
 go
 sp_addlogin 'AdminAn','1234'
 go
-sp_addlogin 'NV1','1'
+sp_addlogin 'NV01','thien'
 go
-sp_addlogin 'NV2','1'
+sp_addlogin 'NV02','an'
 go
-sp_addlogin 'NV3','1'
+sp_addlogin 'NV03','vy'
 go
-sp_addlogin 'NV4','1'
+sp_addlogin 'NV04','tuong'
 go
-sp_addlogin 'NV5','1'
+sp_addlogin 'NV05','thu'
 go
-sp_addlogin 'NV6','1'
+sp_addlogin 'NV06','quynh'
 go
-sp_addlogin 'NV7','1'
+sp_addlogin 'NV07','khoi'
 go
 
 -- tạo user ứng với login 
-sp_adduser 'NV1','NV1'
+sp_adduser 'NV01','NV01'
 go
-sp_adduser 'NV2','NV2'
+sp_adduser 'NV02','NV02'
 go
-sp_adduser 'NV3','NV3'
+sp_adduser 'NV03','NV03'
 go
-sp_adduser 'NV4','NV4'
+sp_adduser 'NV04','NV04'
 go
-sp_adduser 'NV5','NV5'
+sp_adduser 'NV05','NV05'
 go
-sp_adduser 'NV6','NV6'
+sp_adduser 'NV06','NV06'
 go
-sp_adduser 'NV7','NV7'
+sp_adduser 'NV07','NV07'
 go
 sp_adduser 'AdminAn','AdminAn'
 go
@@ -550,19 +559,19 @@ go
 sp_addrole [RoleNhanVien]
 go
 --Add nhân viên vào RoleNhanVien
-sp_addrolemember [RoleNhanVien],[NV1]
+sp_addrolemember [RoleNhanVien],[NV01]
 go
-sp_addrolemember [RoleNhanVien],[NV2]
+sp_addrolemember [RoleNhanVien],[NV02]
 go
-sp_addrolemember [RoleNhanVien],[NV3]
+sp_addrolemember [RoleNhanVien],[NV03]
 go
-sp_addrolemember [RoleNhanVien],[NV4]
+sp_addrolemember [RoleNhanVien],[NV04]
 go
-sp_addrolemember [RoleNhanVien],[NV5]
+sp_addrolemember [RoleNhanVien],[NV05]
 go
-sp_addrolemember [RoleNhanVien],[NV6]
+sp_addrolemember [RoleNhanVien],[NV06]
 go
-sp_addrolemember [RoleNhanVien],[NV7]
+sp_addrolemember [RoleNhanVien],[NV07]
 go
 
 --Add các quyền vào role của nhân viên (RoleNhanViên)
@@ -590,6 +599,7 @@ Grant exec on ThemChiTietHoaDon_proc to RoleNhanVien
 go
 --trên bảng KhachHang
 Grant exec on themKH_proc to RoleNhanVien 
+Grant select on timkiemKH_func to RoleNhanVien 
 
 
 		

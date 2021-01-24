@@ -19,7 +19,6 @@ namespace DBMS_2020.Model
         {
             if (userName != null && password != null)
             {
-
                 this.conn_str = @"Data Source=PC; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
             }
             //Gán chuỗi kết nối để kết nối với SQL sever
@@ -80,7 +79,37 @@ namespace DBMS_2020.Model
             }
             return f;
         }
-
+        public object MyExecuteNonQueryValue(string strSQL,CommandType ct,ref string error)
+        {
+            //Nếu đã có kết nối thì đóng nó lại
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            //Mở kết nối
+            conn.Open();
+            comm = new SqlCommand("select dbo.autoID_func()", conn);
+            //Gán câu lệnh 
+            //comm.CommandText = strSQL;
+            //Chọn loại lệnh 
+            //comm.CommandType = CommandType.StoredProcedure ;
+           
+            try
+            {
+                //Nếu chương trình chạy bình thường thì cờ được gán là True
+                // var result=comm.ExecuteNonQuery();
+                return comm.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                //Trường hợp lỗi sẽ bắt lỗi
+                error = ex.Message;
+            }
+            finally
+            {
+                //Đóng kết nối
+                conn.Close();
+            }
+            return "";
+        }
         //Them delegate
     }
 }
