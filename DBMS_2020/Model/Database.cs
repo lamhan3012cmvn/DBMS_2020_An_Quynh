@@ -81,6 +81,37 @@ namespace DBMS_2020.Model
             return f;
         }
 
+        public object MyExecuteNonQueryValue(string strSQL, CommandType ct, ref string error)
+        {
+            //Cờ lỗi
+            bool f = false;
+            //Nếu đã có kết nối thì đóng nó lại
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            //Mở kết nối
+            conn.Open();
+            //Gán câu lệnh 
+            comm.CommandText = strSQL;
+            //Chọn loại lệnh 
+            comm.CommandType = ct;
+            try
+            {
+                //Nếu chương trình chạy bình thường thì cờ được gán là True
+                var result=comm.ExecuteNonQuery();
+                f = true;
+            }
+            catch (SqlException ex)
+            {
+                //Trường hợp lỗi sẽ bắt lỗi
+                error = ex.Message;
+            }
+            finally
+            {
+                //Đóng kết nối
+                conn.Close();
+            }
+            return f;
+        }
         //Them delegate
     }
 }

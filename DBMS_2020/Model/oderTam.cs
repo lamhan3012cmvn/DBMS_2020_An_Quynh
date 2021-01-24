@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace DBMS_2020.Model
 {
-    class oderTam
+    public class oderTam
     {
         private string phoneNumber;
         private string codeStaff;
         private string codeBranch;
         private List<Dish> dishes;
+
+        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
+        public string CodeStaff { get => codeStaff; set => codeStaff = value; }
+        public string CodeBranch { get => codeBranch; set => codeBranch = value; }
 
         public oderTam(string phoneNumber, string codeStaff, string codeBranch)
         {
@@ -30,6 +34,10 @@ namespace DBMS_2020.Model
         {
             Dish dish = new Dish(code, price, toal);
             this.dishes.Add(dish);
+        }
+        public int checkoutCodDish(string code)
+        {
+            return this.dishes.FindIndex(e => e.CodeDish == code);
         }
     }
 }

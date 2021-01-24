@@ -52,6 +52,7 @@ namespace DBMS_2020.Controllers.Admin
             Database db = new Database(this.tk, this.mk);
             return db.ExecuteQueryDataSet("select * from timkiemNV_func (N'" + name + "')", CommandType.Text);
         }
+      
 
     }
 }

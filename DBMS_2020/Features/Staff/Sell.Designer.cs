@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_Search = new Guna.UI.WinForms.GunaPanel();
             this.lbl_nameStaff = new Guna.UI.WinForms.GunaLabel();
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txt_Search = new Guna.UI.WinForms.GunaLineTextBox();
             this.txt_SearchName = new Guna.UI.WinForms.GunaLabel();
             this.pnl_SellMain = new Guna.UI.WinForms.GunaPanel();
             this.pnl_view = new Guna.UI.WinForms.GunaPanel();
@@ -46,24 +47,31 @@
             this.txt_Name = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Bill = new System.Windows.Forms.Panel();
+            this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.lv_Bill = new System.Windows.Forms.ListView();
+            this.c_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.c_Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cPrices = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.lbl_Money = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.lv_Bill = new System.Windows.Forms.ListView();
             this.pnl_data = new Guna.UI.WinForms.GunaPanel();
             this.dgv_menu = new Guna.UI.WinForms.GunaDataGridView();
+            this.cCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_img = new System.Windows.Forms.DataGridViewImageColumn();
             this.cMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPrices = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.c_Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.c_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txt_img = new System.Windows.Forms.DataGridViewImageColumn();
+            this.gunaColorTransition1 = new Guna.UI.WinForms.GunaColorTransition(this.components);
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.pnl_Search.SuspendLayout();
             this.pnl_SellMain.SuspendLayout();
             this.pnl_view.SuspendLayout();
             this.pnl_Control.SuspendLayout();
             this.pnl_Bill.SuspendLayout();
+            this.gunaPanel2.SuspendLayout();
+            this.gunaPanel1.SuspendLayout();
             this.pnl_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +80,7 @@
             // 
             this.pnl_Search.Controls.Add(this.lbl_nameStaff);
             this.pnl_Search.Controls.Add(this.btn_Back);
-            this.pnl_Search.Controls.Add(this.gunaLineTextBox1);
+            this.pnl_Search.Controls.Add(this.txt_Search);
             this.pnl_Search.Controls.Add(this.txt_SearchName);
             this.pnl_Search.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Search.Location = new System.Drawing.Point(0, 0);
@@ -119,22 +127,23 @@
             this.btn_Back.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
-            // gunaLineTextBox1
+            // txt_Search
             // 
-            this.gunaLineTextBox1.Animated = true;
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLineTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLineTextBox1.LineSize = 2;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(730, 12);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '*';
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(138, 30);
-            this.gunaLineTextBox1.TabIndex = 22;
+            this.txt_Search.Animated = true;
+            this.txt_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Search.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_Search.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_Search.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txt_Search.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_Search.LineSize = 2;
+            this.txt_Search.Location = new System.Drawing.Point(730, 12);
+            this.txt_Search.Name = "txt_Search";
+            this.txt_Search.PasswordChar = '\0';
+            this.txt_Search.Size = new System.Drawing.Size(138, 30);
+            this.txt_Search.TabIndex = 22;
+            this.txt_Search.TextChanged += new System.EventHandler(this.txt_Search_TextChanged);
             // 
             // txt_SearchName
             // 
@@ -279,7 +288,7 @@
             this.txt_Name.LineSize = 2;
             this.txt_Name.Location = new System.Drawing.Point(38, 62);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.PasswordChar = '*';
+            this.txt_Name.PasswordChar = '\0';
             this.txt_Name.Size = new System.Drawing.Size(138, 30);
             this.txt_Name.TabIndex = 24;
             // 
@@ -296,22 +305,77 @@
             // 
             // pnl_Bill
             // 
-            this.pnl_Bill.Controls.Add(this.gunaLabel5);
+            this.pnl_Bill.Controls.Add(this.gunaPanel2);
+            this.pnl_Bill.Controls.Add(this.gunaPanel1);
             this.pnl_Bill.Controls.Add(this.gunaLabel3);
             this.pnl_Bill.Controls.Add(this.lbl_Money);
             this.pnl_Bill.Controls.Add(this.gunaLabel1);
-            this.pnl_Bill.Controls.Add(this.lv_Bill);
             this.pnl_Bill.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_Bill.Location = new System.Drawing.Point(0, 0);
             this.pnl_Bill.Name = "pnl_Bill";
             this.pnl_Bill.Size = new System.Drawing.Size(246, 467);
             this.pnl_Bill.TabIndex = 0;
             // 
+            // gunaPanel2
+            // 
+            this.gunaPanel2.Controls.Add(this.lv_Bill);
+            this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel2.Location = new System.Drawing.Point(0, 45);
+            this.gunaPanel2.Name = "gunaPanel2";
+            this.gunaPanel2.Size = new System.Drawing.Size(246, 307);
+            this.gunaPanel2.TabIndex = 31;
+            // 
+            // lv_Bill
+            // 
+            this.lv_Bill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.lv_Bill.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lv_Bill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.c_Name,
+            this.c_Quantity,
+            this.cPrices});
+            this.lv_Bill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lv_Bill.GridLines = true;
+            this.lv_Bill.HideSelection = false;
+            this.lv_Bill.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.lv_Bill.Location = new System.Drawing.Point(0, 0);
+            this.lv_Bill.Name = "lv_Bill";
+            this.lv_Bill.Scrollable = false;
+            this.lv_Bill.Size = new System.Drawing.Size(246, 307);
+            this.lv_Bill.TabIndex = 1;
+            this.lv_Bill.UseCompatibleStateImageBehavior = false;
+            this.lv_Bill.View = System.Windows.Forms.View.Details;
+            // 
+            // c_Name
+            // 
+            this.c_Name.Text = "Tên Món";
+            this.c_Name.Width = 120;
+            // 
+            // c_Quantity
+            // 
+            this.c_Quantity.Text = "Số Lượng";
+            this.c_Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cPrices
+            // 
+            this.cPrices.Text = "Tổng giá";
+            this.cPrices.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cPrices.Width = 67;
+            // 
+            // gunaPanel1
+            // 
+            this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.gunaPanel1.Controls.Add(this.gunaLabel5);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(246, 45);
+            this.gunaPanel1.TabIndex = 30;
+            // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.gunaLabel5.Location = new System.Drawing.Point(72, 14);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(100, 20);
@@ -351,26 +415,6 @@
             this.gunaLabel1.TabIndex = 22;
             this.gunaLabel1.Text = "Tổng tiền";
             // 
-            // lv_Bill
-            // 
-            this.lv_Bill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.lv_Bill.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lv_Bill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.c_Name,
-            this.c_Quantity,
-            this.cPrices});
-            this.lv_Bill.GridLines = true;
-            this.lv_Bill.HideSelection = false;
-            this.lv_Bill.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lv_Bill.Location = new System.Drawing.Point(0, 48);
-            this.lv_Bill.Name = "lv_Bill";
-            this.lv_Bill.Scrollable = false;
-            this.lv_Bill.Size = new System.Drawing.Size(246, 309);
-            this.lv_Bill.TabIndex = 0;
-            this.lv_Bill.UseCompatibleStateImageBehavior = false;
-            this.lv_Bill.UseWaitCursor = true;
-            this.lv_Bill.View = System.Windows.Forms.View.Details;
-            // 
             // pnl_data
             // 
             this.pnl_data.Controls.Add(this.dgv_menu);
@@ -382,37 +426,40 @@
             // 
             // dgv_menu
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgv_menu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_menu.AllowUserToAddRows = false;
+            this.dgv_menu.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_menu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_menu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_menu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_menu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_menu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_menu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_menu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_menu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_menu.ColumnHeadersHeight = 21;
             this.dgv_menu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cCode,
             this.cName,
-            this.txt_img,
-            this.cMoney});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_menu.DefaultCellStyle = dataGridViewCellStyle12;
+            this.cMoney,
+            this.txt_img});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_menu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_menu.EnableHeadersVisualStyles = false;
             this.dgv_menu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -445,13 +492,25 @@
             this.dgv_menu.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_menu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_menu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgv_menu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_staff_CellContentClick);
+            this.dgv_menu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_menu_CellClick);
+            // 
+            // cCode
+            // 
+            this.cCode.HeaderText = "Mã Món";
+            this.cCode.Name = "cCode";
+            this.cCode.Visible = false;
             // 
             // cName
             // 
             this.cName.HeaderText = "Tên Món";
             this.cName.MinimumWidth = 6;
             this.cName.Name = "cName";
+            // 
+            // cMoney
+            // 
+            this.cMoney.HeaderText = "Giá";
+            this.cMoney.MinimumWidth = 6;
+            this.cMoney.Name = "cMoney";
             // 
             // txt_img
             // 
@@ -461,27 +520,18 @@
             this.txt_img.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.txt_img.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // cMoney
+            // gunaColorTransition1
             // 
-            this.cMoney.HeaderText = "Giá";
-            this.cMoney.MinimumWidth = 6;
-            this.cMoney.Name = "cMoney";
+            this.gunaColorTransition1.ColorArray = new System.Drawing.Color[] {
+        System.Drawing.Color.Red,
+        System.Drawing.Color.Blue,
+        System.Drawing.Color.Orange};
+            this.gunaColorTransition1.EndColor = System.Drawing.Color.Blue;
+            this.gunaColorTransition1.StartColor = System.Drawing.Color.Red;
             // 
-            // cPrices
+            // gunaDragControl1
             // 
-            this.cPrices.Text = "Tổng giá";
-            this.cPrices.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cPrices.Width = 67;
-            // 
-            // c_Quantity
-            // 
-            this.c_Quantity.Text = "Số Lượng";
-            this.c_Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // c_Name
-            // 
-            this.c_Name.Text = "Tên Món";
-            this.c_Name.Width = 120;
+            this.gunaDragControl1.TargetControl = null;
             // 
             // Sell
             // 
@@ -500,6 +550,9 @@
             this.pnl_Control.PerformLayout();
             this.pnl_Bill.ResumeLayout(false);
             this.pnl_Bill.PerformLayout();
+            this.gunaPanel2.ResumeLayout(false);
+            this.gunaPanel1.ResumeLayout(false);
+            this.gunaPanel1.PerformLayout();
             this.pnl_data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).EndInit();
             this.ResumeLayout(false);
@@ -510,15 +563,12 @@
 
         private Guna.UI.WinForms.GunaPanel pnl_Search;
         private Guna.UI.WinForms.GunaButton btn_Back;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
+        private Guna.UI.WinForms.GunaLineTextBox txt_Search;
         private Guna.UI.WinForms.GunaLabel txt_SearchName;
         private Guna.UI.WinForms.GunaPanel pnl_SellMain;
         private Guna.UI.WinForms.GunaPanel pnl_view;
         private Guna.UI.WinForms.GunaPanel pnl_data;
         private Guna.UI.WinForms.GunaDataGridView dgv_menu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cName;
-        private System.Windows.Forms.DataGridViewImageColumn txt_img;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cMoney;
         private System.Windows.Forms.Panel pnl_Bill;
         private Guna.UI.WinForms.GunaPanel pnl_Control;
         private Guna.UI.WinForms.GunaNumeric number_Quantity;
@@ -528,13 +578,21 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel lbl_Money;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private System.Windows.Forms.ListView lv_Bill;
         private Guna.UI.WinForms.GunaButton btn_Pay;
         private Guna.UI.WinForms.GunaButton btn_addOrder;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel lbl_nameStaff;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cMoney;
+        private System.Windows.Forms.DataGridViewImageColumn txt_img;
+        private Guna.UI.WinForms.GunaPanel gunaPanel2;
+        private System.Windows.Forms.ListView lv_Bill;
         private System.Windows.Forms.ColumnHeader c_Name;
         private System.Windows.Forms.ColumnHeader c_Quantity;
         private System.Windows.Forms.ColumnHeader cPrices;
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaColorTransition gunaColorTransition1;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }
