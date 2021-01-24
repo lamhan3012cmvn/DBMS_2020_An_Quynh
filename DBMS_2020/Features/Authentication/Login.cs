@@ -31,13 +31,14 @@ namespace DBMS_2020.Features.Authentication
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if(status==1)
                 {
-                    this.staffView = new Staff.Staff(this.txt_user_name.Text);
-                    DBMS_2020.Class.MethodHelps.addControl(this, this.staffView);
+                    this.admin = new Admin.Admin();
+                    DBMS_2020.Class.MethodHelps.addControl(this, this.admin);
                 }    
                 else if(status==2)
                 {
-                    this.admin = new Admin.Admin();
-                    DBMS_2020.Class.MethodHelps.addControl(this, this.admin);
+                    this.staffView = new Staff.Staff(this.txt_user_name.Text);
+                    DBMS_2020.Class.MethodHelps.addControl(this, this.staffView);
+                    
                 }    
             }
             else
