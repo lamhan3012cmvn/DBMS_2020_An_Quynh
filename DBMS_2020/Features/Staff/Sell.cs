@@ -22,29 +22,29 @@ namespace DBMS_2020.Features.Staff
         private Controllers.Staff staff;
         private string err;
         private string phoneUser;
-       
+
         public Sell()
         {
             InitializeComponent();
             menu = new DBMS_2020.Controllers.Admin.Menu().loadViewManagerMenu().Tables[0];
-            this.codeStaff = "1234";
-            this.codeBranch = "CN1";
+            this.codeStaff = "NV01";
+            this.codeBranch = "CN01";
             this.staff = new Controllers.Staff();
             loadMenu();
         }
-
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
         public void loadMenu()
-        { 
+        {
             this.dgv_menu.Rows.Clear();
             for (int i = 0; i < this.menu.Rows.Count; i++)
             {
                 var item = this.menu.Rows[i];
-                //this.dgv_menu.Rows.Add(item[0], item[1], item[2], item[3]);
-                this.dgv_menu.Rows.Add(item[0], item[1], item[2]);
+                //txt_img.Image = Image.FromFile("../../img/" + item[3]);
+                this.dgv_menu.Rows.Add(item[0], item[1], item[2], Image.FromFile("../../img/" + item[3]));
+                //this.dgv_menu.Rows.Add(item[0], item[1], item[2]);
             }
 
         }
@@ -56,7 +56,7 @@ namespace DBMS_2020.Features.Staff
                 return;
             this.order.Dishes().ForEach(d =>
             {
-                int i = this.lv_Bill.Items.Count; 
+                int i = this.lv_Bill.Items.Count;
                 ListViewItem viewItem = new ListViewItem(d.CodeDish);
                 this.lv_Bill.Items.Add(viewItem);
                 this.lv_Bill.Items[i].SubItems.Add(d.PriceDish);
@@ -68,20 +68,20 @@ namespace DBMS_2020.Features.Staff
 
         private void btn_addOrder_Click(object sender, EventArgs e)
         {
-            if(this.order is null)
+            if (this.order is null)
             {
                 this.order = new oderTam(this.phoneUser, this.codeStaff, this.codeBranch);
             }
             int index = this.order.checkoutCodDish(this.codeDish);
-            if (index==-1)
+            if (index == -1)
             {
                 this.order.addDish(this.codeDish, this.price, this.number_Quantity.Value.ToString());
             }
             else
             {
-                this.order.Dishes()[index].ToalDish =(int.Parse(this.order.Dishes()[index].ToalDish)+ (int)this.number_Quantity.Value).ToString();
+                this.order.Dishes()[index].ToalDish = (int.Parse(this.order.Dishes()[index].ToalDish) + (int)this.number_Quantity.Value).ToString();
             }
-           
+
             loadListView();
         }
 
@@ -89,28 +89,30 @@ namespace DBMS_2020.Features.Staff
         {
             //bool result = this.staff.payTheBill(this.order, this.lbl_Money.Text, ref err);
             string codeBill = this.staff.createCodeBill(ref err);
-            if(err!=null)
+            if (err != null)
             {
                 MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 err = null;
             }
             else
             {
-                this.staff.addBill(codeBill, this.order.PhoneNumber, this.order.CodeStaff, this.lbl_Money.Text, ref err);
+                this.staff.addBill(codeBill, this.order.PhoneNumber, this.codeBranch, this.order.CodeStaff, this.lbl_Money.Text, ref err);
                 if (err == null)
                 {
                     this.order.Dishes().ForEach(d =>
                     {
-                        this.staff.addCTHD(codeBill, d.CodeDish, d.ToalDish, float.Parse(d.PriceDish),ref err);
-                        if(err !=null)
+                        this.staff.addCTHD(codeBill, d.CodeDish, d.ToalDish, float.Parse(d.PriceDish), ref err);
+                        if (err != null)
                         {
                             MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             err = null;
                         }
                     });
-                    if(err==null)
+                    if (err == null)
                     {
                         MessageBox.Show("Thêm Hóa Đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.lv_Bill.Items.Clear();
+                        this.order = null;
                     }
                 }
                 else
@@ -119,32 +121,13 @@ namespace DBMS_2020.Features.Staff
                     err = null;
                 }
             }
-            
-            
-            
-            
-            
-            
-            
-     
-            if (err == null)
-            {
-                MessageBox.Show("Thanh toán hóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.lv_Bill.Items.Clear();
-                this.order = null;
-            }
-            else
-            {
-                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                err = null;
-            }
         }
 
         private void dgv_menu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             this.txt_Name.Text = this.dgv_menu.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.number_Quantity.Value = 1;
-            this.codeDish= this.dgv_menu.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.codeDish = this.dgv_menu.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.price = this.dgv_menu.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
 
@@ -152,10 +135,10 @@ namespace DBMS_2020.Features.Staff
         {
             var tempMenu = this.menu.Rows;
             this.dgv_menu.Rows.Clear();
-            for (int i=0;i<tempMenu.Count;i++)
+            for (int i = 0; i < tempMenu.Count; i++)
             {
                 var item = tempMenu[i];
-                if(item[1].ToString().Contains(this.txt_Search.Text))
+                if (item[1].ToString().Contains(this.txt_Search.Text))
                 {
                     this.dgv_menu.Rows.Add(item[0], item[1], item[2]);
                 }
@@ -164,8 +147,8 @@ namespace DBMS_2020.Features.Staff
 
         private void btn_SearchKH_Click(object sender, EventArgs e)
         {
-            var customer=this.staff.searchCustomer(this.txt_PhoneCustomer.Text);
-            if(customer.Tables[0].Rows.Count==0)
+            var customer = this.staff.searchCustomer(this.txt_PhoneCustomer.Text);
+            if (customer.Tables[0].Rows.Count == 0)
             {
                 this.phoneUser = null;
                 this.lbl_phone.Text = "";

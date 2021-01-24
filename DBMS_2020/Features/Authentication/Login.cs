@@ -13,8 +13,9 @@ namespace DBMS_2020.Features.Authentication
     public partial class Login : UserControl
     {
         private DBMS_2020.Controllers.Authentication auth;
-        private string err;
         private DBMS_2020.Features.Staff.Staff staffView;
+        private DBMS_2020.Features.Admin.Admin admin;
+
         public Login()
         {
             InitializeComponent();
@@ -28,8 +29,16 @@ namespace DBMS_2020.Features.Authentication
             if ((int)result == 1)
             {
                 MessageBox.Show("Đăng Nhập Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.staffView = new Staff.Staff("NV01");
-                DBMS_2020.Class.MethodHelps.addControl(this, this.staffView);
+                if(status==1)
+                {
+                    this.staffView = new Staff.Staff(this.txt_user_name.Text);
+                    DBMS_2020.Class.MethodHelps.addControl(this, this.staffView);
+                }    
+                else if(status==2)
+                {
+                    this.admin = new Admin.Admin();
+                    DBMS_2020.Class.MethodHelps.addControl(this, this.admin);
+                }    
             }
             else
             {

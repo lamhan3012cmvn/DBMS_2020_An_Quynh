@@ -23,7 +23,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             Menu = new Controllers.Admin.Menu();
-            loadDataGridiew();
+            //loadDataGridiew();
 
             picb_img.SizeMode = PictureBoxSizeMode.Zoom;
             openFileDialog1.Title = "Select Picture";
@@ -51,8 +51,14 @@ namespace DBMS_2020.Features.Admin
             DataSet check = Menu.pickItem(this.txt_Code.Text);
             if(check.Tables[0].Rows.Count == 0)
             {
-                //Xử Lý Ảnh ở đây
-                Menu.addMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: float.Parse(this.txt_Price.Text), AnhMinhHoa: "abc", DaBan: 0, ref err);
+                float price;             
+                if(!float.TryParse(this.txt_Price.Text, out price))
+                {
+                    MessageBox.Show("Giá tiền không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }    
+
+                Menu.addMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: price, AnhMinhHoa: "abc", DaBan: 0, ref err);
                 if(err == null)
                 {
                     MessageBox.Show("Thêm món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

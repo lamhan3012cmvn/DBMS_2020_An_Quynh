@@ -34,17 +34,17 @@ namespace DBMS_2020.Controllers
             return result;
         }
 
-        public bool addBill(string codeBill,string phoneNumber,string codeStaff,string total,ref string err)
+        public bool addBill(string codeBill,string phoneNumber,string codeBranch,string codeStaff,string total,ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            string strSQL_HoaDon = $"exec ThemHoaDon_proc {codeBill},{phoneNumber},{codeStaff},{total},{DateTime.Now}";
+            string strSQL_HoaDon = $@"exec ThemHoaDon_proc '{codeBill}','{phoneNumber}','{codeStaff}','{codeBranch}','{float.Parse(total)}','{DateTime.Now}'";
             bool result_HD = db.MyExecuteNonQuery(strSQL_HoaDon, CommandType.Text, ref err);
             return result_HD;
         }
         public bool addCTHD(string codeBill,string codeDish,string total,float priceDish,ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            string strSQL_CTHD = $"exec ThemChiTietHoaDon_proc{codeBill},{codeDish},{total},{priceDish}";
+            string strSQL_CTHD = $"exec ThemChiTietHoaDon_proc'{codeBill}','{codeDish}','{int.Parse(total)}','{priceDish}'";
             bool reuslt = db.MyExecuteNonQuery(strSQL_CTHD, CommandType.Text, ref err);
             return reuslt;
 
@@ -57,7 +57,7 @@ namespace DBMS_2020.Controllers
         public string createCodeBill(ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            string sql = $"select autoID_func()";
+            string sql = $"select dbo.autoID_func()";
             string result = (string)db.MyExecuteNonQueryValue(sql, CommandType.Text, ref err);
             return result;
         }

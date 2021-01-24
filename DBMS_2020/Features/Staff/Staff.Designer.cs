@@ -32,22 +32,22 @@
             this.pnl_load = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.lbl_Branch = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
-            this.lbl_NamePage = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.btn_logout = new Guna.UI.WinForms.GunaButton();
             this.btn_inforStaff = new Guna.UI.WinForms.GunaButton();
             this.btn_Sell = new Guna.UI.WinForms.GunaButton();
+            this.lbl_Branch = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
+            this.lbl_NamePage = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Staff.SuspendLayout();
             this.pnl_load.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,64 +97,6 @@
             this.gunaLabel1.Size = new System.Drawing.Size(132, 35);
             this.gunaLabel1.TabIndex = 23;
             this.gunaLabel1.Text = "Lựa Chọn";
-            // 
-            // lbl_Branch
-            // 
-            this.lbl_Branch.AutoSize = true;
-            this.lbl_Branch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_Branch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lbl_Branch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.lbl_Branch.Location = new System.Drawing.Point(687, 52);
-            this.lbl_Branch.Name = "lbl_Branch";
-            this.lbl_Branch.Size = new System.Drawing.Size(102, 25);
-            this.lbl_Branch.TabIndex = 18;
-            this.lbl_Branch.Text = "Chi Nhánh";
-            // 
-            // gunaPanel1
-            // 
-            this.gunaPanel1.Controls.Add(this.gunaPanel3);
-            this.gunaPanel1.Controls.Add(this.gunaCirclePictureBox1);
-            this.gunaPanel1.Controls.Add(this.gunaLabel2);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(884, 85);
-            this.gunaPanel1.TabIndex = 0;
-            // 
-            // gunaPanel3
-            // 
-            this.gunaPanel3.Controls.Add(this.lbl_NamePage);
-            this.gunaPanel3.Location = new System.Drawing.Point(684, 0);
-            this.gunaPanel3.Name = "gunaPanel3";
-            this.gunaPanel3.Size = new System.Drawing.Size(200, 35);
-            this.gunaPanel3.TabIndex = 12;
-            // 
-            // lbl_NamePage
-            // 
-            this.lbl_NamePage.AutoSize = true;
-            this.lbl_NamePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_NamePage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_NamePage.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lbl_NamePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.lbl_NamePage.Location = new System.Drawing.Point(102, 0);
-            this.lbl_NamePage.Name = "lbl_NamePage";
-            this.lbl_NamePage.Size = new System.Drawing.Size(98, 25);
-            this.lbl_NamePage.TabIndex = 9;
-            this.lbl_NamePage.Text = "Trang Chủ";
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(339, 23);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.gunaLabel2.Size = new System.Drawing.Size(261, 39);
-            this.gunaLabel2.TabIndex = 10;
-            this.gunaLabel2.Text = "Tiểu Lý Phi Đao";
             // 
             // btn_logout
             // 
@@ -243,6 +185,18 @@
             this.btn_Sell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Sell.Click += new System.EventHandler(this.btn_Sell_Click);
             // 
+            // lbl_Branch
+            // 
+            this.lbl_Branch.AutoSize = true;
+            this.lbl_Branch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lbl_Branch.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lbl_Branch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.lbl_Branch.Location = new System.Drawing.Point(687, 52);
+            this.lbl_Branch.Name = "lbl_Branch";
+            this.lbl_Branch.Size = new System.Drawing.Size(102, 25);
+            this.lbl_Branch.TabIndex = 18;
+            this.lbl_Branch.Text = "Chi Nhánh";
+            // 
             // gunaCirclePictureBox2
             // 
             this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
@@ -255,6 +209,38 @@
             this.gunaCirclePictureBox2.TabStop = false;
             this.gunaCirclePictureBox2.UseTransfarantBackground = false;
             // 
+            // gunaPanel1
+            // 
+            this.gunaPanel1.Controls.Add(this.gunaPanel3);
+            this.gunaPanel1.Controls.Add(this.gunaCirclePictureBox1);
+            this.gunaPanel1.Controls.Add(this.gunaLabel2);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(884, 85);
+            this.gunaPanel1.TabIndex = 0;
+            // 
+            // gunaPanel3
+            // 
+            this.gunaPanel3.Controls.Add(this.lbl_NamePage);
+            this.gunaPanel3.Location = new System.Drawing.Point(684, 0);
+            this.gunaPanel3.Name = "gunaPanel3";
+            this.gunaPanel3.Size = new System.Drawing.Size(200, 35);
+            this.gunaPanel3.TabIndex = 12;
+            // 
+            // lbl_NamePage
+            // 
+            this.lbl_NamePage.AutoSize = true;
+            this.lbl_NamePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lbl_NamePage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_NamePage.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lbl_NamePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.lbl_NamePage.Location = new System.Drawing.Point(102, 0);
+            this.lbl_NamePage.Name = "lbl_NamePage";
+            this.lbl_NamePage.Size = new System.Drawing.Size(98, 25);
+            this.lbl_NamePage.TabIndex = 9;
+            this.lbl_NamePage.Text = "Trang Chủ";
+            // 
             // gunaCirclePictureBox1
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
@@ -265,6 +251,20 @@
             this.gunaCirclePictureBox1.TabIndex = 11;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.gunaLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.gunaLabel2.Location = new System.Drawing.Point(339, 23);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
+            this.gunaLabel2.Size = new System.Drawing.Size(261, 39);
+            this.gunaLabel2.TabIndex = 10;
+            this.gunaLabel2.Text = "Tiểu Lý Phi Đao";
             // 
             // Staff
             // 
@@ -277,11 +277,11 @@
             this.pnl_load.ResumeLayout(false);
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.gunaPanel3.ResumeLayout(false);
             this.gunaPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 

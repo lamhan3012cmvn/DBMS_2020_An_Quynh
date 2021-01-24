@@ -15,12 +15,13 @@ namespace DBMS_2020.Model
         private SqlCommand comm = null;
         private SqlDataAdapter da = null;
 
-        public Database(string userName,string password)
+        public Database(string userName, string password)
         {
             if (userName != null && password != null)
             {
                 //this.conn_str = @"Data Source=DESKTOP-UEKLT7K; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
-                this.conn_str = @"Data Source=192.168.43.111; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
+                //this.conn_str = @"Data Source=192.168.43.111; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
+                this.conn_str = @"Data Source=PC; Initial Catalog=QuanLyCuaHangBingSu;User ID=" + userName + ";Password=" + password + ";";
             }
             //Gán chuỗi kết nối để kết nối với SQL sever
             this.conn = new SqlConnection(this.conn_str);
@@ -80,25 +81,24 @@ namespace DBMS_2020.Model
             }
             return f;
         }
-
         public object MyExecuteNonQueryValue(string strSQL, CommandType ct, ref string error)
         {
-            //Cờ lỗi
-            bool f = false;
             //Nếu đã có kết nối thì đóng nó lại
             if (conn.State == ConnectionState.Open)
                 conn.Close();
             //Mở kết nối
             conn.Open();
+            comm = new SqlCommand("select dbo.autoID_func()", conn);
             //Gán câu lệnh 
-            comm.CommandText = strSQL;
+            //comm.CommandText = strSQL;
             //Chọn loại lệnh 
-            comm.CommandType = ct;
+            //comm.CommandType = CommandType.StoredProcedure ;
+
             try
             {
                 //Nếu chương trình chạy bình thường thì cờ được gán là True
-                var result=comm.ExecuteScalar();
-                f = true;
+                // var result=comm.ExecuteNonQuery();
+                return comm.ExecuteScalar();
             }
             catch (SqlException ex)
             {
@@ -110,7 +110,7 @@ namespace DBMS_2020.Model
                 //Đóng kết nối
                 conn.Close();
             }
-            return f;
+            return "";
         }
         //Them delegate
     }

@@ -21,7 +21,7 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.staff = new Controllers.Admin.Staff();
-            loadDataGridiew();
+            //loadDataGridiew();
         }
         private void loadDataGridiew()
         {

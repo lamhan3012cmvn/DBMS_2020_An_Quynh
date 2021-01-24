@@ -35,19 +35,16 @@ namespace DBMS_2020.Features.Staff
             this.sell = new Sell();
             MethodHelps.addControl(this.pnl_load, this.sell);
         }
-
         private void btn_inforStaff_Click(object sender, EventArgs e)
         {
             loadInforStaff();
             if (!(this.sell is null)) this.sell.Dispose();
         }
-
         private void btn_Sell_Click(object sender, EventArgs e)
         {
             loadSell();
             if (!(this.inforStaff is null)) this.inforStaff.Dispose();
         }
-
         private void btn_logout_Click(object sender, EventArgs e)
         {
             this.Dispose();

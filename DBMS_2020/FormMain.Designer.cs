@@ -37,14 +37,14 @@
             this.pnl_FormMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_FormMain.Location = new System.Drawing.Point(0, 0);
             this.pnl_FormMain.Name = "pnl_FormMain";
-            this.pnl_FormMain.Size = new System.Drawing.Size(884, 586);
+            this.pnl_FormMain.Size = new System.Drawing.Size(895, 598);
             this.pnl_FormMain.TabIndex = 0;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 586);
+            this.ClientSize = new System.Drawing.Size(895, 598);
             this.Controls.Add(this.pnl_FormMain);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

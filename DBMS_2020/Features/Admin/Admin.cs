@@ -42,28 +42,14 @@ namespace DBMS_2020.Features.Admin
             MethodHelps.addControl(this.pnl_Admin, staff);
         }
 
-        private void lbl_Staff_Click(object sender, EventArgs e)
+        private void btn_logout_Click(object sender, EventArgs e)
         {
-            //resetPnl();
-            loadManagerStaff();
-            if (!(this.customer is null))
-            {
-                this.customer.Dispose();
-            }
-            if (!(this.branch is null))
-            {
-                this.branch.Dispose();
-            }
-            if (!(this.menu is null))
-            {
-                this.menu.Dispose();
-            }
+            this.Dispose();
         }
 
-        private void lbl_bracnh_Click(object sender, EventArgs e)
+        private void btn_Menu_Click(object sender, EventArgs e)
         {
-            //resetPnl();
-            loadManagerBranch();
+            loadManagerMenu();
             if (!(this.staff is null))
             {
                 this.staff.Dispose();
@@ -72,15 +58,14 @@ namespace DBMS_2020.Features.Admin
             {
                 this.customer.Dispose();
             }
-            if (!(this.menu is null))
+            if (!(this.branch is null))
             {
-                this.menu.Dispose();
+                this.branch.Dispose();
             }
         }
 
-        private void lbl_Customer_Click(object sender, EventArgs e)
+        private void btn_Customer_Click(object sender, EventArgs e)
         {
-            //resetPnl();
             loadManagerCustomer();
             if (!(this.staff is null))
             {
@@ -96,10 +81,9 @@ namespace DBMS_2020.Features.Admin
             }
         }
 
-        private void lbl_Menu_Click(object sender, EventArgs e)
+        private void btn_Branch_Click(object sender, EventArgs e)
         {
-            //resetPnl();
-            loadManagerMenu();
+            loadManagerBranch();
             if (!(this.staff is null))
             {
                 this.staff.Dispose();
@@ -108,30 +92,27 @@ namespace DBMS_2020.Features.Admin
             {
                 this.customer.Dispose();
             }
-            if (!(this.branch is null))
+            if (!(this.menu is null))
             {
-                this.branch.Dispose();
+                this.menu.Dispose();
             }
         }
-        private void resetPnl()
+
+        private void btn_Staff_Click(object sender, EventArgs e)
         {
-            if(!(this.staff is null))
-            {
-                this.staff.Dispose();
-            }
+            loadManagerStaff();
             if (!(this.customer is null))
             {
                 this.customer.Dispose();
             }
-            if(!(this.branch is null))
+            if (!(this.branch is null))
             {
                 this.branch.Dispose();
-            }    
-            if(!(this.menu  is null))
+            }
+            if (!(this.menu is null))
             {
                 this.menu.Dispose();
-            }    
+            }
         }
-       
     }
 }
