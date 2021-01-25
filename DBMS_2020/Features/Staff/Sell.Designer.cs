@@ -100,22 +100,23 @@
             this.lbl_phone.AutoSize = true;
             this.lbl_phone.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_phone.Location = new System.Drawing.Point(340, 12);
+            this.lbl_phone.Location = new System.Drawing.Point(414, 24);
             this.lbl_phone.Name = "lbl_phone";
-            this.lbl_phone.Size = new System.Drawing.Size(0, 25);
+            this.lbl_phone.Size = new System.Drawing.Size(153, 25);
             this.lbl_phone.TabIndex = 25;
+            this.lbl_phone.Text = " Tên khách hàng:";
             // 
             // lbl_nameStaff
             // 
             this.lbl_nameStaff.AutoSize = true;
             this.lbl_nameStaff.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nameStaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_nameStaff.Location = new System.Drawing.Point(337, 14);
+            this.lbl_nameStaff.Location = new System.Drawing.Point(190, 24);
             this.lbl_nameStaff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nameStaff.Name = "lbl_nameStaff";
-            this.lbl_nameStaff.Size = new System.Drawing.Size(179, 25);
+            this.lbl_nameStaff.Size = new System.Drawing.Size(110, 25);
             this.lbl_nameStaff.TabIndex = 24;
-            this.lbl_nameStaff.Text = "Nhân Viên : ................";
+            this.lbl_nameStaff.Text = "Nhân Viên: ";
             // 
             // btn_Back
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace DBMS_2020.Features.Authentication
 {
@@ -36,9 +37,11 @@ namespace DBMS_2020.Features.Authentication
                 }    
                 else if(status==2)
                 {
-                    
+                    ConfigurationManager.AppSettings["userName"]=this.txt_user_name.Text;
+                    ConfigurationManager.AppSettings["password"]=this.txt_password.Text;
                     this.staffView = new Staff.Staff(this.txt_user_name.Text);
                     DBMS_2020.Class.MethodHelps.addControl(this, this.staffView);
+                    
                     
                 }    
             }
@@ -46,6 +49,11 @@ namespace DBMS_2020.Features.Authentication
             {
                 MessageBox.Show("Đăng Nhập Thất Bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void lbl_login_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

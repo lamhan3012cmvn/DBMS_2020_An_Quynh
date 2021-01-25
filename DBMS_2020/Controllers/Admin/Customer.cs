@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DBMS_2020.Model;
+using System.Windows;
 
 namespace DBMS_2020.Controllers.Admin
 {
@@ -18,6 +19,7 @@ namespace DBMS_2020.Controllers.Admin
         {
             this.tk = ConfigurationManager.AppSettings["userName"];
             this.mk = ConfigurationManager.AppSettings["password"];
+            System.Windows.Forms.MessageBox.Show(tk);
         }
         public DataSet loadViewManagerCustomer()
         {

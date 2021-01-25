@@ -436,10 +436,21 @@ go
 --Procedure Thêm Khách Hàng 
 create or alter  procedure themKH_proc @SDT varchar(10),@TenKH nvarchar(50),@DiaChi nvarchar(50), @DaMua int
 as
+declare @kt int
 begin
-	insert into KhachHang values(@SDT,@TenKH,@DiaChi,@DaMua)
+	select @kt =  dbo.ktSoDienThoai_func (@SDT)
+	if(exists(select * from KhachHang where SoDienThoai = @SDT))
+		throw 50005,N'Số điện thoại đã tồn tại',1;
+	else 
+	begin 
+		if(@kt =1)
+			insert into KhachHang values(@SDT,@TenKH,@DiaChi,@DaMua)
+		else 
+			throw 50005,N'Số điện thoại không hợp lệ',1;
+	end
 end
 go
+
 
 
 --Procedure Sửa Khách Hàng
@@ -584,7 +595,7 @@ Grant update  on NhanVien to RoleNhanVien
 
 --nhân viên
 Grant exec on suaNV_proc to RoleNhanVien 
-
+Grant select on pickChiNhanh_NV_func to RoleNhanVien
 
 --Menu
 Grant select on timkiemMonAn_func to RoleNhanVien 
@@ -593,7 +604,7 @@ Grant select on timkiemMonAn_func to RoleNhanVien
 Grant select on timkiemCN_func to RoleNhanVien 
 --Hóa đơn
 Grant exec on ThemHoaDon_proc to RoleNhanVien 		
---Grant select on LayHoaDonTruoc_func to RoleNhanVien 		
+Grant exec on autoID_func to RoleNhanVien 		
 Grant exec on ThemChiTietHoaDon_proc to RoleNhanVien 	
 
 go

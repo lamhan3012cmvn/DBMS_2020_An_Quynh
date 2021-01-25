@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
@@ -89,6 +90,7 @@
     </Compile>
     <Compile Include="Controllers\Admin\Customer.cs" />
     <Compile Include="Controllers\Admin\Staff.cs" />
+    <Compile Include="Controllers\Admin\Statistical.cs" />
     <Compile Include="Controllers\Authentication.cs" />
     <Compile Include="Controllers\Admin\Branch.cs" />
     <Compile Include="Controllers\Admin\Menu.cs" />
@@ -122,6 +124,12 @@
     </Compile>
     <Compile Include="Features\Admin\ManagerStaff.Designer.cs">
       <DependentUpon>ManagerStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Admin\statistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\statistical.Designer.cs">
+      <DependentUpon>statistical.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\Authentication\Login.cs">
       <SubType>UserControl</SubType>
@@ -199,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Admin\ManagerStaff.resx">
       <DependentUpon>ManagerStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\Statistical.resx">
+      <DependentUpon>statistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Authentication\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

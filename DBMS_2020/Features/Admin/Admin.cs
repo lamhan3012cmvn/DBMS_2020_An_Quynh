@@ -17,9 +17,11 @@ namespace DBMS_2020.Features.Admin
         private ManagerCustomer customer;
         private ManagerMenu menu;
         private ManagerStaff staff;
+        private Statistical statistical;
         public Admin()
         {
             InitializeComponent();
+           
         }
         private void loadManagerBranch()
         {
@@ -40,6 +42,11 @@ namespace DBMS_2020.Features.Admin
         {
             this.staff = new ManagerStaff();
             MethodHelps.addControl(this.pnl_loadUI, staff);
+        }
+        public void loadStatictical()
+        {
+            statistical = new Statistical();
+            MethodHelps.addControl(this.pnl_loadUI, statistical);
         }
 
         private void btn_logout_Click(object sender, EventArgs e)
@@ -62,6 +69,10 @@ namespace DBMS_2020.Features.Admin
             {
                 this.branch.Dispose();
             }
+            if (!(this.statistical is null))
+            {
+                this.statistical.Dispose();
+            }
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)
@@ -78,6 +89,10 @@ namespace DBMS_2020.Features.Admin
             if (!(this.menu is null))
             {
                 this.menu.Dispose();
+            }
+            if (!(this.statistical is null))
+            {
+                this.statistical.Dispose();
             }
         }
 
@@ -96,6 +111,10 @@ namespace DBMS_2020.Features.Admin
             {
                 this.menu.Dispose();
             }
+            if (!(this.statistical is null))
+            {
+                this.statistical.Dispose();
+            }
         }
 
         private void btn_Staff_Click(object sender, EventArgs e)
@@ -112,6 +131,31 @@ namespace DBMS_2020.Features.Admin
             if (!(this.menu is null))
             {
                 this.menu.Dispose();
+            }
+            if(!(this.statistical is null))
+            {
+                this.statistical.Dispose();
+            }    
+        }
+
+        private void btn_statistical_Click(object sender, EventArgs e)
+        {
+            loadStatictical();
+            if (!(this.staff is null))
+            {
+                this.staff.Dispose();
+            }
+            if (!(this.customer is null))
+            {
+                this.customer.Dispose();
+            }
+            if (!(this.menu is null))
+            {
+                this.menu.Dispose();
+            }
+            if (!(this.branch is null))
+            {
+                this.branch.Dispose();
             }
         }
     }

@@ -32,6 +32,7 @@ namespace DBMS_2020.Features.Staff
            
             this.staff = new Controllers.Staff();
             this.customer = new Controllers.Admin.Customer();
+            this.lbl_nameStaff.Text += this.codeStaff; 
             loadMenu();
         }
         private void btn_Back_Click(object sender, EventArgs e)
