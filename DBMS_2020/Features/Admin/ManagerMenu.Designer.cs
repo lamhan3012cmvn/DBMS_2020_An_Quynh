@@ -345,7 +345,6 @@
             this.pnl_data.Controls.Add(this.dgv_Menu);
             this.pnl_data.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_data.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.pnl_data.LineRight = 2;
             this.pnl_data.LineStyle = System.Windows.Forms.BorderStyle.None;
             this.pnl_data.Location = new System.Drawing.Point(0, 0);
             this.pnl_data.Name = "pnl_data";

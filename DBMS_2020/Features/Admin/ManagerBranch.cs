@@ -16,13 +16,24 @@ namespace DBMS_2020.Features.Admin
         private string err;
         DataTable DT;
         private Controllers.Admin.Branch branch;
+        private bool flag;
         public ManagerBranch()
         {
             InitializeComponent();
             this.branch = new Controllers.Admin.Branch();
             loadDataGridiew();
+
+            flag = false;
+            enabled();
         }
 
+        private void enabled()
+        {
+            this.txt_Name.Enabled = !flag;
+            this.txt_Code.Enabled = !flag;
+            this.txt_Address.Enabled = !flag;
+            this.btn_Update.Enabled = flag;
+        }
         private void loadDataGridiew()
         {
             var data = this.branch.loadViewManagerBranch();
@@ -33,10 +44,14 @@ namespace DBMS_2020.Features.Admin
                 var item = DT.Rows[i];
                 dgv_branch.Rows.Add(item[0], item[1], item[2], item[3]);
             }
-            // Qua day load len view
         }
 
-
+        private void resetTxt()
+        {
+            this.txt_Code.Text = "";
+            this.txt_Name.Text = "";
+            this.txt_Address.Text = "";
+        }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -45,6 +60,14 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if (flag == true)
+            {
+                flag = false;
+                this.enabled();
+
+                resetTxt();
+                return;
+            }
             DataSet check = this.branch.pickBranch(this.txt_Code.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
@@ -80,6 +103,8 @@ namespace DBMS_2020.Features.Admin
 
         private void dgv_branch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.flag = true;
+            this.enabled();
             if (e.RowIndex < 0)
                 return;
             this.txt_Code.Enabled = false;
@@ -130,6 +155,18 @@ namespace DBMS_2020.Features.Admin
             }
             // Qua day load len view
 
+        }
+
+        private void dgv_branch_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.flag = true;
+            this.enabled();
+            if (e.RowIndex < 0)
+                return;
+            this.txt_Code.Enabled = false;
+            this.txt_Code.Text = this.dgv_branch.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.txt_Name.Text = this.dgv_branch.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.txt_Address.Text = this.dgv_branch.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
     }
 }

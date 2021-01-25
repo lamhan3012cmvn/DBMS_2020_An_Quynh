@@ -30,6 +30,7 @@ namespace DBMS_2020.Features.Admin
             picb_img.SizeMode = PictureBoxSizeMode.Zoom;
             openFileDialog1.Title = "Select Picture";
             openFileDialog1.Filter = "JPEG Image|*.jpg|Windows Bitmap|*.bmp|All Files|*.*";
+            
             flag = false;//flase thì add true thì update or delete
             enabled();
         }
@@ -39,7 +40,6 @@ namespace DBMS_2020.Features.Admin
             this.txt_Name.Enabled = !this.flag;
             this.txt_Price.Enabled = !this.flag;
             this.btn_Update.Enabled = this.flag;
-            this.btn_Add.Enabled = !this.flag;
             this.btn_Del.Enabled = this.flag;
         }
         public void loadDataGridiew()
@@ -47,11 +47,11 @@ namespace DBMS_2020.Features.Admin
             var data = this.Menu.loadViewManagerMenu();
             DT = data.Tables[0];
             this.dgv_Menu.Rows.Clear();
-            for(int i =0;i<DT.Rows.Count;i++)
+            for (int i = 0; i < DT.Rows.Count; i++)
             {
                 var item = DT.Rows[i];
-                dgv_Menu.Rows.Add(item[0], item[1], item[2],item[4]);
-            }    
+                dgv_Menu.Rows.Add(item[0], item[1], item[2], item[4]);
+            }
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -124,6 +124,7 @@ namespace DBMS_2020.Features.Admin
             {
                 flag = false;
                 this.enabled();
+                resetTextBox();
             }
             
         }
@@ -132,7 +133,6 @@ namespace DBMS_2020.Features.Admin
             this.txt_Code.Text = "";
             this.txt_Name.Text = "";
             this.txt_Price.Text = "";
-            this.txt_SearchName.Text = "";
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
