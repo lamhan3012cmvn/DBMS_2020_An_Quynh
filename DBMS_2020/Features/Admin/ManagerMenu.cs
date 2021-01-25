@@ -19,15 +19,28 @@ namespace DBMS_2020.Features.Admin
         DataTable DT;
         private Controllers.Admin.Menu Menu;
         private string srcImg;
+        private string nameImg;
+        private bool flag;
         public ManagerMenu()
         {
             InitializeComponent();
             Menu = new Controllers.Admin.Menu();
-            loadDataGridiew();
+            //loadDataGridiew();
 
             picb_img.SizeMode = PictureBoxSizeMode.Zoom;
             openFileDialog1.Title = "Select Picture";
             openFileDialog1.Filter = "JPEG Image|*.jpg|Windows Bitmap|*.bmp|All Files|*.*";
+            flag = false;//flase thì add true thì update or delete
+            enabled();
+        }
+        private void enabled()
+        {
+            this.txt_Code.Enabled = !this.flag;
+            this.txt_Name.Enabled = !this.flag;
+            this.txt_Price.Enabled = !this.flag;
+            this.btn_Update.Enabled = this.flag;
+            this.btn_Add.Enabled = !this.flag;
+            this.btn_Del.Enabled = this.flag;
         }
         public void loadDataGridiew()
         {
@@ -48,40 +61,71 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            DataSet check = Menu.pickItem(this.txt_Code.Text);
-            if(check.Tables[0].Rows.Count == 0)
+            if(flag==false)
             {
-                float price;             
-                if(!float.TryParse(this.txt_Price.Text, out price))
+                DataSet check = Menu.pickItem(this.txt_Code.Text);
+                if (check.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("Giá tiền không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }    
+                    float price;
+                    if (!float.TryParse(this.txt_Price.Text, out price))
+                    {
+                        MessageBox.Show("Giá tiền không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if(srcImg==null)
+                    {
+                        MessageBox.Show("Bạn chưa chọn ảnh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        DialogResult result = openFileDialog1.ShowDialog();
+                        //Kiểm tra xem người dùng đã chọn file chưa
+                        if (result == DialogResult.OK)
+                        {
+                            // Lấy hình ảnh
+                            Image img = Image.FromFile(openFileDialog1.FileName);
 
-                Menu.addMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: price, AnhMinhHoa: "abc", DaBan: 0, ref err);
-                if(err == null)
-                {
-                    MessageBox.Show("Thêm món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    try
+                            // Gán ảnh
+                            picb_img.Image = img;
+                            this.srcImg = openFileDialog1.FileName;
+                            this.nameImg = openFileDialog1.SafeFileName;
+                        }
+                        {
+                            return;
+                        }
+                    }    
+                    Menu.addMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: price, AnhMinhHoa: this.txt_Name.Text, DaBan: 0, ref err);
+                    if (err == null)
                     {
-                        loadDataGridiew();
+                        try
+                        {
+                            string dst = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+                            File.Copy(srcImg, $@"{dst}\img\{nameImg}");
+                            srcImg = null;
+                            nameImg = null;
+                            loadDataGridiew();
+                            MessageBox.Show("Thêm món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    catch
+                    else
                     {
-                        MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        err = null;
                     }
-                }  
+                }
                 else
                 {
-                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    err = null;
-                }    
+                    MessageBox.Show("Đã có món trong menu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                resetTextBox();
             }
             else
             {
-                MessageBox.Show("Đã có món trong menu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                flag = false;
+                this.enabled();
             }
-            resetTextBox();
+            
         }
         private void resetTextBox()
         {
@@ -110,10 +154,11 @@ namespace DBMS_2020.Features.Admin
                 this.Menu.updateMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: price, AnhMinhHoa:"", ref err) ;
                 if (err == null)
                 {
-                    MessageBox.Show("Update món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                     try
                     {
                         loadDataGridiew();
+                        MessageBox.Show("Update món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch
                     {
@@ -131,12 +176,31 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
-            
+            this.Menu.deleteMenu(this.txt_Code.Text, ref err);
+            if (err == null)
+            {
+                try
+                {
+                    loadDataGridiew();
+                    MessageBox.Show("Xóa món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                err = null;
+            }
         }
 
         private void dgv_Menu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.txt_Code.Enabled = false;
+            flag = true;
+            this.enabled();
             this.txt_Code.Text = this.dgv_Menu.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.txt_Name.Text = this.dgv_Menu.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.txt_Price.Text = this.dgv_Menu.Rows[e.RowIndex].Cells[2].Value.ToString();
@@ -157,6 +221,7 @@ namespace DBMS_2020.Features.Admin
                 // Gán ảnh
                 picb_img.Image = img;
                 this.srcImg = openFileDialog1.FileName;
+                this.nameImg = openFileDialog1.SafeFileName;
             }
         }
     }

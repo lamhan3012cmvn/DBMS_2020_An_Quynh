@@ -50,9 +50,11 @@ namespace DBMS_2020.Controllers.Admin
             var result = db.MyExecuteNonQuery("execute suaMon_proc '" + MaMon + "',N'" + TenMon + "','" + GiaTien + "','" + AnhMinhHoa + "'", CommandType.Text, ref err);
             return result;
         }
-        public bool deleteMenu(string MaMon)
+        public bool deleteMenu(string MaMon,string err)
         {
-            return true;
+            Database db = new Database(this.tk, this.mk);
+            var reuslt = db.MyExecuteNonQuery($"execute xoaMon_proc '{MaMon}'", CommandType.Text, ref err);
+            return reuslt;
         }
 
         public DataSet top3Menu()

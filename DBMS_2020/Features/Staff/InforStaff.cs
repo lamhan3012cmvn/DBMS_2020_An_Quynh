@@ -38,8 +38,7 @@ namespace DBMS_2020.Features.Staff
             this.pnl_ChangePassword.Visible = this.cb_ChangePassword.Checked;
 
         }
-
-        private void InforStaff_Load(object sender, EventArgs e)
+        private void loadStaff()
         {
             var data = (DataSet)this.staff.viewInforStaff(codeStaff);
             DT = data.Tables[0];
@@ -49,6 +48,10 @@ namespace DBMS_2020.Features.Staff
             this.txt_Dob.Text = DT.Rows[0][3].ToString();
             this.txt_DaBan.Text = DT.Rows[0][6].ToString();
             this.txt_NameBranch.Text = this.branch;
+        }
+        private void InforStaff_Load(object sender, EventArgs e)
+        {
+            loadStaff();
         }
     }
 }

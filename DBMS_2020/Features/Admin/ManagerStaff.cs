@@ -40,16 +40,67 @@ namespace DBMS_2020.Features.Admin
         private void btn_Update_Click(object sender, EventArgs e)
         {
             this.staff.updateStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,MatKhau:"1234",err:ref err);
+            if (err == null)
+            {
+                try
+                {
+                    loadDataGridiew();
+                    MessageBox.Show("Update nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                err = null;
+            }
         }
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
             this.staff.deleteStaff(MaNV:this.txt_Code.Text,err:ref err);
+            if (err == null)
+            {
+                try
+                {
+                    loadDataGridiew();
+                    MessageBox.Show("Delete nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                err = null;
+            }
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
             this.staff.addStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,MatKhau:"1234",SoLuongBan:0,err:ref this.err);
+            if (err == null)
+            {
+                try
+                {
+                    loadDataGridiew();
+                    MessageBox.Show("Thêm nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                err = null;
+            }
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
