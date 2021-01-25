@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Controllers\Admin\Customer.cs" />
     <Compile Include="Controllers\Admin\Staff.cs" />
+    <Compile Include="Controllers\Admin\Statistical.cs" />
     <Compile Include="Controllers\Authentication.cs" />
     <Compile Include="Controllers\Admin\Branch.cs" />
     <Compile Include="Controllers\Admin\Menu.cs" />
@@ -147,6 +148,12 @@
     </Compile>
     <Compile Include="Features\Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Staff\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\Staff\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Features\Staff\InforStaff.cs">
       <SubType>UserControl</SubType>
@@ -218,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Staff\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Staff\InforStaff.resx">
       <DependentUpon>InforStaff.cs</DependentUpon>

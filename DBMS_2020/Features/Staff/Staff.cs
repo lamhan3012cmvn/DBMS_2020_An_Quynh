@@ -47,7 +47,9 @@ namespace DBMS_2020.Features.Staff
         }
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            //AddCustomer add = new AddCustomer();
+            //add.ShowDialog();
+           // this.Dispose();
         }
     }
 }
