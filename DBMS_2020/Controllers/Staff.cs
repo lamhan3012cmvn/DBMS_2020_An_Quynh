@@ -74,5 +74,17 @@ namespace DBMS_2020.Controllers
             var result = db.ExecuteQueryDataSet("select * from pickChiNhanh_NV_func('" + code + "')", System.Data.CommandType.Text);
             return result;
         }
+        public bool changeInfor(string code,string name,string phone,ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery($"exec suaNV_proc '{code}',N'{name}','{phone}'",CommandType.Text,ref err);
+            return result;
+        }
+        public bool changePassword(string code,string password,string newPassword,ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery($"exec doiMatKhauNV_proc '{code}','{password}','{newPassword}'", CommandType.Text, ref err);
+            return result;
+        }
     }
 }

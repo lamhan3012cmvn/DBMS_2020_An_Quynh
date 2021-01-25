@@ -16,12 +16,24 @@ namespace DBMS_2020.Features.Admin
         private string err;
         DataTable DT;
         private Controllers.Admin.Customer Customer;
+        private bool flag;
         public ManagerCustomer()
         {
             InitializeComponent();
             this.Customer = new Controllers.Admin.Customer();
-            
+            flag = false;
+            enabled();
             loadDataGridiew();
+        }
+        private void enabled()
+        {
+            this.txt_Name.Enabled = !flag;
+            this.txt_bought.Enabled = !flag;
+            this.txt_Address.Enabled = !flag;
+            this.txt_PhoneNumber.Enabled = !flag;
+            this.btn_Add.Enabled = !flag;
+            this.btn_Update.Enabled = flag;
+            this.btn_Del.Enabled = flag;
         }
         public void loadDataGridiew()
         {
@@ -42,6 +54,12 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if(flag==true)
+            {
+                flag = false;
+                this.enabled();
+                return;
+            }    
             DataSet check =this.Customer.pickCustomer(this.txt_PhoneNumber.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
@@ -71,7 +89,7 @@ namespace DBMS_2020.Features.Admin
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
-        {
+        { 
             DataSet check = this.Customer.pickCustomer(this.txt_PhoneNumber.Text);
             if (check.Tables[0].Rows.Count == 0)
             {
@@ -107,6 +125,8 @@ namespace DBMS_2020.Features.Admin
 
         private void dgv_customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.flag = false;
+            this.enabled();
             this.txt_PhoneNumber.Enabled = false;
             if (e.RowIndex < 0)
                 return;    

@@ -16,6 +16,7 @@ namespace DBMS_2020.Features.Staff
         private string branch;
         private Controllers.Staff staff;
         DataTable DT;
+        private string err;
         public InforStaff(string codeNV)
         {
             InitializeComponent();
@@ -26,7 +27,50 @@ namespace DBMS_2020.Features.Staff
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            if(this.cb_ChangePassword.Checked)
+            {
+                staff.changePassword(this.txt_Code.Text,this.txt_PasswordOld.Text,this.txt_PasswordNew.Text,ref err);
+                if (err == null)
+                {
+                    try
+                    {
+                        loadStaff();
+                        MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
+                }
+                else
+                {
+                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    err = null;
+                }
+            }
+            else
+            {
+                staff.changeInfor(this.txt_Code.Text,txt_Name.Text,txt_PhoneNumber.Text,ref err);
+                if (err == null)
+                {
+                    try
+                    {
+                        loadStaff();
+                        MessageBox.Show("Cập nhật thông tin thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Bạn Không có quyền truy cập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    err = null;
+                }
+            }    
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
