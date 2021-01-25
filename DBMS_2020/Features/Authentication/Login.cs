@@ -51,9 +51,10 @@ namespace DBMS_2020.Features.Authentication
             }
         }
 
-        private void lbl_login_Click(object sender, EventArgs e)
-        {
 
+        private void lbl_register_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

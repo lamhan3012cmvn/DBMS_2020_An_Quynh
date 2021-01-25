@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_back = new Guna.UI.WinForms.GunaPanel();
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
             this.pnl_btn = new Guna.UI.WinForms.GunaPanel();
@@ -39,7 +39,6 @@
             this.btn_Customer = new Guna.UI.WinForms.GunaButton();
             this.btn_Branch = new Guna.UI.WinForms.GunaButton();
             this.pnl_Data = new Guna.UI.WinForms.GunaPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_data = new Guna.UI.WinForms.GunaDataGridView();
             this.cCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,13 +47,14 @@
             this.cDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cBranch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cSellNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_Name = new Guna.UI.WinForms.GunaLabel();
             this.pnl_back.SuspendLayout();
             this.pnl_btn.SuspendLayout();
             this.pnl_Data.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_back
@@ -62,7 +62,7 @@
             this.pnl_back.Controls.Add(this.btn_Back);
             this.pnl_back.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_back.Location = new System.Drawing.Point(0, 0);
-            this.pnl_back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_back.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_back.Name = "pnl_back";
             this.pnl_back.Size = new System.Drawing.Size(1179, 70);
             this.pnl_back.TabIndex = 0;
@@ -82,7 +82,7 @@
             this.btn_Back.Image = global::DBMS_2020.Properties.Resources.back;
             this.btn_Back.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_Back.Location = new System.Drawing.Point(4, 11);
-            this.btn_Back.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Back.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Back.Name = "btn_Back";
             this.btn_Back.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Back.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -103,7 +103,7 @@
             this.pnl_btn.Controls.Add(this.btn_Branch);
             this.pnl_btn.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_btn.Location = new System.Drawing.Point(0, 70);
-            this.pnl_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_btn.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_btn.Name = "pnl_btn";
             this.pnl_btn.Size = new System.Drawing.Size(421, 575);
             this.pnl_btn.TabIndex = 2;
@@ -122,8 +122,8 @@
             this.btn_Staff.ForeColor = System.Drawing.Color.White;
             this.btn_Staff.Image = global::DBMS_2020.Properties.Resources.staffs;
             this.btn_Staff.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Staff.Location = new System.Drawing.Point(56, 368);
-            this.btn_Staff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Staff.Location = new System.Drawing.Point(56, 420);
+            this.btn_Staff.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Staff.Name = "btn_Staff";
             this.btn_Staff.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Staff.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -152,8 +152,8 @@
             this.btn_Menu.ForeColor = System.Drawing.Color.White;
             this.btn_Menu.Image = global::DBMS_2020.Properties.Resources.menu;
             this.btn_Menu.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Menu.Location = new System.Drawing.Point(56, 276);
-            this.btn_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Menu.Location = new System.Drawing.Point(47, 330);
+            this.btn_Menu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Menu.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -182,8 +182,8 @@
             this.btn_Customer.ForeColor = System.Drawing.Color.White;
             this.btn_Customer.Image = global::DBMS_2020.Properties.Resources.customer;
             this.btn_Customer.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Customer.Location = new System.Drawing.Point(56, 186);
-            this.btn_Customer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Customer.Location = new System.Drawing.Point(56, 238);
+            this.btn_Customer.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Customer.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -212,8 +212,8 @@
             this.btn_Branch.ForeColor = System.Drawing.Color.White;
             this.btn_Branch.Image = global::DBMS_2020.Properties.Resources.branch;
             this.btn_Branch.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Branch.Location = new System.Drawing.Point(56, 89);
-            this.btn_Branch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Branch.Location = new System.Drawing.Point(56, 153);
+            this.btn_Branch.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Branch.Name = "btn_Branch";
             this.btn_Branch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Branch.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -234,19 +234,10 @@
             this.pnl_Data.Controls.Add(this.panel1);
             this.pnl_Data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Data.Location = new System.Drawing.Point(421, 70);
-            this.pnl_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Data.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Data.Name = "pnl_Data";
             this.pnl_Data.Size = new System.Drawing.Size(758, 575);
             this.pnl_Data.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbl_Name);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 100);
-            this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -261,24 +252,25 @@
             // 
             this.dgv_data.AllowUserToAddRows = false;
             this.dgv_data.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgv_data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_data.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.dgv_data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_data.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_data.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_data.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_data.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_data.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_data.ColumnHeadersHeight = 50;
             this.dgv_data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cCode,
@@ -287,14 +279,14 @@
             this.cDate,
             this.cBranch,
             this.cSellNumber});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_data.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_data.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_data.EnableHeadersVisualStyles = false;
             this.dgv_data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -310,8 +302,8 @@
             this.dgv_data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_data.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgv_data.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_data.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_data.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_data.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            this.dgv_data.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_data.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_data.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_data.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -326,8 +318,8 @@
             this.dgv_data.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgv_data.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_data.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_data.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            this.dgv_data.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             // 
             // cCode
             // 
@@ -365,6 +357,15 @@
             this.cSellNumber.MinimumWidth = 6;
             this.cSellNumber.Name = "cSellNumber";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lbl_Name);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(758, 100);
+            this.panel1.TabIndex = 0;
+            // 
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
@@ -373,9 +374,8 @@
             this.lbl_Name.Location = new System.Drawing.Point(4, 26);
             this.lbl_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(413, 51);
+            this.lbl_Name.Size = new System.Drawing.Size(0, 51);
             this.lbl_Name.TabIndex = 1;
-            this.lbl_Name.Text = "Không có gì đừng tìm";
             // 
             // Statistical
             // 
@@ -385,16 +385,16 @@
             this.Controls.Add(this.pnl_Data);
             this.Controls.Add(this.pnl_btn);
             this.Controls.Add(this.pnl_back);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Statistical";
             this.Size = new System.Drawing.Size(1179, 645);
             this.pnl_back.ResumeLayout(false);
             this.pnl_btn.ResumeLayout(false);
             this.pnl_Data.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_data)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

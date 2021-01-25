@@ -34,7 +34,7 @@ namespace DBMS_2020.Controllers.Admin
         public DataSet loadTopStaff()
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.ExecuteQueryDataSet("Select * from top3NhanVien_func()", CommandType.Text);
+            var result = db.ExecuteQueryDataSet("Select * from topNhanVien_func()", CommandType.Text);
             return result;
 
         }

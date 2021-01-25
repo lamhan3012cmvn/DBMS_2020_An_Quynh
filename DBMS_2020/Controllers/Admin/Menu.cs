@@ -61,5 +61,11 @@ namespace DBMS_2020.Controllers.Admin
             var result = db.ExecuteQueryDataSet("select * from top3MonAn_func", CommandType.Text);
             return result;
         }
+        public bool deleteMenu(string code, ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.MyExecuteNonQuery("execute xoaNV_proc '" + code + "'", CommandType.Text,ref err);
+            return result;
+        }
     }
 }

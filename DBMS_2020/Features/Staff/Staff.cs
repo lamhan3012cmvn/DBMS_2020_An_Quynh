@@ -16,7 +16,8 @@ namespace DBMS_2020.Features.Staff
         private InforStaff inforStaff;
         private Sell sell;
         private string codeStaff;
-        private string codeBrand;
+        private string branch;
+        private string codeBranch;
         private DBMS_2020.Controllers.Admin.Staff staff;
         public Staff(string codeNV)
         {
@@ -24,21 +25,23 @@ namespace DBMS_2020.Features.Staff
             staff = new Controllers.Admin.Staff();
             //loadInforStaff();
             //loadSell();
-            this.codeBrand= (string)this.staff.branch_Staff(codeNV).Tables[0].Rows[0][0];
-            this.lbl_Branch.Text += codeBrand;
+            DataTable DT = this.staff.branch_Staff(codeNV).Tables[0];
+            this.branch= (string)DT.Rows[0][0];
+            this.codeBranch = (string)DT.Rows[0][1];
+            this.lbl_Branch.Text += branch;
             this.codeStaff = codeNV;
         }
         private void loadInforStaff()
         {
 
             this.lbl_NamePage.Text = "Thông tin user";
-            this.inforStaff = new InforStaff();
+            this.inforStaff = new InforStaff(codeStaff);
             MethodHelps.addControl(this.pnl_load, this.inforStaff); ;
         }
         private void loadSell()
         {
             this.lbl_NamePage.Text = "Bán hàng";
-            this.sell = new Sell(codeStaff);
+            this.sell = new Sell(codeStaff,codeBranch);
             MethodHelps.addControl(this.pnl_load, this.sell);
         }
         private void btn_inforStaff_Click(object sender, EventArgs e)

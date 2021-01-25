@@ -35,18 +35,20 @@
             // 
             this.pnl_load_ui.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_load_ui.Location = new System.Drawing.Point(0, 0);
+            this.pnl_load_ui.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_load_ui.Name = "pnl_load_ui";
-            this.pnl_load_ui.Size = new System.Drawing.Size(884, 609);
+            this.pnl_load_ui.Size = new System.Drawing.Size(1179, 812);
             this.pnl_load_ui.TabIndex = 0;
             // 
             // Index
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnl_load_ui);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Index";
-            this.Size = new System.Drawing.Size(884, 609);
+            this.Size = new System.Drawing.Size(1179, 812);
             this.ResumeLayout(false);
 
         }

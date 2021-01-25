@@ -201,7 +201,7 @@ go
 -- Function lấy một chi nhánh khi biết mã nhân viên
 create or alter function pickChiNhanh_NV_func (@MaNV varchar(10)) returns table
 as
-	return select TenChiNhanh from ChiNhanh,NhanVien where NhanVien.MaNhanVien = @MaNV and NhanVien.MaChiNhanh =ChiNhanh.MaChiNhanh 
+	return select TenChiNhanh,ChiNhanh.MaChiNhanh from ChiNhanh,NhanVien where NhanVien.MaNhanVien = @MaNV and NhanVien.MaChiNhanh =ChiNhanh.MaChiNhanh 
 go
 
 --tìm kiếm theo tên nhân viên
@@ -231,7 +231,12 @@ returns table
 as
 return(select* from KhachHang where KhachHang.TenKhachHang like N'%' + @tenKH+'%' or KhachHang.SoDienThoai like N'%' + @tenKH+'%')
 go
-
+--Function tìm kiếm khách hàng theo tên
+create or alter function timkiemKHnotLike_func (@SDT nvarchar(50))
+returns table 
+as
+return(select* from KhachHang where KhachHang.SoDienThoai = @SDT)
+go
 select * from timkiemKH_func (N'Vi')
 go
 
@@ -255,7 +260,12 @@ returns table
 as
 return (select Top(1) * from ChiNhanh ORDER BY DoanhThu DESC)
 go
-
+--top 3 nhân viên có số lượng bán nhiều nhất
+create or alter function topNhanVien_func()
+returns table
+as
+return (select Top(3) * from NhanVien ORDER BY SoLuongBan DESC)
+go
 --Function đăng nhập 
 create or alter function ktDangNhap_func(@tk varchar(10),@mk varchar(20),@chucnang int) returns int
 as
@@ -388,10 +398,12 @@ go
 create or alter procedure xoaNV_proc @MaNV varchar(10)
 as
 begin
+	update HoaDon set HoaDon.MaNV = NULL where HoaDon.MaNV = @MaNV
 	execute XoaLogin @MaNV
 	delete from NhanVien where MaNhanVien=@MaNV	
 end
 go
+
 --procedure đổi mật khẩu Nhân viên
 create or alter procedure doiMatKhauNV_proc @tk varchar(10),@mkc varchar(20),@mkm varchar(20)
 as
@@ -430,6 +442,7 @@ go
 create or alter  procedure xoaMon_proc @MaMon varchar(10)
 as
 begin
+	delete from ChiTietHoaDon where MaMon = @MaMon
 	delete from Menu where MaMon=@MaMon
 end
 go
@@ -596,6 +609,7 @@ Grant update  on NhanVien to RoleNhanVien
 --nhân viên
 Grant exec on suaNV_proc to RoleNhanVien 
 Grant select on pickChiNhanh_NV_func to RoleNhanVien
+Grant select on pickNhanVien_func to RoleNhanVien
 
 --Menu
 Grant select on timkiemMonAn_func to RoleNhanVien 
@@ -610,7 +624,8 @@ Grant exec on ThemChiTietHoaDon_proc to RoleNhanVien
 go
 --trên bảng KhachHang
 Grant exec on themKH_proc to RoleNhanVien 
-Grant select on timkiemKH_func to RoleNhanVien 
+Grant select on timkiemKH_func to RoleNhanVien
+Grant select on timkiemKHnotLike_func to RoleNhanVien
 
 
 		

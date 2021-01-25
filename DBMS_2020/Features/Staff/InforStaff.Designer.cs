@@ -45,9 +45,7 @@
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.txt_PhoneNumber = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.txt_Email = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.txt_Address = new Guna.UI.WinForms.GunaLineTextBox();
+            this.txt_Dob = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.txt_Name = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -97,9 +95,7 @@
             this.pnl_Control.Controls.Add(this.gunaLabel5);
             this.pnl_Control.Controls.Add(this.txt_PhoneNumber);
             this.pnl_Control.Controls.Add(this.gunaLabel4);
-            this.pnl_Control.Controls.Add(this.txt_Email);
-            this.pnl_Control.Controls.Add(this.gunaLabel3);
-            this.pnl_Control.Controls.Add(this.txt_Address);
+            this.pnl_Control.Controls.Add(this.txt_Dob);
             this.pnl_Control.Controls.Add(this.gunaLabel2);
             this.pnl_Control.Controls.Add(this.txt_Name);
             this.pnl_Control.Controls.Add(this.gunaLabel1);
@@ -121,7 +117,7 @@
             this.txt_DaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_DaBan.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.txt_DaBan.LineSize = 2;
-            this.txt_DaBan.Location = new System.Drawing.Point(100, 460);
+            this.txt_DaBan.Location = new System.Drawing.Point(101, 364);
             this.txt_DaBan.Margin = new System.Windows.Forms.Padding(4);
             this.txt_DaBan.Name = "txt_DaBan";
             this.txt_DaBan.PasswordChar = '\0';
@@ -133,7 +129,7 @@
             this.gunaLabel9.AutoSize = true;
             this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.gunaLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel9.Location = new System.Drawing.Point(63, 432);
+            this.gunaLabel9.Location = new System.Drawing.Point(64, 336);
             this.gunaLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel9.Name = "gunaLabel9";
             this.gunaLabel9.Size = new System.Drawing.Size(72, 25);
@@ -341,49 +337,21 @@
             this.gunaLabel4.TabIndex = 45;
             this.gunaLabel4.Text = "Số Điện Thoại";
             // 
-            // txt_Email
+            // txt_Dob
             // 
-            this.txt_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.txt_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Email.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Email.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Email.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Email.LineSize = 2;
-            this.txt_Email.Location = new System.Drawing.Point(100, 362);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Email.Name = "txt_Email";
-            this.txt_Email.PasswordChar = '\0';
-            this.txt_Email.Size = new System.Drawing.Size(315, 43);
-            this.txt_Email.TabIndex = 44;
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(63, 334);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(58, 25);
-            this.gunaLabel3.TabIndex = 43;
-            this.gunaLabel3.Text = "Email";
-            // 
-            // txt_Address
-            // 
-            this.txt_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.txt_Address.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Address.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Address.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_Address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Address.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.txt_Address.LineSize = 2;
-            this.txt_Address.Location = new System.Drawing.Point(100, 262);
-            this.txt_Address.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Address.Name = "txt_Address";
-            this.txt_Address.PasswordChar = '\0';
-            this.txt_Address.Size = new System.Drawing.Size(315, 43);
-            this.txt_Address.TabIndex = 42;
+            this.txt_Dob.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.txt_Dob.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Dob.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_Dob.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txt_Dob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_Dob.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.txt_Dob.LineSize = 2;
+            this.txt_Dob.Location = new System.Drawing.Point(100, 262);
+            this.txt_Dob.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Dob.Name = "txt_Dob";
+            this.txt_Dob.PasswordChar = '\0';
+            this.txt_Dob.Size = new System.Drawing.Size(315, 43);
+            this.txt_Dob.TabIndex = 42;
             // 
             // gunaLabel2
             // 
@@ -393,9 +361,9 @@
             this.gunaLabel2.Location = new System.Drawing.Point(63, 234);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(73, 25);
+            this.gunaLabel2.Size = new System.Drawing.Size(98, 25);
             this.gunaLabel2.TabIndex = 41;
-            this.gunaLabel2.Text = "Địa Chỉ";
+            this.gunaLabel2.Text = "Ngày Sinh";
             // 
             // txt_Name
             // 
@@ -464,6 +432,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InforStaff";
             this.Size = new System.Drawing.Size(1179, 645);
+            this.Load += new System.EventHandler(this.InforStaff_Load);
             this.pnl_Control.ResumeLayout(false);
             this.pnl_Control.PerformLayout();
             this.pnl_ChangePassword.ResumeLayout(false);
@@ -488,9 +457,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLineTextBox txt_PhoneNumber;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Guna.UI.WinForms.GunaLineTextBox txt_Email;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLineTextBox txt_Address;
+        private Guna.UI.WinForms.GunaLineTextBox txt_Dob;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLineTextBox txt_Name;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;

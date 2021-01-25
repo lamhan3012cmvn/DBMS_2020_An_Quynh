@@ -24,20 +24,20 @@ namespace DBMS_2020.Features.Staff
         private string err;
         private string phoneUser;
 
-        public Sell(string codeStaff)
+        public Sell(string codeStaff, string codeBranch)
         {
             InitializeComponent();
             menu = new DBMS_2020.Controllers.Admin.Menu().loadViewManagerMenu().Tables[0];
             this.codeStaff = codeStaff;
-           
+            this.codeBranch = codeBranch;
             this.staff = new Controllers.Staff();
             this.customer = new Controllers.Admin.Customer();
-            this.lbl_nameStaff.Text += this.codeStaff; 
+            this.lbl_nameStaff.Text += this.codeStaff;
             loadMenu();
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            
+
             this.Dispose();
         }
         public void loadMenu()
@@ -54,17 +54,14 @@ namespace DBMS_2020.Features.Staff
         }
         public void loadListView()
         {
-            this.lv_Bill.Items.Clear();
+            this.dgv_Dished.Rows.Clear();
             int total = 0;
             if (this.order is null)
                 return;
             this.order.Dishes().ForEach(d =>
             {
-                int i = this.lv_Bill.Items.Count;
-                ListViewItem viewItem = new ListViewItem(d.CodeDish);
-                this.lv_Bill.Items.Add(viewItem);
-                this.lv_Bill.Items[i].SubItems.Add(d.PriceDish);
-                this.lv_Bill.Items[i].SubItems.Add(d.ToalDish);
+                int i = this.dgv_Dished.Rows.Count;
+                this.dgv_Dished.Rows.Add(d.CodeDish, d.ToalDish, d.PriceDish);
                 total += (int.Parse(d.PriceDish) * int.Parse(d.ToalDish));
             });
             this.lbl_Money.Text = total.ToString();
@@ -72,11 +69,26 @@ namespace DBMS_2020.Features.Staff
 
         private void btn_addOrder_Click(object sender, EventArgs e)
         {
-            
-                if (this.order is null)
+
+            if (this.order is null)
+            {
+                var customer = this.staff.searchCustomer(this.txt_PhoneCustomer.Text);
+                if (customer.Tables[0].Rows.Count == 0)
                 {
-                    this.order = new oderTam(this.phoneUser, this.codeStaff, this.codeBranch);
+                    MessageBox.Show("Vui lòng nhập số điện thoại khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.txt_PhoneCustomer.Focus();
                 }
+                else
+                {
+                    this.phoneUser = this.txt_PhoneCustomer.Text;
+                    this.lbl_phone.Text = customer.Tables[0].Rows[0][1].ToString();
+                    this.order = new oderTam(phoneUser, this.codeStaff, this.codeBranch);
+                    this.order.addDish(this.codeDish, this.price, this.number_Quantity.Value.ToString());
+                }
+
+            }
+            else
+            {
                 int index = this.order.checkoutCodDish(this.codeDish);
                 if (index == -1)
                 {
@@ -86,13 +98,15 @@ namespace DBMS_2020.Features.Staff
                 {
                     this.order.Dishes()[index].ToalDish = (int.Parse(this.order.Dishes()[index].ToalDish) + (int)this.number_Quantity.Value).ToString();
                 }
-            
+
+                loadListView();
+            }
             loadListView();
         }
 
         private void btn_Pay_Click(object sender, EventArgs e)
         {
-            //bool result = this.staff.payTheBill(this.order, this.lbl_Money.Text, ref err);
+
             string codeBill = this.staff.createCodeBill(ref err);
             if (err != null)
             {
@@ -119,7 +133,7 @@ namespace DBMS_2020.Features.Staff
                         this.dgv_Dished.Rows.Clear();
                         this.number_Quantity.Value = 0;
                         this.lbl_Money.Text = "0.0";
-                      
+
                         this.order = null;
 
                     }
@@ -162,11 +176,11 @@ namespace DBMS_2020.Features.Staff
             {
                 this.phoneUser = null;
                 this.lbl_phone.Text = "";
-                MessageBox.Show("Chưa có khác hàng");
+                MessageBox.Show("Chưa có khách hàng");
                 AddCustomer add = new AddCustomer(this.staff);
                 add.ShowDialog();
                 add.FormClosed += Add_FormClosed;
-                
+
             }
             else
             {
@@ -179,5 +193,23 @@ namespace DBMS_2020.Features.Staff
         {
             MessageBox.Show("1234");
         }
+
+        private void dgv_Dished_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            this.order.Dishes()[e.RowIndex].ToalDish = this.dgv_Dished.CurrentCell.Value.ToString();
+            loadListView();
+        }
+
+
+
+        private void dgv_Dished_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            e.Cancel = true;
+            if (e.Row.Index < 0) return;
+
+            this.order.Dishes().RemoveAt(e.Row.Index);
+            loadListView();
+        }
+
     }
 }

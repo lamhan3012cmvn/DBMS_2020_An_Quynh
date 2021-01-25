@@ -46,6 +46,9 @@ namespace DBMS_2020.Features.Admin
             this.txt_BranchCode = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.btn_Del = new Guna.UI.WinForms.GunaButton();
+            this.btn_Update = new Guna.UI.WinForms.GunaButton();
+            this.btn_Add = new Guna.UI.WinForms.GunaButton();
             this.txt_Phone = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.txt_Name = new Guna.UI.WinForms.GunaLineTextBox();
@@ -56,9 +59,6 @@ namespace DBMS_2020.Features.Admin
             this.btn_Back = new Guna.UI.WinForms.GunaButton();
             this.txt_SearchName = new Guna.UI.WinForms.GunaLineTextBox();
             this.txt_null = new Guna.UI.WinForms.GunaLabel();
-            this.btn_Del = new Guna.UI.WinForms.GunaButton();
-            this.btn_Update = new Guna.UI.WinForms.GunaButton();
-            this.btn_Add = new Guna.UI.WinForms.GunaButton();
             this.pnl_data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_staff)).BeginInit();
             this.gunaPanel1.SuspendLayout();
@@ -85,23 +85,23 @@ namespace DBMS_2020.Features.Admin
             this.dgv_staff.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_staff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_staff.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_staff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_staff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_staff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_staff.ColumnHeadersHeight = 21;
+            this.dgv_staff.ColumnHeadersHeight = 50;
             this.dgv_staff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cCode,
             this.cName,
@@ -109,12 +109,12 @@ namespace DBMS_2020.Features.Admin
             this.cDate,
             this.cBranch,
             this.cSellNumber});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_staff.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_staff.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -132,8 +132,8 @@ namespace DBMS_2020.Features.Admin
             this.dgv_staff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_staff.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgv_staff.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_staff.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_staff.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_staff.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            this.dgv_staff.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_staff.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -141,15 +141,15 @@ namespace DBMS_2020.Features.Admin
             this.dgv_staff.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgv_staff.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_staff.ThemeStyle.HeaderStyle.Height = 21;
+            this.dgv_staff.ThemeStyle.HeaderStyle.Height = 50;
             this.dgv_staff.ThemeStyle.ReadOnly = false;
             this.dgv_staff.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_staff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgv_staff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_staff.ThemeStyle.RowsStyle.Height = 22;
-            this.dgv_staff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.dgv_staff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgv_staff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(110)))), ((int)(((byte)(115)))));
+            this.dgv_staff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_staff_CellContentClick);
             // 
             // cCode
@@ -290,6 +290,93 @@ namespace DBMS_2020.Features.Admin
             this.gunaLabel3.Size = new System.Drawing.Size(96, 25);
             this.gunaLabel3.TabIndex = 22;
             this.gunaLabel3.Text = "Ngày sinh";
+            // 
+            // btn_Del
+            // 
+            this.btn_Del.AnimationHoverSpeed = 0.07F;
+            this.btn_Del.AnimationSpeed = 0.03F;
+            this.btn_Del.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Del.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.BorderColor = System.Drawing.Color.Black;
+            this.btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Del.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Del.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Del.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Del.ForeColor = System.Drawing.Color.White;
+            this.btn_Del.Image = global::DBMS_2020.Properties.Resources.delete;
+            this.btn_Del.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Del.Location = new System.Drawing.Point(839, 124);
+            this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Del.Name = "btn_Del";
+            this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Del.OnHoverImage = null;
+            this.btn_Del.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Del.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Del.Radius = 20;
+            this.btn_Del.Size = new System.Drawing.Size(151, 52);
+            this.btn_Del.TabIndex = 21;
+            this.btn_Del.Text = "Xóa";
+            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.AnimationHoverSpeed = 0.07F;
+            this.btn_Update.AnimationSpeed = 0.03F;
+            this.btn_Update.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Update.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.BorderColor = System.Drawing.Color.Black;
+            this.btn_Update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Update.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Update.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.ForeColor = System.Drawing.Color.White;
+            this.btn_Update.Image = global::DBMS_2020.Properties.Resources.updated;
+            this.btn_Update.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Update.Location = new System.Drawing.Point(1003, 124);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Update.OnHoverImage = null;
+            this.btn_Update.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Update.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Update.Radius = 20;
+            this.btn_Update.Size = new System.Drawing.Size(151, 52);
+            this.btn_Update.TabIndex = 20;
+            this.btn_Update.Text = "Sửa";
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.AnimationHoverSpeed = 0.07F;
+            this.btn_Add.AnimationSpeed = 0.03F;
+            this.btn_Add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Add.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.BorderColor = System.Drawing.Color.Black;
+            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Add.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Add.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.Image = global::DBMS_2020.Properties.Resources.add;
+            this.btn_Add.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Add.Location = new System.Drawing.Point(1003, 38);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Add.OnHoverImage = null;
+            this.btn_Add.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.btn_Add.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Add.Radius = 20;
+            this.btn_Add.Size = new System.Drawing.Size(151, 52);
+            this.btn_Add.TabIndex = 19;
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // txt_Phone
             // 
@@ -452,93 +539,6 @@ namespace DBMS_2020.Features.Admin
             this.txt_null.Size = new System.Drawing.Size(90, 25);
             this.txt_null.TabIndex = 21;
             this.txt_null.Text = "Tìm Kiếm";
-            // 
-            // btn_Del
-            // 
-            this.btn_Del.AnimationHoverSpeed = 0.07F;
-            this.btn_Del.AnimationSpeed = 0.03F;
-            this.btn_Del.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Del.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.BorderColor = System.Drawing.Color.Black;
-            this.btn_Del.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Del.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Del.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Del.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Del.ForeColor = System.Drawing.Color.White;
-            this.btn_Del.Image = global::DBMS_2020.Properties.Resources.delete;
-            this.btn_Del.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Del.Location = new System.Drawing.Point(839, 124);
-            this.btn_Del.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Del.Name = "btn_Del";
-            this.btn_Del.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Del.OnHoverImage = null;
-            this.btn_Del.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Del.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.btn_Del.Radius = 20;
-            this.btn_Del.Size = new System.Drawing.Size(151, 52);
-            this.btn_Del.TabIndex = 21;
-            this.btn_Del.Text = "Xóa";
-            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
-            // 
-            // btn_Update
-            // 
-            this.btn_Update.AnimationHoverSpeed = 0.07F;
-            this.btn_Update.AnimationSpeed = 0.03F;
-            this.btn_Update.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Update.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.BorderColor = System.Drawing.Color.Black;
-            this.btn_Update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Update.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Update.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Update.ForeColor = System.Drawing.Color.White;
-            this.btn_Update.Image = global::DBMS_2020.Properties.Resources.updated;
-            this.btn_Update.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Update.Location = new System.Drawing.Point(1003, 124);
-            this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Update.OnHoverImage = null;
-            this.btn_Update.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Update.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.btn_Update.Radius = 20;
-            this.btn_Update.Size = new System.Drawing.Size(151, 52);
-            this.btn_Update.TabIndex = 20;
-            this.btn_Update.Text = "Sửa";
-            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.AnimationHoverSpeed = 0.07F;
-            this.btn_Add.AnimationSpeed = 0.03F;
-            this.btn_Add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Add.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.BorderColor = System.Drawing.Color.Black;
-            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Add.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Add.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Image = global::DBMS_2020.Properties.Resources.add;
-            this.btn_Add.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Add.Location = new System.Drawing.Point(1003, 38);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Add.OnHoverImage = null;
-            this.btn_Add.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Add.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
-            this.btn_Add.Radius = 20;
-            this.btn_Add.Size = new System.Drawing.Size(151, 52);
-            this.btn_Add.TabIndex = 19;
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // ManagerStaff
             // 

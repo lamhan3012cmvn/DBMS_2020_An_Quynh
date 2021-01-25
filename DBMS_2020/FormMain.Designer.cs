@@ -36,16 +36,18 @@
             this.pnl_FormMain.BackColor = System.Drawing.Color.White;
             this.pnl_FormMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_FormMain.Location = new System.Drawing.Point(0, 0);
+            this.pnl_FormMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_FormMain.Name = "pnl_FormMain";
-            this.pnl_FormMain.Size = new System.Drawing.Size(900, 605);
+            this.pnl_FormMain.Size = new System.Drawing.Size(1212, 804);
             this.pnl_FormMain.TabIndex = 0;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 605);
+            this.ClientSize = new System.Drawing.Size(1212, 804);
             this.Controls.Add(this.pnl_FormMain);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DBMS";

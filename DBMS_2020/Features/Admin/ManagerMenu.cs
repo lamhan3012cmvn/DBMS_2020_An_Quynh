@@ -131,7 +131,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void dgv_Menu_CellContentClick(object sender, DataGridViewCellEventArgs e)

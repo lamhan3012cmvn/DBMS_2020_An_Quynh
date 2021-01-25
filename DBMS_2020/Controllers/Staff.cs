@@ -23,7 +23,7 @@ namespace DBMS_2020.Controllers
         public object viewInforStaff(string codeStaff)
         {
             Database db = new Database(this.tk, this.mk);
-            string strSql = "select * from pickMon_func ('" + codeStaff + "')";
+            string strSql = "select * from pickNhanVien_func ('" + codeStaff + "')";
             var result = db.ExecuteQueryDataSet(strSql, System.Data.CommandType.Text);
             return result;
         }
@@ -56,16 +56,22 @@ namespace DBMS_2020.Controllers
             bool result = db.MyExecuteNonQuery(strSQL, CommandType.Text, ref err);
             return result;
         }
-        public DataSet searchCustomer(string name)
+        public DataSet searchCustomer(string code)
         {
             Database db = new Database(this.tk, this.mk);
-            return db.ExecuteQueryDataSet("select * from timkiemKH_func (N'" + name + "')", CommandType.Text);
+            return db.ExecuteQueryDataSet("select * from timkiemKHnotLike_func (N'" + code + "')", CommandType.Text);
         }
         public string createCodeBill(ref string err)
         {
             Database db = new Database(this.tk, this.mk);
             string sql = $"select dbo.autoID_func()";
             string result = (string)db.MyExecuteNonQueryValue(sql, CommandType.Text, ref err);
+            return result;
+        }
+        public DataSet branch_Staff(string code)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.ExecuteQueryDataSet("select * from pickChiNhanh_NV_func('" + code + "')", System.Data.CommandType.Text);
             return result;
         }
     }
