@@ -63,7 +63,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_staff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_staff.ColumnHeadersHeight = 21;
+            this.dgv_staff.ColumnHeadersHeight = 50;
             this.dgv_staff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cCode,
             this.cName,
@@ -88,7 +88,7 @@
             this.dgv_staff.RowHeadersWidth = 51;
             this.dgv_staff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_staff.Size = new System.Drawing.Size(774, 423);
-            this.dgv_staff.TabIndex = 1;
+            this.dgv_staff.TabIndex = 2;
             this.dgv_staff.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgv_staff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgv_staff.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -102,7 +102,7 @@
             this.dgv_staff.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgv_staff.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_staff.ThemeStyle.HeaderStyle.Height = 21;
+            this.dgv_staff.ThemeStyle.HeaderStyle.Height = 50;
             this.dgv_staff.ThemeStyle.ReadOnly = false;
             this.dgv_staff.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.dgv_staff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;

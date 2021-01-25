@@ -17,9 +17,12 @@ namespace DBMS_2020.Features.Admin
         private ManagerCustomer customer;
         private ManagerMenu menu;
         private ManagerStaff staff;
+        private Statistical statistical;
         public Admin()
         {
             InitializeComponent();
+            statistical = new Statistical();
+            MethodHelps.addControl(this.pnl_loadUI, statistical);
         }
         private void loadManagerBranch()
         {

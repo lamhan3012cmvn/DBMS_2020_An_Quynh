@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.pnl_Admin = new Guna.UI.WinForms.GunaPanel();
             this.pnl_loadUI = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
@@ -39,10 +38,10 @@
             this.btn_Customer = new Guna.UI.WinForms.GunaButton();
             this.btn_Branch = new Guna.UI.WinForms.GunaButton();
             this.pnl_Menu = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.lbl_NamePage = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.pnl_Admin.SuspendLayout();
             this.pnl_loadUI.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -66,9 +65,9 @@
             // 
             this.pnl_loadUI.Controls.Add(this.gunaPanel1);
             this.pnl_loadUI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_loadUI.Location = new System.Drawing.Point(0, 85);
+            this.pnl_loadUI.Location = new System.Drawing.Point(0, 101);
             this.pnl_loadUI.Name = "pnl_loadUI";
-            this.pnl_loadUI.Size = new System.Drawing.Size(884, 524);
+            this.pnl_loadUI.Size = new System.Drawing.Size(884, 508);
             this.pnl_loadUI.TabIndex = 6;
             // 
             // gunaPanel1
@@ -79,10 +78,9 @@
             this.gunaPanel1.Controls.Add(this.btn_Menu);
             this.gunaPanel1.Controls.Add(this.btn_Customer);
             this.gunaPanel1.Controls.Add(this.btn_Branch);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(884, 524);
+            this.gunaPanel1.Size = new System.Drawing.Size(884, 505);
             this.gunaPanel1.TabIndex = 0;
             // 
             // gunaCirclePictureBox2
@@ -109,8 +107,8 @@
             this.btn_Staff.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Staff.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_Staff.ForeColor = System.Drawing.Color.White;
-            this.btn_Staff.Image = ((System.Drawing.Image)(resources.GetObject("btn_Staff.Image")));
-            this.btn_Staff.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Staff.Image = global::DBMS_2020.Properties.Resources.staffs;
+            this.btn_Staff.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_Staff.Location = new System.Drawing.Point(95, 313);
             this.btn_Staff.Name = "btn_Staff";
             this.btn_Staff.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -138,8 +136,8 @@
             this.btn_logout.FocusedColor = System.Drawing.Color.Empty;
             this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_logout.Image")));
-            this.btn_logout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_logout.Image = global::DBMS_2020.Properties.Resources.logout1;
+            this.btn_logout.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_logout.Location = new System.Drawing.Point(95, 390);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -149,7 +147,7 @@
             this.btn_logout.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_logout.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_logout.Radius = 20;
-            this.btn_logout.Size = new System.Drawing.Size(186, 42);
+            this.btn_logout.Size = new System.Drawing.Size(213, 42);
             this.btn_logout.TabIndex = 39;
             this.btn_logout.Text = "Đăng xuất";
             this.btn_logout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -167,8 +165,8 @@
             this.btn_Menu.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Menu.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_Menu.ForeColor = System.Drawing.Color.White;
-            this.btn_Menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_Menu.Image")));
-            this.btn_Menu.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Menu.Image = global::DBMS_2020.Properties.Resources.menu;
+            this.btn_Menu.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_Menu.Location = new System.Drawing.Point(95, 238);
             this.btn_Menu.Name = "btn_Menu";
             this.btn_Menu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -196,8 +194,8 @@
             this.btn_Customer.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Customer.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.Image = ((System.Drawing.Image)(resources.GetObject("btn_Customer.Image")));
-            this.btn_Customer.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Customer.Image = global::DBMS_2020.Properties.Resources.customer;
+            this.btn_Customer.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_Customer.Location = new System.Drawing.Point(95, 165);
             this.btn_Customer.Name = "btn_Customer";
             this.btn_Customer.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -225,9 +223,9 @@
             this.btn_Branch.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Branch.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_Branch.ForeColor = System.Drawing.Color.White;
-            this.btn_Branch.Image = ((System.Drawing.Image)(resources.GetObject("btn_Branch.Image")));
-            this.btn_Branch.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Branch.Location = new System.Drawing.Point(95, 92);
+            this.btn_Branch.Image = global::DBMS_2020.Properties.Resources.branch;
+            this.btn_Branch.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Branch.Location = new System.Drawing.Point(95, 86);
             this.btn_Branch.Name = "btn_Branch";
             this.btn_Branch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Branch.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
@@ -244,14 +242,29 @@
             // 
             // pnl_Menu
             // 
+            this.pnl_Menu.Controls.Add(this.gunaLabel2);
             this.pnl_Menu.Controls.Add(this.gunaPanel3);
             this.pnl_Menu.Controls.Add(this.gunaCirclePictureBox1);
-            this.pnl_Menu.Controls.Add(this.gunaLabel2);
             this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.pnl_Menu.Name = "pnl_Menu";
-            this.pnl_Menu.Size = new System.Drawing.Size(884, 85);
+            this.pnl_Menu.Size = new System.Drawing.Size(884, 101);
             this.pnl_Menu.TabIndex = 5;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.BackColor = System.Drawing.Color.White;
+            this.gunaLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gunaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel2.Location = new System.Drawing.Point(212, 13);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
+            this.gunaLabel2.Size = new System.Drawing.Size(469, 75);
+            this.gunaLabel2.TabIndex = 17;
+            this.gunaLabel2.Text = "BingsuWolrd";
+            this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gunaPanel3
             // 
@@ -259,7 +272,7 @@
             this.gunaPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.gunaPanel3.Location = new System.Drawing.Point(687, 0);
             this.gunaPanel3.Name = "gunaPanel3";
-            this.gunaPanel3.Size = new System.Drawing.Size(197, 85);
+            this.gunaPanel3.Size = new System.Drawing.Size(197, 101);
             this.gunaPanel3.TabIndex = 15;
             // 
             // lbl_NamePage
@@ -269,36 +282,23 @@
             this.lbl_NamePage.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl_NamePage.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lbl_NamePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.lbl_NamePage.Location = new System.Drawing.Point(99, 0);
+            this.lbl_NamePage.Location = new System.Drawing.Point(120, 0);
             this.lbl_NamePage.Name = "lbl_NamePage";
-            this.lbl_NamePage.Size = new System.Drawing.Size(98, 25);
+            this.lbl_NamePage.Size = new System.Drawing.Size(77, 25);
             this.lbl_NamePage.TabIndex = 9;
-            this.lbl_NamePage.Text = "Trang Chủ";
+            this.lbl_NamePage.Text = "Quản lý";
             // 
             // gunaCirclePictureBox1
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(13, 5);
+            this.gunaCirclePictureBox1.Image = global::DBMS_2020.Properties.Resources.logo;
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(13, 0);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(112, 107);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaCirclePictureBox1.TabIndex = 14;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.gunaLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.gunaLabel2.Location = new System.Drawing.Point(314, 14);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.gunaLabel2.Size = new System.Drawing.Size(261, 39);
-            this.gunaLabel2.TabIndex = 13;
-            this.gunaLabel2.Text = "Tiểu Lý Phi Đao";
             // 
             // Admin
             // 
@@ -329,7 +329,6 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel3;
         private Guna.UI.WinForms.GunaLabel lbl_NamePage;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox2;
         private Guna.UI.WinForms.GunaButton btn_Staff;
@@ -337,5 +336,6 @@
         private Guna.UI.WinForms.GunaButton btn_Menu;
         private Guna.UI.WinForms.GunaButton btn_Customer;
         private Guna.UI.WinForms.GunaButton btn_Branch;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
     }
 }

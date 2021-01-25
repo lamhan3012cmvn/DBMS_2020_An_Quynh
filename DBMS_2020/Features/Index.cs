@@ -16,9 +16,9 @@ namespace DBMS_2020.Features
         public Index()
         {
             InitializeComponent();
-            UILogin();
+            //UILogin();
             //UIRegistration();
-            //UIAdmin();
+            UIAdmin();
             //UIStaff();
 
         }

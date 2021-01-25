@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
@@ -123,6 +124,12 @@
     <Compile Include="Features\Admin\ManagerStaff.Designer.cs">
       <DependentUpon>ManagerStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Admin\statistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Features\Admin\statistical.Designer.cs">
+      <DependentUpon>statistical.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Authentication\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -200,6 +207,9 @@
     <EmbeddedResource Include="Features\Admin\ManagerStaff.resx">
       <DependentUpon>ManagerStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Features\Admin\Statistical.resx">
+      <DependentUpon>statistical.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Features\Authentication\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,9 +262,19 @@
     <Content Include="img\Cheese.jpg" />
     <Content Include="img\Choco.jpg" />
     <Content Include="img\GreenTea.jpg" />
+    <None Include="img\icon\add.png" />
+    <None Include="img\icon\branch.png" />
+    <None Include="img\icon\back.png" />
     <Content Include="img\icon\cart.png" />
     <None Include="img\icon\staff.png" />
     <None Include="img\icon\logout.png" />
+    <None Include="img\icon\logo.gif" />
+    <None Include="img\icon\updated.png" />
+    <None Include="img\icon\delete.png" />
+    <None Include="img\icon\customer.png" />
+    <None Include="img\icon\menu.png" />
+    <None Include="img\icon\staffs.png" />
+    <None Include="img\icon\sacek.png" />
     <Content Include="img\mango.png" />
     <Content Include="img\Oreo.jpg" />
     <Content Include="img\peach.jpg" />
