@@ -20,16 +20,18 @@ namespace DBMS_2020.Features.Staff
         private string codeDish;
         private DataTable menu;
         private Controllers.Staff staff;
+        private Controllers.Admin.Customer customer;
         private string err;
         private string phoneUser;
 
-        public Sell()
+        public Sell(string codeStaff)
         {
             InitializeComponent();
             menu = new DBMS_2020.Controllers.Admin.Menu().loadViewManagerMenu().Tables[0];
-            this.codeStaff = "NV01";
-            this.codeBranch = "CN01";
+            this.codeStaff = codeStaff;
+           
             this.staff = new Controllers.Staff();
+            this.customer = new Controllers.Admin.Customer();
             loadMenu();
         }
         private void btn_Back_Click(object sender, EventArgs e)
@@ -68,20 +70,21 @@ namespace DBMS_2020.Features.Staff
 
         private void btn_addOrder_Click(object sender, EventArgs e)
         {
-            if (this.order is null)
-            {
-                this.order = new oderTam(this.phoneUser, this.codeStaff, this.codeBranch);
-            }
-            int index = this.order.checkoutCodDish(this.codeDish);
-            if (index == -1)
-            {
-                this.order.addDish(this.codeDish, this.price, this.number_Quantity.Value.ToString());
-            }
-            else
-            {
-                this.order.Dishes()[index].ToalDish = (int.Parse(this.order.Dishes()[index].ToalDish) + (int)this.number_Quantity.Value).ToString();
-            }
-
+            
+                if (this.order is null)
+                {
+                    this.order = new oderTam(this.phoneUser, this.codeStaff, this.codeBranch);
+                }
+                int index = this.order.checkoutCodDish(this.codeDish);
+                if (index == -1)
+                {
+                    this.order.addDish(this.codeDish, this.price, this.number_Quantity.Value.ToString());
+                }
+                else
+                {
+                    this.order.Dishes()[index].ToalDish = (int.Parse(this.order.Dishes()[index].ToalDish) + (int)this.number_Quantity.Value).ToString();
+                }
+            
             loadListView();
         }
 
@@ -96,7 +99,7 @@ namespace DBMS_2020.Features.Staff
             }
             else
             {
-                this.staff.addBill(codeBill, this.order.PhoneNumber, this.codeBranch, this.order.CodeStaff, this.lbl_Money.Text, ref err);
+                this.staff.addBill(codeBill, this.phoneUser, this.codeBranch, this.order.CodeStaff, this.lbl_Money.Text, ref err);
                 if (err == null)
                 {
                     this.order.Dishes().ForEach(d =>
@@ -112,7 +115,11 @@ namespace DBMS_2020.Features.Staff
                     {
                         MessageBox.Show("Thêm Hóa Đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.lv_Bill.Items.Clear();
+                        this.number_Quantity.Value = 0;
+                        this.lbl_Money.Text = "0.0";
+                      
                         this.order = null;
+
                     }
                 }
                 else
@@ -120,6 +127,7 @@ namespace DBMS_2020.Features.Staff
                     MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     err = null;
                 }
+
             }
         }
 
@@ -157,7 +165,7 @@ namespace DBMS_2020.Features.Staff
             }
             else
             {
-                this.phoneUser = this.lbl_phone.Text;
+                this.phoneUser = this.txt_PhoneCustomer.Text;
                 this.lbl_phone.Text = customer.Tables[0].Rows[0][1].ToString();
             }
 

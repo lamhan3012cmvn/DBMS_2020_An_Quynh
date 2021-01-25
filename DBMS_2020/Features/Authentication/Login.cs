@@ -15,7 +15,7 @@ namespace DBMS_2020.Features.Authentication
         private DBMS_2020.Controllers.Authentication auth;
         private DBMS_2020.Features.Staff.Staff staffView;
         private DBMS_2020.Features.Admin.Admin admin;
-
+        
         public Login()
         {
             InitializeComponent();
@@ -36,6 +36,7 @@ namespace DBMS_2020.Features.Authentication
                 }    
                 else if(status==2)
                 {
+                    
                     this.staffView = new Staff.Staff(this.txt_user_name.Text);
                     DBMS_2020.Class.MethodHelps.addControl(this, this.staffView);
                     

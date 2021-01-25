@@ -31,23 +31,23 @@
             this.pnl_Admin = new Guna.UI.WinForms.GunaPanel();
             this.pnl_loadUI = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.pnl_Menu = new Guna.UI.WinForms.GunaPanel();
-            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
-            this.lbl_NamePage = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.btn_Staff = new Guna.UI.WinForms.GunaButton();
             this.btn_logout = new Guna.UI.WinForms.GunaButton();
             this.btn_Menu = new Guna.UI.WinForms.GunaButton();
             this.btn_Customer = new Guna.UI.WinForms.GunaButton();
             this.btn_Branch = new Guna.UI.WinForms.GunaButton();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.pnl_Menu = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
+            this.lbl_NamePage = new Guna.UI.WinForms.GunaLabel();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.pnl_Admin.SuspendLayout();
             this.pnl_loadUI.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             this.pnl_Menu.SuspendLayout();
             this.gunaPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.pnl_Admin.Controls.Add(this.pnl_Menu);
             this.pnl_Admin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_Admin.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_Admin.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Admin.Name = "pnl_Admin";
             this.pnl_Admin.Size = new System.Drawing.Size(1179, 750);
             this.pnl_Admin.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.pnl_loadUI.Controls.Add(this.gunaPanel1);
             this.pnl_loadUI.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_loadUI.Location = new System.Drawing.Point(0, 124);
-            this.pnl_loadUI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_loadUI.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_loadUI.Name = "pnl_loadUI";
             this.pnl_loadUI.Size = new System.Drawing.Size(1179, 626);
             this.pnl_loadUI.TabIndex = 6;
@@ -81,46 +81,10 @@
             this.gunaPanel1.Controls.Add(this.btn_Customer);
             this.gunaPanel1.Controls.Add(this.btn_Branch);
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1179, 622);
             this.gunaPanel1.TabIndex = 0;
-            // 
-            // pnl_Menu
-            // 
-            this.pnl_Menu.Controls.Add(this.gunaLabel2);
-            this.pnl_Menu.Controls.Add(this.gunaPanel3);
-            this.pnl_Menu.Controls.Add(this.gunaCirclePictureBox1);
-            this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
-            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_Menu.Name = "pnl_Menu";
-            this.pnl_Menu.Size = new System.Drawing.Size(1179, 124);
-            this.pnl_Menu.TabIndex = 5;
-            // 
-            // gunaPanel3
-            // 
-            this.gunaPanel3.Controls.Add(this.lbl_NamePage);
-            this.gunaPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gunaPanel3.Location = new System.Drawing.Point(916, 0);
-            this.gunaPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gunaPanel3.Name = "gunaPanel3";
-            this.gunaPanel3.Size = new System.Drawing.Size(263, 124);
-            this.gunaPanel3.TabIndex = 15;
-            // 
-            // lbl_NamePage
-            // 
-            this.lbl_NamePage.AutoSize = true;
-            this.lbl_NamePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.lbl_NamePage.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_NamePage.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.lbl_NamePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.lbl_NamePage.Location = new System.Drawing.Point(165, 0);
-            this.lbl_NamePage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_NamePage.Name = "lbl_NamePage";
-            this.lbl_NamePage.Size = new System.Drawing.Size(98, 32);
-            this.lbl_NamePage.TabIndex = 9;
-            this.lbl_NamePage.Text = "Quản lý";
             // 
             // gunaCirclePictureBox2
             // 
@@ -285,18 +249,17 @@
             this.btn_Branch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Branch.Click += new System.EventHandler(this.btn_Branch_Click);
             // 
-            // gunaCirclePictureBox1
+            // pnl_Menu
             // 
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::DBMS_2020.Properties.Resources.logo;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(17, 0);
-            this.gunaCirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(150, 132);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.gunaCirclePictureBox1.TabIndex = 14;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            this.pnl_Menu.Controls.Add(this.gunaLabel2);
+            this.pnl_Menu.Controls.Add(this.gunaPanel3);
+            this.pnl_Menu.Controls.Add(this.gunaCirclePictureBox1);
+            this.pnl_Menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Menu.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_Menu.Name = "pnl_Menu";
+            this.pnl_Menu.Size = new System.Drawing.Size(1179, 124);
+            this.pnl_Menu.TabIndex = 5;
             // 
             // gunaLabel2
             // 
@@ -314,23 +277,60 @@
             this.gunaLabel2.Text = "BingsuWolrd";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // gunaPanel3
+            // 
+            this.gunaPanel3.Controls.Add(this.lbl_NamePage);
+            this.gunaPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gunaPanel3.Location = new System.Drawing.Point(916, 0);
+            this.gunaPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaPanel3.Name = "gunaPanel3";
+            this.gunaPanel3.Size = new System.Drawing.Size(263, 124);
+            this.gunaPanel3.TabIndex = 15;
+            // 
+            // lbl_NamePage
+            // 
+            this.lbl_NamePage.AutoSize = true;
+            this.lbl_NamePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.lbl_NamePage.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_NamePage.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lbl_NamePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.lbl_NamePage.Location = new System.Drawing.Point(165, 0);
+            this.lbl_NamePage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_NamePage.Name = "lbl_NamePage";
+            this.lbl_NamePage.Size = new System.Drawing.Size(98, 32);
+            this.lbl_NamePage.TabIndex = 9;
+            this.lbl_NamePage.Text = "Quản lý";
+            // 
+            // gunaCirclePictureBox1
+            // 
+            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCirclePictureBox1.Image = global::DBMS_2020.Properties.Resources.logo;
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(17, 0);
+            this.gunaCirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(150, 132);
+            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaCirclePictureBox1.TabIndex = 14;
+            this.gunaCirclePictureBox1.TabStop = false;
+            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.Controls.Add(this.pnl_Admin);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Admin";
             this.Size = new System.Drawing.Size(1179, 750);
             this.pnl_Admin.ResumeLayout(false);
             this.pnl_loadUI.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             this.pnl_Menu.ResumeLayout(false);
             this.pnl_Menu.PerformLayout();
             this.gunaPanel3.ResumeLayout(false);
             this.gunaPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 

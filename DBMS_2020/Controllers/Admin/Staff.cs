@@ -22,7 +22,7 @@ namespace DBMS_2020.Controllers.Admin
         public DataSet loadViewManagerStaff()
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.ExecuteQueryDataSet("Select * from NhanVien", CommandType.Text);
+            var result = db.ExecuteQueryDataSet("Select * from NhanVien_ChiNhanh_View", CommandType.Text);
             return result;
         }
         //NHÂN VIÊN
@@ -52,7 +52,13 @@ namespace DBMS_2020.Controllers.Admin
             Database db = new Database(this.tk, this.mk);
             return db.ExecuteQueryDataSet("select * from timkiemNV_func (N'" + name + "')", CommandType.Text);
         }
-      
+        
+        public DataSet branch_Staff(string code)
+        {
+            Database db = new Database(this.tk, this.mk);
+            var result = db.ExecuteQueryDataSet("select * from pickChiNhanh_NV_func('" + code + "')", System.Data.CommandType.Text);
+            return result;
+        }
 
     }
 }

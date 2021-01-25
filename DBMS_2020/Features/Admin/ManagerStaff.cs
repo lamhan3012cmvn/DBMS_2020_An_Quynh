@@ -32,7 +32,8 @@ namespace DBMS_2020.Features.Admin
             {
                 var item = DT.Rows[i];
                 var DoB = item[3].ToString().Split(' ')[0];
-                dgv_staff.Rows.Add(item[0], item[1],  item[2], DoB, item[4],item[6]);
+                
+                dgv_staff.Rows.Add(item[0], item[1],  item[2], DoB, item[4],item[5]);
             }
         }
 
