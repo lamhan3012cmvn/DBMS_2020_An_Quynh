@@ -40,7 +40,7 @@ namespace DBMS_2020.Features
         public void UIStaff()
         {
             Staff.Staff staff = new Staff.Staff("NV01");
-            MethodHelps.addControl(this.pnl_load_ui,staff);
+            MethodHelps.addControl(this.pnl_load_ui, staff);
         }
     }
 }

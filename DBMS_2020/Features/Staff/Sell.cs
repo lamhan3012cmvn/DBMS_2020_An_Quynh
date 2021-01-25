@@ -37,6 +37,7 @@ namespace DBMS_2020.Features.Staff
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
+            
             this.Dispose();
         }
         public void loadMenu()
@@ -115,7 +116,7 @@ namespace DBMS_2020.Features.Staff
                     if (err == null)
                     {
                         MessageBox.Show("Thêm Hóa Đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.lv_Bill.Items.Clear();
+                        this.dgv_Dished.Rows.Clear();
                         this.number_Quantity.Value = 0;
                         this.lbl_Money.Text = "0.0";
                       
@@ -162,14 +163,21 @@ namespace DBMS_2020.Features.Staff
                 this.phoneUser = null;
                 this.lbl_phone.Text = "";
                 MessageBox.Show("Chưa có khác hàng");
-                //Không có Q về tạo form
+                AddCustomer add = new AddCustomer(this.staff);
+                add.ShowDialog();
+                add.FormClosed += Add_FormClosed;
+                
             }
             else
             {
                 this.phoneUser = this.txt_PhoneCustomer.Text;
                 this.lbl_phone.Text = customer.Tables[0].Rows[0][1].ToString();
             }
+        }
 
+        private void Add_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show("1234");
         }
     }
 }

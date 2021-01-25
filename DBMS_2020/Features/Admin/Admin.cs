@@ -51,6 +51,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
+
             this.Dispose();
         }
 

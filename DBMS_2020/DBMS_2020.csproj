@@ -149,6 +149,12 @@
     <Compile Include="Features\Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Staff\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Features\Staff\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Features\Staff\InforStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Features\Staff\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Features\Staff\InforStaff.resx">
       <DependentUpon>InforStaff.cs</DependentUpon>

@@ -59,7 +59,7 @@
             this.pnl_Staff.Location = new System.Drawing.Point(0, 0);
             this.pnl_Staff.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_Staff.Name = "pnl_Staff";
-            this.pnl_Staff.Size = new System.Drawing.Size(1179, 750);
+            this.pnl_Staff.Size = new System.Drawing.Size(884, 609);
             this.pnl_Staff.TabIndex = 0;
             // 
             // pnl_load
@@ -69,7 +69,7 @@
             this.pnl_load.Location = new System.Drawing.Point(0, 136);
             this.pnl_load.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_load.Name = "pnl_load";
-            this.pnl_load.Size = new System.Drawing.Size(1179, 614);
+            this.pnl_load.Size = new System.Drawing.Size(884, 473);
             this.pnl_load.TabIndex = 1;
             // 
             // gunaPanel2
@@ -83,7 +83,7 @@
             this.gunaPanel2.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1179, 614);
+            this.gunaPanel2.Size = new System.Drawing.Size(884, 473);
             this.gunaPanel2.TabIndex = 0;
             // 
             // btn_logout
@@ -100,17 +100,16 @@
             this.btn_logout.ForeColor = System.Drawing.Color.White;
             this.btn_logout.Image = global::DBMS_2020.Properties.Resources.logout;
             this.btn_logout.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_logout.Location = new System.Drawing.Point(117, 353);
-            this.btn_logout.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_logout.Location = new System.Drawing.Point(88, 287);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_logout.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_logout.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_logout.OnHoverImage = null;
             this.btn_logout.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_logout.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_logout.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_logout.Radius = 20;
-            this.btn_logout.Size = new System.Drawing.Size(366, 106);
+            this.btn_logout.Size = new System.Drawing.Size(274, 86);
             this.btn_logout.TabIndex = 22;
             this.btn_logout.Text = "Đăng xuất";
             this.btn_logout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -130,17 +129,16 @@
             this.btn_inforStaff.ForeColor = System.Drawing.Color.White;
             this.btn_inforStaff.Image = global::DBMS_2020.Properties.Resources.staff;
             this.btn_inforStaff.ImageSize = new System.Drawing.Size(45, 45);
-            this.btn_inforStaff.Location = new System.Drawing.Point(117, 238);
-            this.btn_inforStaff.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_inforStaff.Location = new System.Drawing.Point(88, 193);
             this.btn_inforStaff.Name = "btn_inforStaff";
             this.btn_inforStaff.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_inforStaff.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_inforStaff.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_inforStaff.OnHoverImage = null;
             this.btn_inforStaff.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_inforStaff.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_inforStaff.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_inforStaff.Radius = 20;
-            this.btn_inforStaff.Size = new System.Drawing.Size(366, 93);
+            this.btn_inforStaff.Size = new System.Drawing.Size(274, 76);
             this.btn_inforStaff.TabIndex = 21;
             this.btn_inforStaff.Text = "Thông tin nhân viên";
             this.btn_inforStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -160,17 +158,16 @@
             this.btn_Sell.ForeColor = System.Drawing.Color.White;
             this.btn_Sell.Image = global::DBMS_2020.Properties.Resources.cart;
             this.btn_Sell.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_Sell.Location = new System.Drawing.Point(117, 117);
-            this.btn_Sell.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Sell.Location = new System.Drawing.Point(88, 95);
             this.btn_Sell.Name = "btn_Sell";
             this.btn_Sell.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Sell.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.btn_Sell.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Sell.OnHoverImage = null;
             this.btn_Sell.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.btn_Sell.Padding = new System.Windows.Forms.Padding(27, 0, 27, 0);
+            this.btn_Sell.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btn_Sell.Radius = 20;
-            this.btn_Sell.Size = new System.Drawing.Size(366, 95);
+            this.btn_Sell.Size = new System.Drawing.Size(274, 77);
             this.btn_Sell.TabIndex = 20;
             this.btn_Sell.Text = "Bán Hàng";
             this.btn_Sell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -185,7 +182,7 @@
             this.lbl_Branch.Location = new System.Drawing.Point(59, 60);
             this.lbl_Branch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Branch.Name = "lbl_Branch";
-            this.lbl_Branch.Size = new System.Drawing.Size(155, 32);
+            this.lbl_Branch.Size = new System.Drawing.Size(121, 25);
             this.lbl_Branch.TabIndex = 18;
             this.lbl_Branch.Text = "Chi Nhánh:   ";
             // 
@@ -193,10 +190,9 @@
             // 
             this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox2.Image = global::DBMS_2020.Properties.Resources.special;
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(634, 117);
-            this.gunaCirclePictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(476, 95);
             this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
-            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(424, 402);
+            this.gunaCirclePictureBox2.Size = new System.Drawing.Size(318, 327);
             this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaCirclePictureBox2.TabIndex = 17;
             this.gunaCirclePictureBox2.TabStop = false;
@@ -211,7 +207,7 @@
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1179, 136);
+            this.gunaPanel1.Size = new System.Drawing.Size(884, 136);
             this.gunaPanel1.TabIndex = 0;
             // 
             // gunaLabel2
@@ -219,13 +215,13 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.BackColor = System.Drawing.Color.White;
             this.gunaLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gunaLabel2.Font = new System.Drawing.Font("Edwardian Script ITC", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel2.Location = new System.Drawing.Point(368, 17);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.gunaLabel2.Size = new System.Drawing.Size(479, 96);
+            this.gunaLabel2.Size = new System.Drawing.Size(489, 75);
             this.gunaLabel2.TabIndex = 16;
             this.gunaLabel2.Text = "BingsuWolrd";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -234,10 +230,9 @@
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox1.Image = global::DBMS_2020.Properties.Resources.logo;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(21, 4);
-            this.gunaCirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(16, 3);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(150, 132);
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(112, 107);
             this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaCirclePictureBox1.TabIndex = 15;
             this.gunaCirclePictureBox1.TabStop = false;
@@ -259,21 +254,21 @@
             this.lbl_NamePage.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbl_NamePage.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lbl_NamePage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.lbl_NamePage.Location = new System.Drawing.Point(143, 0);
+            this.lbl_NamePage.Location = new System.Drawing.Point(169, 0);
             this.lbl_NamePage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_NamePage.Name = "lbl_NamePage";
-            this.lbl_NamePage.Size = new System.Drawing.Size(124, 32);
+            this.lbl_NamePage.Size = new System.Drawing.Size(98, 25);
             this.lbl_NamePage.TabIndex = 9;
             this.lbl_NamePage.Text = "Trang Chủ";
             // 
             // Staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_Staff);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Staff";
-            this.Size = new System.Drawing.Size(1179, 750);
+            this.Size = new System.Drawing.Size(884, 609);
             this.pnl_Staff.ResumeLayout(false);
             this.pnl_load.ResumeLayout(false);
             this.gunaPanel2.ResumeLayout(false);

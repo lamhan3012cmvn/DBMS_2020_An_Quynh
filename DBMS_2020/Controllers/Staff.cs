@@ -49,6 +49,13 @@ namespace DBMS_2020.Controllers
             return reuslt;
 
         }
+        public bool addCustomer(string code,string name,string address,ref string err)
+        {
+            Database db = new Database(this.tk, this.mk);
+            string strSQL = $"exec themKH_proc '{code}',N'{name}',N'{address}','{0}'";
+            bool result = db.MyExecuteNonQuery(strSQL, CommandType.Text, ref err);
+            return result;
+        }
         public DataSet searchCustomer(string name)
         {
             Database db = new Database(this.tk, this.mk);

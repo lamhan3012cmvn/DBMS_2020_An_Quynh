@@ -37,7 +37,6 @@ namespace DBMS_2020.Features.Staff
         }
         private void loadSell()
         {
-
             this.lbl_NamePage.Text = "Bán hàng";
             this.sell = new Sell(codeStaff);
             MethodHelps.addControl(this.pnl_load, this.sell);
@@ -54,7 +53,7 @@ namespace DBMS_2020.Features.Staff
         }
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+           this.Dispose();
         }
     }
 }
