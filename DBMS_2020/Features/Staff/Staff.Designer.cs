@@ -201,7 +201,7 @@
             // 
             this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox2.Image = global::DBMS_2020.Properties.Resources.special;
-            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(489, 95);
+            this.gunaCirclePictureBox2.Location = new System.Drawing.Point(489, 119);
             this.gunaCirclePictureBox2.Name = "gunaCirclePictureBox2";
             this.gunaCirclePictureBox2.Size = new System.Drawing.Size(300, 300);
             this.gunaCirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
