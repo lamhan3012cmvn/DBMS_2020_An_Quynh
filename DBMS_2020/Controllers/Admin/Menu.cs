@@ -66,7 +66,7 @@ namespace DBMS_2020.Controllers.Admin
         public bool deleteMenu(string code, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute xoaNV_proc '" + code + "'", CommandType.Text,ref err);
+            var result = db.MyExecuteNonQuery("execute xoaMon_proc '" + code + "'", CommandType.Text,ref err);
             return result;
         }
     }

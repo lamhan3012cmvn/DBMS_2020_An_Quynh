@@ -94,6 +94,7 @@
             this.btn_Back.Size = new System.Drawing.Size(155, 52);
             this.btn_Back.TabIndex = 24;
             this.btn_Back.Text = "Trở lại";
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // pnl_btn
             // 

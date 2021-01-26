@@ -39,7 +39,7 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            this.staff.updateStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,MatKhau:"1234",err:ref err);
+            this.staff.updateStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,err:ref err);
             if (err == null)
             {
                 try
@@ -61,7 +61,9 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Del_Click(object sender, EventArgs e)
         {
+
             this.staff.deleteStaff(MaNV:this.txt_Code.Text,err:ref err);
+           
             if (err == null)
             {
                 try

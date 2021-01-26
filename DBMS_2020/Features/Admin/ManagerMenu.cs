@@ -61,7 +61,8 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            if(flag==false)
+           
+            if (flag==false)
             {
                 DataSet check = Menu.pickItem(this.txt_Code.Text);
                 if (check.Tables[0].Rows.Count == 0)
@@ -91,7 +92,7 @@ namespace DBMS_2020.Features.Admin
                             return;
                         }
                     }    
-                    Menu.addMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: price, AnhMinhHoa: this.txt_Name.Text, DaBan: 0, ref err);
+                    Menu.addMenu(MaMon: this.txt_Code.Text, TenMon: this.txt_Name.Text, GiaTien: price, AnhMinhHoa: this.nameImg, DaBan: 0, ref err);
                     if (err == null)
                     {
                         try

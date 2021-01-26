@@ -115,33 +115,40 @@ namespace DBMS_2020.Features.Staff
             }
             else
             {
-                this.staff.addBill(codeBill, this.phoneUser, this.codeBranch, this.order.CodeStaff, this.lbl_Money.Text, ref err);
-                if (err == null)
+                try
                 {
-                    this.order.Dishes().ForEach(d =>
-                    {
-                        this.staff.addCTHD(codeBill, d.CodeDish, d.ToalDish, float.Parse(d.PriceDish), ref err);
-                        if (err != null)
-                        {
-                            MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            err = null;
-                        }
-                    });
+                    this.staff.addBill(codeBill, this.phoneUser, this.codeBranch, this.order.CodeStaff, this.lbl_Money.Text, ref err);
                     if (err == null)
                     {
-                        MessageBox.Show("Thêm Hóa Đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.dgv_Dished.Rows.Clear();
-                        this.number_Quantity.Value = 0;
-                        this.lbl_Money.Text = "0.0";
+                        this.order.Dishes().ForEach(d =>
+                        {
+                            this.staff.addCTHD(codeBill, d.CodeDish, d.ToalDish, float.Parse(d.PriceDish), ref err);
+                            if (err != null)
+                            {
+                                MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                err = null;
+                            }
+                        });
+                        if (err == null)
+                        {
+                            MessageBox.Show("Thêm Hóa Đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.dgv_Dished.Rows.Clear();
+                            this.number_Quantity.Value = 0;
+                            this.lbl_Money.Text = "0.0";
 
-                        this.order = null;
+                            this.order = null;
 
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        err = null;
                     }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show(err, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    err = null;
+                    MessageBox.Show("Chưa chọn món", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }

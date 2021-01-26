@@ -34,10 +34,10 @@ namespace DBMS_2020.Controllers.Admin
             return result;
         }
 
-        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, string MatKhau, ref string err)
+        public bool updateStaff(string MaNV, string TenNV, string SDT, string ngaySinh, string MaChiNhanh, ref string err)
         {
             Database db = new Database(this.tk, this.mk);
-            var result = db.MyExecuteNonQuery("execute suaNV_proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "','" + MatKhau, CommandType.Text, ref err);
+            var result = db.MyExecuteNonQuery("execute suaNV_proc '" + MaNV + "',N'" + TenNV + "','" + SDT + "','" + MaChiNhanh + "'", CommandType.Text, ref err);
             return result;
         }
 

@@ -108,5 +108,10 @@ namespace DBMS_2020.Features.Admin
                 this.dgv_data.Rows.Add(item[0], item[1], item[2], DoB, item[4], item[6]);
             }
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

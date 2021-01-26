@@ -23,6 +23,8 @@ namespace DBMS_2020.Features.Staff
             this.staff = new Controllers.Staff();
             this.codeStaff = codeNV;
             this.branch = (string)this.staff.branch_Staff(codeNV).Tables[0].Rows[0][0];
+            var data = (DataSet)this.staff.viewInforStaff(codeStaff);
+            DT = data.Tables[0];
         }
 
         private void btn_save_Click(object sender, EventArgs e)
@@ -33,9 +35,8 @@ namespace DBMS_2020.Features.Staff
                 if (err == null)
                 {
                     try
-                    {
-                        loadStaff();
-                        MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    { 
+                        MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);                     
                     }
                     catch
                     {
@@ -80,12 +81,13 @@ namespace DBMS_2020.Features.Staff
         private void cb_ChangePassword_CheckedChanged(object sender, EventArgs e)
         {
             this.pnl_ChangePassword.Visible = this.cb_ChangePassword.Checked;
+            this.txt_Name.Enabled= !this.cb_ChangePassword.Checked;
+            this.txt_PhoneNumber.Enabled= !this.cb_ChangePassword.Checked;
 
         }
         private void loadStaff()
         {
-            var data = (DataSet)this.staff.viewInforStaff(codeStaff);
-            DT = data.Tables[0];
+           
             this.txt_Code.Text = DT.Rows[0][0].ToString();
             this.txt_Name.Text = DT.Rows[0][1].ToString();
             this.txt_PhoneNumber.Text = DT.Rows[0][2].ToString();

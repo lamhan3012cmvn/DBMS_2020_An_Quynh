@@ -77,13 +77,13 @@ create table ChiTietHoaDon
 insert into QuanLy values ('AdminQuynh','1234')
 insert into QuanLy values ('AdminAn','1234')
 
-insert into ChiNhanh values ('CN01',N'Chi Nhánh 1',N'Quận 1',1000000)
-insert into ChiNhanh values ('CN02',N'Chi Nhánh 2',N'Quận 2',600000)
-insert into ChiNhanh values ('CN03',N'Chi Nhánh 3',N'Quận 3',300000)
-insert into ChiNhanh values ('CN04',N'Chi Nhánh 4',N'Quận 4',500000)
-insert into ChiNhanh values ('CN05',N'Chi Nhánh 5',N'Quận 5',450000)
-insert into ChiNhanh values ('CN06',N'Chi Nhánh 6',N'Quận 6',800000)
-insert into ChiNhanh values ('CN07',N'Chi Nhánh 7',N'Quận 7',700000)
+insert into ChiNhanh values ('CN01',N'Chi Nhánh 1',N'Quận 1',0)
+insert into ChiNhanh values ('CN02',N'Chi Nhánh 2',N'Quận 2',0)
+insert into ChiNhanh values ('CN03',N'Chi Nhánh 3',N'Quận 3',0)
+insert into ChiNhanh values ('CN04',N'Chi Nhánh 4',N'Quận 4',0)
+insert into ChiNhanh values ('CN05',N'Chi Nhánh 5',N'Quận 5',0)
+insert into ChiNhanh values ('CN06',N'Chi Nhánh 6',N'Quận 6',0)
+insert into ChiNhanh values ('CN07',N'Chi Nhánh 7',N'Quận 7',0)
 
 insert into  NhanVien  values ('NV01',N'Nguyễn Cước Thiên','0984728234','01-10-2000','CN01','thien',0)
 insert into  NhanVien values ('NV02',N'Lâm Hoàng An','0912348234','2000-01-01','CN02','an',0)
@@ -93,23 +93,23 @@ insert into  NhanVien values ('NV05',N'Đặng Nguyễn Hoài Thư','0984712367'
 insert into  NhanVien values ('NV06',N'Nguyễn Thị Như Quỳnh','0985194510','2000-01-01','CN06','quynh',0)
 insert into  NhanVien values ('NV07',N'Phạm Duy Khôi','0998728678','2000-01-01','CN07','khoi',0)
 
-insert into KhachHang values ('0985194510',N'Trần Ngọc Anh',N'01 Trần Hưng Đạo, Quận 1',15)
-insert into KhachHang values ('0947699623',N'Đặng Quốc Việt',N'02 Võ Thị Sáu, Quận 3',15)
-insert into KhachHang values ('0987654321',N'Phan Như Ý',N'10 Đường 12, Quận 2',15)
-insert into KhachHang values ('0912674906',N'Nguyễn Mai Hoa',N'99 Nguyễn Thị Thập, Quận 7',15)
-insert into KhachHang values ('0912674006',N'Võ Văn Thiên',N'01 Đường 9, Quận 4',15)
-insert into KhachHang values ('0912674001',N'Nguyễn Gia Bảo',N'02 Đường 10, Quận 5',15)
+insert into KhachHang values ('0985194510',N'Trần Ngọc Anh',N'01 Trần Hưng Đạo, Quận 1',0)
+insert into KhachHang values ('0947699623',N'Đặng Quốc Việt',N'02 Võ Thị Sáu, Quận 3',0)
+insert into KhachHang values ('0987654321',N'Phan Như Ý',N'10 Đường 12, Quận 2',0)
+insert into KhachHang values ('0912674906',N'Nguyễn Mai Hoa',N'99 Nguyễn Thị Thập, Quận 7',0)
+insert into KhachHang values ('0912674006',N'Võ Văn Thiên',N'01 Đường 9, Quận 4',0)
+insert into KhachHang values ('0912674001',N'Nguyễn Gia Bảo',N'02 Đường 10, Quận 5',0)
 
-insert into Menu values ('BINGSU01','Special BingSu',55000,'special.jpg','5')
-insert into Menu values ('BINGSU02','Cheese Cake BingSu',50000,'Cheese.jpg','10')
-insert into Menu values ('BINGSU03','Passion Cheese BingSu','45000,passioncheese.jpg','4')
-insert into Menu values ('BINGSU04','Choco BingSu',40000,'Choco.jpg','5')
-insert into Menu values ('BINGSU05','Oreo BingSu',45000,'Oreo.jpg','7')
-insert into Menu values ('BINGSU06','Mango BingSo',45000,'mango.png','10')
-insert into Menu values ('BINGSU07','Strawberry BingSu',50000,'strawberry.jpg','8')
-insert into Menu values ('BINGSU08','Green Tea BingSu',40000,'GreenTea.jpg','2')
-insert into Menu values ('BINGSU09','Peach BingSu',45000,'peach.jpg','1')
-insert into Menu values ('BINGSU10','Black Sesame BingSu',40000,'black-sesame','6')
+insert into Menu values ('BINGSU01','Special BingSu',55000,'special.jpg','0')
+insert into Menu values ('BINGSU02','Cheese Cake BingSu',50000,'Cheese.jpg','0')
+insert into Menu values ('BINGSU03','Passion Cheese BingSu','45000,passioncheese.jpg','0')
+insert into Menu values ('BINGSU04','Choco BingSu',40000,'Choco.jpg','0')
+insert into Menu values ('BINGSU05','Oreo BingSu',45000,'Oreo.jpg','0')
+insert into Menu values ('BINGSU06','Mango BingSo',45000,'mango.png','0')
+insert into Menu values ('BINGSU07','Strawberry BingSu',50000,'strawberry.jpg','0')
+insert into Menu values ('BINGSU08','Green Tea BingSu',40000,'GreenTea.jpg','0')
+insert into Menu values ('BINGSU09','Peach BingSu',45000,'peach.jpg','0')
+insert into Menu values ('BINGSU10','Black Sesame BingSu',40000,'black-sesame','0')
 
 select * from Menu
 
@@ -124,7 +124,6 @@ set @tonggia = (select inserted.TongGia from inserted)
 select @chinhanh = inserted.MaChiNhanh, @khachhang= inserted.SoDT_KhachHang from inserted
 begin 
 	update ChiNhanh set DoanhThu = DoanhThu + @tonggia where ChiNhanh.MaChiNhanh = @chinhanh
-	--update KhachHang set KhachHang.DaMua = KhachHang.DaMua + @tonggia*0.1 where KhachHang.SoDienThoai = @khachhang
 end
 go 
 --Trigger: sau khi thanh toán thì số lượng đã mua của khách hàng tăng lên 
@@ -171,9 +170,6 @@ begin
 	set @nextMaHD = Cast(CONVERT(int,SUBSTRING(@preMaHD,3,10))+1 as varchar(10))
 	return concat('HD', @nextMaHD)
 end
-go
-print dbo.autoID_func()
-select dbo.autoID_func()
 
 go
 -- Function lấy một nhân viên khi biết mã nhân viên đó
@@ -237,8 +233,7 @@ returns table
 as
 return(select* from KhachHang where KhachHang.SoDienThoai = @SDT)
 go
-select * from timkiemKH_func (N'Vi')
-go
+
 
 --top 3 món bán chạy
 create or alter function top3MonAn_func()
@@ -316,38 +311,6 @@ begin
 end
 go
 
-
--- đăng nhập 
-create or alter function ktDangNhap_func(@tk varchar(20),@mk varchar(20),@chucnang int) returns int
-as
-begin
-declare @kq int
-if(@tk = '' or @mk ='')
-	set @kq =0
-if (@chucnang=1)
-	begin
-		if(exists(select * from QuanLy where QuanLy.TenDangNhap=@tk and QuanLy.MatKhau=@mk))
-		begin
-			 set @kq=1
-		end
-		else set @kq=0
-	end
-else if (@chucnang=2)
-	begin
-		if(exists(select * from NhanVien where NhanVien.MaNhanVien=@tk and NhanVien.MatKhau=@mk))
-		begin
-			set @kq=1
-		end
-		else set @kq=0
-	end
-else if(@chucnang = -1 )
-	set  @kq = 0
-return @kq
-end
-go
-select dbo.ktDangNhap_func ('','',1)
-go
-
 -- Procedure
 --thêm nhân viên
 create or alter procedure themNV_proc @MaNV varchar(10),@TenNV nvarchar(50),@SDT varchar(10),@ngaySinh datetime,@MaChiNhanh varchar(10),@MatKhau varchar(20),@SoLuongBan int
@@ -361,24 +324,26 @@ go
 create or alter procedure ThemLoginNhanVien @tk varchar(10),@mk varchar(10)
 as
 begin
-	declare @sql varchar(10)
+	declare @sql varchar(MAX)
 	EXEC sp_addlogin @tk,@mk
 	EXEC sp_adduser @tk,@tk
 	set @sql= 'sp_addrolemember[RoleNhanVien],['+@tk+']' 
 	EXEC sp_sqlexec @sql
 end
 go
+
 -- Đăng kí nhân viên mới
 Create or alter proc DangKiNV_Proc @tk varchar(10), @mk varchar(20),@tenNV nvarchar(50),@sdt nvarchar(50),@ngaySinh datetime,@machinhanh nvarchar(50),@soluongban int
 as
 begin
-	
-		execute themNV_proc @tk,@tenNV,@sdt,@ngaySinh,@machinhanh,@mk,@soluongban	
 		execute ThemLoginNhanVien @tk, @mk
+		execute themNV_proc @tk,@tenNV,@sdt,@ngaySinh,@machinhanh,@mk,@soluongban	
+		
 end
 go
+
 --Procedure Sửa Nhân Viên
-create or alter procedure suaNV_proc @MaNV varchar(10),@TenNV nvarchar(50),@SDT varchar(10),@MaChiNhanh varchar(10),@MatKhau varchar(20)
+create or alter procedure suaNV_proc @MaNV varchar(10),@TenNV nvarchar(50),@SDT varchar(10),@MaChiNhanh varchar(10)
 as
 begin
 	update NhanVien set TenNhanVien=@TenNV,SDT=@SDT,MaChiNhanh=@MaChiNhanh where @MaNV=MaNhanVien
@@ -404,6 +369,7 @@ begin
 end
 go
 
+
 --procedure đổi mật khẩu Nhân viên
 create or alter procedure doiMatKhauNV_proc @tk varchar(10),@mkc varchar(20),@mkm varchar(20)
 as
@@ -425,7 +391,6 @@ go
 create or alter procedure themMon_proc @MaMon varchar(10),@TenMon nvarchar(50),@GiaTien float,@AnhMinhHoa varchar(50), @DaBan int
 as
 begin
-	
 	insert into Menu values(@MaMon,@TenMon,@GiaTien,@AnhMinhHoa,@DaBan)	
 end
 go
@@ -464,8 +429,6 @@ begin
 end
 go
 
-
-
 --Procedure Sửa Khách Hàng
 create or alter procedure suaKH_proc @SDT varchar(10),@TenKH nvarchar(50),@DiaChi nvarchar(50)
 as
@@ -475,13 +438,6 @@ begin
 end
 go
 
---Procedure Xóa Khách hàng
-create or alter  procedure xoaKH_proc @SDT varchar(20)
-as
-begin
-	delete from KhachHang where SoDienThoai=@SDT
-end
-go
 --Procedure Thêm Chi Nhánh
 
 create or alter procedure themCN_proc @MaChiNhanh varchar(10),@TenCN nvarchar(50),@DiaChi nvarchar(50), @DoanhThu float
@@ -497,13 +453,7 @@ begin
 	update ChiNhanh set TenChiNhanh=@TenCN,DiaChi=@DiaChi where @MaChiNhanh=MaChiNhanh
 end
 go
---Procedure Xóa chi nhánh
-create or alter procedure xoaCN_proc @MaCN varchar(10)
-as
-begin
-	delete from ChiNhanh where MaChiNhanh=@MaCN
-end
-go
+
 -- Procedure Thêm hóa đơn mới
 create or alter procedure ThemHoaDon_proc @maHoaDon varchar(10),@SDT varchar(10),@maNV varchar(10), @maCN varchar(10),@tongGia float, @ngayBan datetime
 as 
@@ -511,7 +461,6 @@ begin
 	insert into HoaDon values (@maHoaDon,@SDT,@maNV,@maCN,@ngayBan,@tongGia)
 end
 go
-
 
 --Procedure thêm vào chi tiết hóa đơn
 create or alter procedure ThemChiTietHoaDon_proc @maHD varchar(10),@maMon varchar(10), @soLuong int, @gia float
@@ -531,6 +480,10 @@ go
 
 create or alter View Menu_View as
 select MaMon,TenMon, GiaTien,AnhMinhHoa from Menu
+go
+
+create or alter View NhanVien_ChiNhanh_View as 
+select MaNhanVien,TenNhanVien,SDT,NgaySinh,TenChiNhanh,SoLuongBan from NhanVien,ChiNhanh where NhanVien.MaChiNhanh = ChiNhanh.MaChiNhanh
 go
 
 
@@ -607,9 +560,11 @@ Grant select   on Menu to RoleNhanVien
 Grant update  on NhanVien to RoleNhanVien 
 
 --nhân viên
+
 Grant exec on suaNV_proc to RoleNhanVien 
 Grant select on pickChiNhanh_NV_func to RoleNhanVien
 Grant select on pickNhanVien_func to RoleNhanVien
+Grant exec on doiMatKhauNV_proc to RoleNhanVien
 
 --Menu
 Grant select on timkiemMonAn_func to RoleNhanVien 
