@@ -42,7 +42,7 @@ namespace DBMS_2020.Features.Admin
 
         private void loadDataGridiew()
         {
-            var data = this.staff.loadViewManagerStaff();
+            var data = this.staff.loadViewManagerStaff();//gọi xuống
             DT = data.Tables[0];
             this.dgv_staff.Rows.Clear();
             for (int i = 0; i < DT.Rows.Count; i++)

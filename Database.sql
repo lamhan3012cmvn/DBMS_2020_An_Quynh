@@ -150,7 +150,7 @@ go
 
 --Trigger: sau khi thanh toán thì số lượng đã bán của nhân viên tăng lên 
 
-create or alter trigger SoLuongDaBan on ChiTietHoaDon
+create or alter trigger SoLuongNVBan on ChiTietHoaDon
 after insert as
 declare @soluong int, @nhanvien nvarchar(50)
 set @soluong = (select inserted.SoLuong from inserted )
@@ -158,6 +158,18 @@ set @nhanvien = (select HoaDon.MaNV from inserted, HoaDon where inserted.MaHD = 
 begin 
 	update NhanVien set SoLuongBan = SoLuongBan +@soluong where MaNhanVien = @nhanvien
 end
+go
+
+--trigger: kiểm tra ngày sinh nhân viên
+create or alter trigger ktNgaySinh on NhanVien
+for insert, update as
+	declare @ngaySinh datetime
+	select @ngaySinh = YEAR(inserted.NgaySinh) from inserted
+	if(YEAR(GETDATE()) - @ngaySinh < 18)
+	begin 
+		rollback tran;
+		throw 50005,N'Ngày sinh không hợp lệ',1;
+	end	
 go
 --function 
 
@@ -485,6 +497,9 @@ go
 create or alter View NhanVien_ChiNhanh_View as 
 select MaNhanVien,TenNhanVien,SDT,NgaySinh,TenChiNhanh,SoLuongBan from NhanVien,ChiNhanh where NhanVien.MaChiNhanh = ChiNhanh.MaChiNhanh
 go
+
+
+
 
 
 -- Phân quyền
