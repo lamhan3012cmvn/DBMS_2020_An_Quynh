@@ -17,12 +17,29 @@ namespace DBMS_2020.Features.Admin
         private string err;
         DataTable DT;
         private Controllers.Admin.Staff staff;
+        private bool flag;
+
         public ManagerStaff()
         {
             InitializeComponent();
             this.staff = new Controllers.Admin.Staff();
             loadDataGridiew();
+
+            flag = false;
+            enabled();
         }
+
+        private void enabled()
+        {
+            this.btn_Update.Enabled = flag;
+            this.btn_Del.Enabled = flag;
+            this.txt_BranchCode.Enabled = !flag;
+            this.txt_Code.Enabled = !flag;
+            this.txt_Name.Enabled = !flag;
+            this.txt_Phone.Enabled = !flag;
+            this.date_birthDay.Enabled = !flag;
+        }
+
         private void loadDataGridiew()
         {
             var data = this.staff.loadViewManagerStaff();
@@ -32,11 +49,18 @@ namespace DBMS_2020.Features.Admin
             {
                 var item = DT.Rows[i];
                 var DoB = item[3].ToString().Split(' ')[0];
-                
-                dgv_staff.Rows.Add(item[0], item[1],  item[2], DoB, item[4],item[5]);
+
+                dgv_staff.Rows.Add(item[0], item[1], item[2], DoB, item[4], item[5]);
             }
         }
-
+        private void resetTxt()
+        {
+            this.txt_BranchCode.Text = "";
+            this.txt_Code.Text = "";
+            this.txt_Name.Text = "";
+            this.txt_Phone.Text = "";
+            this.date_birthDay.Text = "";
+        }
         private void btn_Update_Click(object sender, EventArgs e)
         {
             this.staff.updateStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,err:ref err);
@@ -85,6 +109,14 @@ namespace DBMS_2020.Features.Admin
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if (flag == true)
+            {
+                flag = false;
+                this.enabled();
+
+                resetTxt();
+                return;
+            }
             this.staff.addStaff(MaNV:this.txt_Code.Text,TenNV:this.txt_Name.Text,SDT:this.txt_Phone.Text,ngaySinh:DateTime.Now.ToString(),MaChiNhanh:this.txt_BranchCode.Text,MatKhau:"1234",SoLuongBan:0,err:ref this.err);
             if (err == null)
             {
@@ -112,13 +144,14 @@ namespace DBMS_2020.Features.Admin
 
         private void dgv_staff_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            flag = true;
+            this.enabled();
+
             this.txt_Code.Text = this.dgv_staff.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.txt_Name.Text = this.dgv_staff.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.txt_Phone.Text = this.dgv_staff.Rows[e.RowIndex].Cells[2].Value.ToString();
            // this.date_birthDay.Value = new DateTime(this.dgv_staff.Rows[e.RowIndex].Cells[3].Value.ToString());
             this.txt_BranchCode.Text = this.dgv_staff.Rows[e.RowIndex].Cells[4].Value.ToString();
-           
-
         }
 
         private void txt_SearchName_TextChanged(object sender, EventArgs e)

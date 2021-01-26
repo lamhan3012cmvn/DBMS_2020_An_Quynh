@@ -21,8 +21,10 @@ namespace DBMS_2020.Features.Admin
         {
             InitializeComponent();
             this.Customer = new Controllers.Admin.Customer();
+            
             flag = false;
             enabled();
+
             loadDataGridiew();
         }
         private void enabled()
@@ -31,7 +33,7 @@ namespace DBMS_2020.Features.Admin
             this.txt_bought.Enabled = !flag;
             this.txt_Address.Enabled = !flag;
             this.txt_PhoneNumber.Enabled = !flag;
-            this.btn_Add.Enabled = !flag;
+
             this.btn_Update.Enabled = flag;
             this.btn_Del.Enabled = flag;
         }
@@ -52,12 +54,21 @@ namespace DBMS_2020.Features.Admin
             this.Dispose();
         }
 
+        private void resetTxt()
+        {
+            this.txt_Name.Text = "";
+            this.txt_PhoneNumber.Text = "";
+            this.txt_bought.Text = "";
+            this.txt_Address.Text = "";
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if(flag==true)
             {
                 flag = false;
                 this.enabled();
+
+                resetTxt();
                 return;
             }    
             DataSet check =this.Customer.pickCustomer(this.txt_PhoneNumber.Text);
@@ -70,6 +81,7 @@ namespace DBMS_2020.Features.Admin
                     try
                     {
                         loadDataGridiew();
+                        resetTxt();
                     }
                     catch
                     {
@@ -125,9 +137,10 @@ namespace DBMS_2020.Features.Admin
 
         private void dgv_customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.flag = false;
+            this.flag = true;
             this.enabled();
             this.txt_PhoneNumber.Enabled = false;
+
             if (e.RowIndex < 0)
                 return;    
             this.txt_PhoneNumber.Text = this.dgv_customer.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -147,6 +160,20 @@ namespace DBMS_2020.Features.Admin
                 var item = DT.Rows[i];
                 dgv_customer.Rows.Add(item[0], item[1], item[2], item[3]);
             }
+        }
+
+        private void dgv_customer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.flag = true;
+            this.enabled();
+            this.txt_PhoneNumber.Enabled = false;
+
+            if (e.RowIndex < 0)
+                return;
+            this.txt_PhoneNumber.Text = this.dgv_customer.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.txt_Name.Text = this.dgv_customer.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.txt_Address.Text = this.dgv_customer.Rows[e.RowIndex].Cells[2].Value.ToString();
+            this.txt_bought.Text = this.dgv_customer.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
     }
 }
